@@ -1,5 +1,5 @@
 GOOUUU Tech ESP32-S3-CAM Expansion Board
-
+(WORK IN PROGRESS) Prof. Michael P. Harris
 .____________________________________________________________________________________.
 | Ø    ___  ¬R4        1 2 3 4      ¬R6   .-----------.    U2                      Ø |
 |     |W Ø|        GND • • • •           —ô 5V0 sensor|    Ø¨¨[•|ô|o|o]¨¨Ø    I²C    |
@@ -62,7 +62,7 @@ QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO   |   | '-CS  
             sockets... just let the extra row of top and bottom pins
             hang over/extend past the headers alowing a 44-pin board
             to plug into a set of 40-pin sockets.  This development
-            board does not have a DVP camera interface like our
+            board does NOT have a DVP camera interface like our
             first three boards.
 
             All 4 of these “ESP32-S3-WROOM-1” Dev boards are pinout
@@ -79,7 +79,7 @@ QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO   |   | '-CS  
             pin compatible boards... look at the board with the two
             USB ports facing down. The Left-side pins will end with
             GPIO13, GPIO14 then 5V0 (and possibly an extra GND). The
-            top-Right side pins will (possibly start with a GND pin)
+            top Right-side pins will (possibly start with a GND pin)
             then begin with TXD, RXD, GPIO1, then GPIO2.
 
             The 44-pin “YD-ESP32-S3” and “ESP32-S3-DevKitC-1” have 1
@@ -136,14 +136,14 @@ Development Board 40-pin “Yellow” and 42-pin “Black” header sockets.
 
  1. Pins marked © and _, are pins reserved for the DVP Camera.
     (Includes all of the GPIO Pins on the Left-side header, except:
-     GPIO3, GPIO46, and GPIO14)
+     GPIO3, GPIO46, & GPIO14).
  2. Pins marked õ and ~, are pins reserved for the TF SD_Card slot.
-    (GPIO38, GPIO39, and GPIO40)
+    (GPIO38, GPIO39, & GPIO40). The TF SD_Card slot is on the back.
  3. Pins marked ð and *, are pins reserved for PSRAM and QIO Flash.
-    (GPIO36, GPIO37, and GPIO38)
+    (GPIO36, GPIO37, & GPIO38). Best not to use these pins.
 
- 4. Pins marked ô are 5V0
- 5. Pins marked ö are 3V3
+ 4. Pins marked ô are 5V0   (5.0 volts)
+ 5. Pins marked ö are 3V3   (3.3 volts)
  6. Pins marked • are GND
  7. Pins marked ø are USB_D+ and USB_D—
 
@@ -189,13 +189,13 @@ Development Board 40-pin “Yellow” and 42-pin “Black” header sockets.
 
 ————————————————————————————————————————————————————————————————————
 GOOUUU Tech ESP32-S3-CAM Expansion Board
-    MISC Pin connections/configuration:
+    MISC Pin connections/configurations:
 
  •    DHT11 DATA: GPIO2
  •   R3 W505 Pot:
  •     Jumper P7: GPIO5
  •     Jumper P8: GPIO4
- •     Header S1:
+ •     Header S1: GPIO1
  •     Header S2:
  •     Header S3:
  •     Header S4:
@@ -272,7 +272,7 @@ source, there are two solder pads labeled J1.  By solder shorting
 these two pads together, the regulator is bypassed and the module
 can be powered directly from 3.3V.
 
-In general, it is best to operate the display off of 5V to ensure
+In general, it is best to operate the display off of 5V0 to ensure
 enough power is available.  Be careful of trying to operate the
 display from the built-in 3.3V available on Arduino and similar
 microcontrollers since these power sources often have limited
@@ -285,20 +285,20 @@ This display incorporates a SPI interface which provides for fast
 display updates. It is a 4-wire interface so it includes the CS
 (Chip Select) pin.
 
-The Touch Screen also uses the SPI interface and can hook up to the
+The Touch Screen also uses the SPI interface and CAN hook up to the
 same pins as the display, but uses a separate CS to avoid conflict.
 
-For best performance a hardware SPI interface should be used if
+For best performance the hardware SPI interface should be used if
 possible to get the fastest screen updates.
 
-        Display Controller:	ILITEK	ILI9341
+        Display Controller:	ILITEK ILI9341
           Touch Controller:	XPT	XPT2046
 
         Display	Technology:	TFT LCD
                 Resolution:	240×320 pixels
-                     Color:	RGB 65K color (5:6:5)
+                     Color:	RGB 65K color (16-bit 5:6:5)
              Viewing Angle: ±60°
-                 Interface:	SPI (Display and Touch)
+                Interfaces:	SPI (Display and Touch)
          Operating Ratings:	DC Power Input	3.6 – 5.5V
          Operating Current:	<60mA (typical)
 
