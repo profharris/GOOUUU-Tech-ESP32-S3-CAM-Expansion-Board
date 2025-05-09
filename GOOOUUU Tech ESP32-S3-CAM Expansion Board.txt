@@ -3,12 +3,12 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
 .____________________________________________________________________________________.
 | Ø    ___  ¬R4        1 2 3 4      ¬R6   .-----------.    U2                      Ø |
 |     |W Ø|        GND • • • •           —ô 5V0 sensor|    Ø¨¨[•|ô|o|o]¨¨Ø    I²C    |
-| 5V0 |5  | o      5V0 ô ô ô ô  o     G2 —oDATA DHT11 |    ¦   G V S S   ¦ ————————— |
-|     |0  | o G5   SIG o o o o  o G4     —× n/c temp  |    ¦   N C C D   ¦ GND > GND |
-| GND |5  | P7         G G G G  P8       —• GND humi  |    ¦   D C L A   ¦ VCC > 5V0 |
-|     '———'            1              U3  '-----------'    ¦             ¦ SCL > G9  |
-|   R3 POT                _______________                  ¦ 0.96″ OLED  ¦ SDA > G8  |
-|                        |  ___   _   __¯|    G##~ SD_Card ¦   64×128    ¦           |
+| 5V0 |5  | o      5V0 ô ô ô ô  o     G2 —oDATA DHT11 |    ¦   G V S S   ¦ Interface |
+|     |0  | o G5   SIG o o o o  o G4     —× n/c temp  |    ¦   N C C D   ¦ ————————— |
+| GND |5  | P7         G G G G  P8       —• GND humi  |    ¦   D C L A   ¦ GND > GND |
+|     '———'            1              U3  '-----------'    ¦             ¦ VCC > 5V0 |
+|   R3 POT                _______________                  ¦ 0.96″ OLED  ¦ SCL > G9  |
+|                        |  ___   _   __¯|    G##~ SD_Card ¦   64×128    ¦ SDA > G8  |
 |     DVP Camera _G##    | | | |_| |_|   |    G##* PSRAM   Ø……¨¨¨¨¨¨¨¨………Ø           |
 |                     .——| | |           |——.                                        |
 |TXD o ö 3V3      3V3 |ö:|——.··. .————/:@|:o| G43  TX›        _____SPI TFT___ESP32S3_|
@@ -32,9 +32,9 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
 |G19 o o G14  CS  G14 |o [Ø]  ''''''   [Ø] ø| G19  D+      (ESP32-S3-CAM) V1.2       |
 |GND • ô 5V0      5V0 |ô .......O T....... •| GND        2.8″ SPI TFT LCD 240×320    |
 |                     |  | USB |T T| USB |  |                                        |
-|G46: In Only*        |  |  C  |G L|  C  |  |                   M     M T   T   T    |
-|                     '——'ESP32'———'CH343'——'         V G   R   O S L I C T D T I    |
-|          ¬   ¬                 .     .   ¬          C N C S D S C E S L C I D R    |
+|G46: Input Only*     |  |  C  |G L|  C  |  |                   M     M T   T   T    |
+|         ¬   ¬       '——'ESP32'———'CH343'——'         V G   R   O S L I C T D T I    |
+|         R5 R7                  R1¬ R2¬              C N C S D S C E S L C I D R    |
 |          ¤   ¤      [Ø]   [Ø]  |USB-C|   ¤          C D S T C I K D O K S N O Q    |
 | Ø       D2  D3      RST   KEY  '-----'  D1         [ô|•|o|o|o|o|o|ö|•|o|o|o|o|×] Ø |
 '————————————————————————————————————————————————————————————————————————————————————'
@@ -43,11 +43,199 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
                                                       0 D 4 1 7 5   3 D 2     1 '-IRQ
                                                                     |   | | | '-MISO
 ——————————————————————————————————————————————————————————————————— |   | | '-MOSI
-KEY FEATURES OF TFT LCD 2.8″ 240×320 DISPLAY WITH TOUCHSCREEN:      |   | '-CS  Touch
-                                                                    |   '-SCK    Pins
-    o 2.8″ TFT LCD with 240×320 resolution                          |
-    o 65K colors with ILI9341 controller                            |
-    o Resistive Touch Screen with XPT2046 controller                '-BackLight
+QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO   |   | '-CS  Touch
+——————————— sets of header-pin sockets (Yellow and Black) to plug   |   '-SCK    Pins
+            in your ESP32-S3-WROOM-1 Development boards.            |
+                                                                    |
+            The 40-Pin “Yellow” header sockets, are designed for    '-BackLight
+            the GOOUUU “ESP32-S3-CAM” board. The “ESP32-S3-WROOM”
+            (CAM Module), a clone of the “FREEVOVE ESP32-S3-WROOM”;
+            both also work perfectly in the “Yellow” headers as all
+            three of these DVP camera ready Dev boards have the same
+            pinouts and same SoC main chip the “ESP32-S3-WROOM-1”.
+
+            A fourth development board using the “ESP32-S3-WROOM-1”
+            SoC, the “YD-ESP32-S3” also called the “ESP32-S3-WROOM-1
+            Dev”, --is a 44-pin board, but the top and bottom rows
+            of pins are just an extra 3V3 pin and three extra ground
+            pins. -This board also works in the “Yellow” header pin
+            sockets... just let the extra row of top and bottom pins
+            hang over/extend past the headers alowing a 44-pin board
+            to plug into a set of 40-pin sockets.  This development
+            board does not have a DVP camera interface like our
+            first three boards.
+
+            All 4 of these “ESP32-S3-WROOM-1” Dev boards are pinout
+            backward compatible, -not counting the extra top/bottom
+            pins, with the original 44-pin “ESP-S3-DevKitC-1”.
+                NOTE: DevKitC-1, NOT DevKitM-1 (NOT pin compatible)
+
+            Unfortunately, this original “ESP-S3-DevKitC-1” will not
+            plug into the “Yellow” headers as this original board is
+            narrower (by 1 pin spacing) than the other four boards.
+            Otherwise it could plug in just like the “YD-ESP32-S3”.
+
+            NOTE: To identify one of these five ESP32-S3-DevKitC-1
+            pin compatible boards... look at the board with the two
+            USB ports facing down. The Left-side pins will end with
+            GPIO13, GPIO14 then 5V0 (and possibly an extra GND). The
+            top-Right side pins will (possibly start with a GND pin)
+            then begin with TXD, RXD, GPIO1, then GPIO2.
+
+            The 44-pin “YD-ESP32-S3” and “ESP32-S3-DevKitC-1” have 1
+            extra pin at the top and bottom of each header, an extra
+            3V3 pin in the upper-Left, and an extra GND pin on the
+            other 3 corners.
+            --------------------------------------------------------
+
+            The 42-Pin “Black” header sockets are for an ALT version
+            of the “ESP-S3-DevKitC-1”. This ALT version has 42-pins
+            instead of the original 44-pins and is 1 pin space wider
+            like the four Dev boards mentioned above.
+
+            Even though this 42-pin “ESP-S3-DevKitC-1_ALT-version”
+            uses the same “ESP32-S3-WROOM-1” SoC, pinout is similar
+            but NOT the same as the other 40 & 44-pin Dev boards...
+            “ESP32-S3-GOOUUU-CAM”, “ESP32-S3-WROOM” (CAM Module),
+            “FREEVOVE ESP32-S3-WROOM”, “YD-ESP32-S3” or the original
+            44-pin “ESP-S3-DevKitC-1”.
+
+            A quick way to identify this Dev board, besides 42-pins
+            instead of 40 or 44-pins, is to look at the board with
+            the two USB ports facing down. The upper-Right pins will
+            start with (extra) GND, GPIO1, GPIO2, TX0, RX0... and
+            the lower-Left will end with GPIO11, GPIO12, 3V3. --AND
+            most importantly, the lower-Right pin is ‘5VIN’.
+
+WARNING: I want to pointout this lower-Right ‘5VIN’ pin specifically
+———————— because all the other ESP32-S3 Dev boards mentioned, have a
+         GND (power ground) pin in the lower-Right. Plugging in a 5V
+         pin into a GND header socket, or vice-versa, is a quick way
+         to short out and burn-up your Dev board!
+
+The design engineers for the “GOOUUU Tech ESP32-S3-CAM Expansion
+Board” have done something very clever! They have cross-wired, where
+needed, the pins in the 40-pin “Yellow” header to the 42-pin “Black”
+header to match the pinout functions.
+
+For example: the first four upper-Right pins of the 40-pin “Yellow”
+header are: 1. TXD, 2. RXD, 3. GPIO1, 4. GPIO2.  The first five pins
+of the 42-pin “Black” header are 1. GND, 2. GPIO1, 3. GPIO2, 4. TX0,
+and 5. RX0. Copper traces on the Expansion Board, connect “Yellow”
+pin-1 TXD to “Black” pin-4 TX0, and “Yellow” pin-2 RXD to “Black”
+pin-5 RX0. Also GPIO1 is cross connected to GPIO1, GPIO2 is cross
+connected to GPIO2 and so on. Since all the “ESP32-S3-WROOM-1” SoC
+designs have the same pins... this allows for a single 40-pin double
+row breakout header along the left side of the expansion board. The
+pinout of this breakout header, mirror-image matches the 40-pin
+“Yellow” headers, and all of the pins are well labled.
+
+————————————————————————————————————————————————————————————————————
+Following is my diagram, illustrating the 2-way “ESP32-S3-WROOM-1”
+Development Board 40-pin “Yellow” and 42-pin “Black” header sockets.
+
+ 1. Pins marked © and _, are pins reserved for the DVP Camera.
+    (Includes all of the GPIO Pins on the Left-side header, except:
+     GPIO3, GPIO46, and GPIO14)
+ 2. Pins marked õ and ~, are pins reserved for the TF SD_Card slot.
+    (GPIO38, GPIO39, and GPIO40)
+ 3. Pins marked ð and *, are pins reserved for PSRAM and QIO Flash.
+    (GPIO36, GPIO37, and GPIO38)
+
+ 4. Pins marked ô are 5V0
+ 5. Pins marked ö are 3V3
+ 6. Pins marked • are GND
+ 7. Pins marked ø are USB_D+ and USB_D—
+
+ 8. Pins marked » or « are pins with position mismatches between the
+    Yellow P1 & P2 header-pin sockets and the Black P3 & P3 sockets.
+
+       |GOOUUU ESP32-S3-CAM| or: “ESP32-S3-WROOM” (CAM Module)
+       |   40-pin headers  |     “FREEVOVE ESP32-S3-WROOM”
+       V   Yellow P1 & P2  V     “YD-ESP32-S3”/ESP32-S3-WROOM-1 Dev
+
+        |ESP32-S3-DevKitC-1 |
+        | 42-pin ALT VERSION|
+        V   Black P3 & P4   V
+
+       .—P1 (Yellow)       .—P2 (Yellow 40-pin header)
+       |.—P3 (Black)       |.—P4 (Black 42-pin header)
+       ||                  ||
+       ×• GND              ×• GND              NOTE¹: The DVP Camera
+  3V3  öö 3V3 same    »TXD oo  G1«                    interface uses
+   EN  oo  EN same    »RXD oo  G2«                    all the Yellow
+  _G4  ©©  G4 same    »G1  oo TX0«                    GPIO Left-side
+  _G5  ©©  G5 same    »G2  oo RX0«                    _pins except:
+  _G6  ©©  G6 --same-- G42 oo G42                     GPIO3, GPIO46,
+  _G7  ©©  G7 --same-- G41 oo G41                     and GPIO14.
+  _G15 ©© G15 --same-- G40 õõ G40~  SD_Card GPIO40
+  _G16 ©© G16 --same-- G39 õõ G39~    "     GPIO39
+  _G17 ©© G17 --same-- G38 õõ G38~    "     GPIO38
+  _G18 ©© G18 --same-- G37 ðð G37*  PSRAM   GPIO37
+  _G8  ©©  G8 --same-- G36 ðð G36*    "     GPIO36
+  »G3  oø G19« D+ same G35 ðð G35*    "     GPIO35
+  »G46 oø G20« D— same G0  oo  G0
+ »_G9  ©o  G3«    same G45 oo G45              NOTE²: Pin GPIO46 is
+ »_G10 ©o G46«    same G48 ¤¤ G48                     INPUT only.
+ »_G11 ©©  G9«    same G47 oo G47                     No pullups.
+ »_G12 ©© G10«    same G21 oo G21
+ »_G12 ©© G10«    same G21 oo G21
+ »_G13 ©© G11«     D— »G20 øo G14«
+  »G14 o© G12«     D+ »G19 ø© G13«
+  »5V0 ôö 3V3«        »GND •ô 5VIN« (<-- Be careful!)
+       ||                  ||
+       |'—Black            |'—Black
+       '—Yellow            '—Yellow
+
+————————————————————————————————————————————————————————————————————
+GOOUUU Tech ESP32-S3-CAM Expansion Board
+    MISC Pin connections/configuration:
+
+ •    DHT11 DATA: GPIO2
+ •   R3 W505 Pot:
+ •     Jumper P7: GPIO5
+ •     Jumper P8: GPIO4
+ •     Header S1:
+ •     Header S2:
+ •     Header S3:
+ •     Header S4:
+ •       I²C SDA: GPIO8         [0.96″ OLED]
+ •       I²C SCL: GPIO9         [  64×128  ]
+ •        LED D1: GPIO1
+ •        LED D2: GPIO2
+ •        LED D3: GPIO3
+ •  [RST] Button: EN/RESET
+ •  [KEY] Button: GPIO0/BOOT
+
+--------------------------------------------------------------------
+GOOUUU Tech ESP32-S3-CAM Expansion Board
+    14-Pin SPI 2.8″ 240×320 TFT LCD header:
+
+    ILI9341 2.8"    GOOUUU Tech
+    TFT Display     Expansion
+    with Touch:     Board:         Description:
+
+ 1. T-IRQ           × N/C          Touch Interrupt Output-Active LOW
+ 2. T-DO <MISO>     GPIO41         Touch Data Out   (SPI MISO)
+ 3. T-DIN <MOSI>    GPIO2          Touch Data In    (SPI MOSI)
+ 4. T-CS            GPIO1          Touch Chip Select-Active LOW
+ 5. T-CLK <SCK>     GPIO42         Touch Clock      (SPI SCK)
+ 6. SDO <MISO>      GND            GND-Not Used     (SPI MISO)
+ 7. LED             3V3            BackLight Enable-Active HIGH
+ 8. SCK             GPIO0          Display Clock    (SPI SCK)
+ 9. SDI <MOSI>      GPIO45         Display Data In  (SPI MOSI)
+10. DC              GPIO47         Display Data/Command-HIGH = Data
+11. RESET           GPIO21         Display Reset Input-Active LOW
+12. CS              GPIO14         Display Chip Select-Active LOW
+13. GND             GND            Power System Ground
+14. VCC             5V0            Power 5.0V
+
+————————————————————————————————————————————————————————————————————
+KEY FEATURES OF TFT LCD 2.8″ 240×320 DISPLAY WITH TOUCHSCREEN:
+
+    o 2.8″ TFT LCD with 240×320 resolution
+    o 65K colors with ILI9341 controller
+    o Resistive Touch Screen with XPT2046 controller
     o SPI 4-wire LCD interface (SCK, MOSI, DC, CS)
     o SPI 4-wire SD_Card interface (SCK, MOSI, MISO, CS)
     o 3.6 to 5.5V module operation
@@ -65,164 +253,14 @@ Internally the display operates at 3.3V, so if using with a 5V0
 microcontroller, be sure to include logic level shifters on the
 data lines to prevent possible damage.
 
-————————————————————————————————————————————————————————————————————
-QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO
-            sets of header pin sockets (Yellow and Black) to plug in
-            ESP32-S3-WROOM-1 Development MCUs.
-
-            The 40-Pin “Yellow” header sockets, are designed for the
-            GOOUUU “ESP32-S3-CAM” board. The “ESP32-S3-WROOM” (CAM
-            Module), a clone of the “FREEVOVE ESP32-S3-WROOM”; both
-            also work in the “Yellow” headers as all three of these
-            DVP camera ready dev boards have the same pinouts and
-            same SoC main chip the “ESP32-S3-WROOM-1”.
-
-            A fourth development board using the “ESP32-S3-WROOM-1”
-            SoC, the “YD-ESP32-S3” also called the “ESP32-S3-WROOM-1
-            Dev”, -is a 44-pin board, but the top and bottom rows of
-            pins are just an extra 3V3 pin and three extra ground
-            pins. This board also works in the “Yellow” header pin
-            sockets... just let the extra top and bottom pins hang
-            over the headers -alowing a 44-pin board to plug into a
-            set of 40-pin sockets. This development board does not
-            have a DVP camera interface like the first three boards.
-
-            All 4 of these “ESP32-S3-WROOM-1” dev boards are pinout
-            -backward compatible, not counting the extra top/bottom
-            pins, with the original 44-pin “ESP-S3-DevKitC-1”.
-
-            Unfortunately, this original “ESP-S3-DevKitC-1” will not
-            plug into the “Yellow” headers as this original board is
-            narrower (by 1 pin spacing) than the other four boards.
-            Otherwise it could plug in just like the “YD-ESP32-S3”.
-
-            NOTE: To identify one of these five ESP32-S3-DevKitC-1
-            pin compatible boards... look at the board with the two
-            USB ports facing down. The Left side pins will end with
-            GPIO13, GPIO14 then 5V (and possibly an extra GND). The
-            top of the Right side pins will (possibly start with GND)
-            then begin with TXD, RXD, GPIO1, then GPIO2.
-
-            The 44-pin “YD-ESP32-S3” and “ESP32-S3-DevKitC-1” have 1
-            extra pin at the top and bottom, -an extra 3V3 in the
-            upper-left, and an extra GND pin on the other 3 corners.
-            --------------------------------------------------------
-
-            The 42-Pin “Black” header sockets are for an ALT version
-            of the “ESP-S3-DevKitC-1”. This ALT version has 42pins
-            instead of the original 44-pins and is 1 pin space wider
-            like the three dev boards mentioned above.
-
-            Even though this 42-pin “ESP-S3-DevKitC-1_ALT-version”
-            uses the same “ESP32-S3-WROOM-1” SoC, pinout is similar
-            but NOT the same as the other 40/44-pin dev boards...
-            “ESP32-S3-GOOUUU-CAM”, “ESP32-S3-WROOM” (CAM Module),
-            “FREEVOVE ESP32-S3-WROOM”, “YD-ESP32-S3”, and original
-            44-pin “ESP-S3-DevKitC-1”.
-
-            A quick way to identify this dev board, besides 42-pins
-            instead of 40 or 44-pins, is to look at the board with
-            the two USB ports facing down. The upper-right pins will
-            start with (extra) GND, GPIO1, GPIO2, TX0, RX0... and
-            the lower-left will end with GPIO11, GPIO12, 3V3. AND
-            importantly, the lower-right pin is ‘5VIN’.
-
-WARNING: I want to pointout this lower-right ‘5VIN’ pin specifically
-    because all the other ESP32-S3 Dev boards mentioned, have a GND
-    (power ground) pin in the lower-right. Plugging in a 5V pin into
-    a GND header socket, or vice-versa, is a quick way to short out
-    and burn-up your dev board!
-
-Now the design engineers of the “GOOUUU Tech ESP32-S3-CAM Expansion
-Board” have done something very clever. They have cross-wired, were
-needed, the pins in the 40-pin “Yellow” header to the 42-pin “Black”
-header to match the pinout functions.
-
-For example, the first four upper-right pins of the 40-pin “Yellow”
-header are: 1. TXD, 2. RXD, 3. GPIO1, 4. GPIO2.  The first five pins
-of the 42-pin “Black” header are 1. GND, 2. GPIO1, 3. GPIO2, 4. TX0,
-and 5. RX0. The copper traces on the board connect Yellow pin-1 TXD
-to Black pin-4 TX0, and Yellow pin-2 RXD to Black pin-5 RX0. Also
-GPIO1 is cross connected to GPIO1, GPIO2 is cross connected to GPIO2
-and so on. Since all the “ESP32-S3-WROOM-1” SoC designs have the
-same pins this allows for a single 40-pin double row breakout header
-along the left side of the expansion board. The pinout of the break
-out header mirror-image matches the 40-pin “Yellow” headers, and all
-pins are well marked.
-
-————————————————————————————————————————————————————————————————————
-Following is my diagram, illustrating the 2-way ESP32-S3-WROOM-1
-Development board 40-pin “Yellow” and 42-pin “Black” header sockets.
-
- 1. Pins marked © and _, are pins reserved for the DVP Camera.
-    (Most all of the GPIO Pins on the left side header, except:
-     GPIO3, GPIO46, and GPIO14)
- 2. Pins marked õ and ~, are pins reserved for the TF SD_Card.
-    (GPIO38, GPIO39, and GPIO40)
- 3. Pins marked ð and *, are pins reserved for PSRAM and Flash.
-    (GPIO36, GPIO37, and GPIO38)
-
- 4. Pins marked ô are 5V0
- 5. Pins marked ö are 3V3
- 6. Pins marked • are GND
- 7. Pins marked ø are USB_D+ and USB_D—
- 
- 8. Pins marked » or « are pin position mismatches between the 
-    Yellow P1 & P2 header pin sockets and the Black P3 & P3 sockets.
-
-
-        |ESP32-S3-DevKitC-1 |
-        | 42pin ALT VERSION |
-        V   Black P3 & P4   V
-
-       |GOOUUU ESP32-S3-CAM|
-       |   Yellow P1 & P2  |
-       V                   V
-
-       .—P1 (Yellow)       .—P2
-       |.—P3 (Black)       |.—P4
-       ||                  ||
-        • GND               • GND
-  3V3  öö 3V3 same    »TXD oo G1«
-   EN  oo EN  same    »RXD oo G2«
-  _G4  ©© G4  same    »G1  oo TX0«
-  _G5  ©© G5  same    »G2  oo RX0«
-  _G6  ©© G6  --same-- G42 oo G42
-  _G7  ©© G7  --same-- G41 oo G41
-  _G15 ©© G15 --same-- G40 õõ G40
-  _G16 ©© G16 --same-- G39 õõ G39
-  _G17 ©© G17 --same-- G38 õõ G38
-  _G18 ©© G18 --same-- G37 ðð G37
-  _G8  ©© G8  --same-- G36 ðð G36
-  »G3  oø G19« D+ same G35 ðð G35
-  »G46 oø G20« D— same G0  oo G0
- »_G9  ©o G3«     same G45 oo G45
- »_G10 ©o G46«    same G48 ¤¤ G48
- »_G11 ©© G9«     same G47 oo G47
- »_G12 ©© G10«    same G21 oo G21
- »_G12 ©© G10«    same G21 oo G21
- »_G13 ©© G11«     D— »G20 øo G14«
-  »G14 o© G12«     D+ »G19 ø© G13«
-  »5V0 ôö 3V3«        »GND •ô 5VIN«
-       ||                  ||
-       |'—Black            |'—Black
-       '—Yellow            '—Yellow
-
-————————————————————————————————————————————————————————————————————
-GOOUUU Tech ESP32-S3-CAM Expansion Board
-MISC Pin configurations:
-
-DHT11 DATA: GPIO2
-
-
-
-————————————————————————————————————————————————————————————————————
+--------------------------------------------------------------------
 2.8″ TFT Display Technical Specifications:
 
-Module Power
+Module Power:
+—————————————
 
 SEE IMAGE:  TFT LCD 2.8 240×320 RGB ILI9341 with Touchscreen
-            - J1 Jumper Location
+            ---> J1 Jumper Location
 
 The module power comes in on the VCC pin.  The module includes an
 on-board 3.3V regulator, so the module should normally be operated
@@ -241,6 +279,7 @@ microcontrollers since these power sources often have limited
 current capability and may overheat.
 
 SPI Interface:
+——————————————
 
 This display incorporates a SPI interface which provides for fast
 display updates. It is a 4-wire interface so it includes the CS
@@ -252,23 +291,25 @@ same pins as the display, but uses a separate CS to avoid conflict.
 For best performance a hardware SPI interface should be used if
 possible to get the fastest screen updates.
 
-        Display	Technology	TFT LCD
-                Resolution	240×320 pixels
-                     Color	RGB 65K color (5:6:5)
-             Viewing Angle  ±60°
-                 Interface	SPI (Display and Touch)
-         Operating Ratings	DC Power Input	3.6 – 5.5V
-         Operating Current	<60mA (typical)
+        Display Controller:	ILITEK	ILI9341
+          Touch Controller:	XPT	XPT2046
+
+        Display	Technology:	TFT LCD
+                Resolution:	240×320 pixels
+                     Color:	RGB 65K color (5:6:5)
+             Viewing Angle: ±60°
+                 Interface:	SPI (Display and Touch)
+         Operating Ratings:	DC Power Input	3.6 – 5.5V
+         Operating Current:	<60mA (typical)
 
     Dimensions:
-          Module Size (PCB)	86×50mm (3.39″×1.97″)
-           Display diagonal	71.12mm (2.8″)
-              Display (W×H)	57.6×43.2mm (2.27×1.7″)
+         Module Size (PCB):	86×50mm     (3.39″×1.97″)
+          Display diagonal:	71.12mm     (2.8″)
+             Display (W×H):	57.6×43.2mm (2.27×1.7″)
 
-    Display Controller	ILITEK	ILI9341
-      Touch Controller	XPT	XPT2046
 
 TFT 1x14 Header:
+————————————————
 
  1. T_IRQ – Touch Interrupt Output.  Active LOW. If using, connect
             to interrupt capable pin on MCU.
@@ -292,12 +333,13 @@ TFT 1x14 Header:
 
 
 Display Orientation:
+————————————————————
 
 The display can be rotated in all 4 directions.  Use setRotation(n)
 to rotate the image to match the physical rotation where n ranges
 from 0 to 3.
 
-You will also need to set the rotation of the Touch Screen.  The
+You will also need to set the Rotation of the ‘Touch Screen’. The
 numbers DO NOT MATCH, so use one of the following combinations.
 
 ILI9341 Display	 XPT2046 Touchscreen
@@ -309,426 +351,27 @@ ILI9341 Display	 XPT2046 Touchscreen
 ————————————————————————————————————————————————————————————————————
 
 ====================================================================
-// Find the default SPI pins for your board.
+// findSPIpins.ino
+// Find the default (Hardware) SPI pins for your board.
 // Make sure you have the right board selected in: Tools > Boards...
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(115200);
-  Serial.print("MOSI: ");
+  Serial.begin(115200);         // Initialize Serial communication
+  while(!Serial);               // Wait for the Serial port to open
+
+  Serial.print(" MOSI: ");
   Serial.println(MOSI);
-  Serial.print("MISO: ");
+  Serial.print(" MISO: ");
   Serial.println(MISO);
-  Serial.print("SCK: ");
+  Serial.print("  SCK: ");
   Serial.println(SCK);
-  Serial.print("SS: ");
+  Serial.print("SS/CS: ");
   Serial.println(SS);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-}
-
-====================================================================
-
-====================================================================
-/* 240×320 ILI9341 LCD with Touch Test Program
- *
- * Exercise the 240×320 ILI9341 TFT LCD with touch
- * Based loosely on Adafruit mandelbrot example
- *
- */
-#include "SPI.h"
-#include "Adafruit_GFX.h"
-#include "Adafruit_ILI9341.h"
-#include "XPT2046_Touchscreen.h"
-
-#define TFT_CS   10
-#define TFT_DC   9
-#define TOUCH_CS 8
-Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC);
-XPT2046_Touchscreen ts(TOUCH_CS);
-
-const int16_t
-  bits        = 12,     // Fractional resolution
-  pixelWidth  = 320,    // TFT dimensions
-  pixelHeight = 240,
-  iterations  = 30;     //  Fractal iteration limit or 'dwell'
-float
-  centerReal  = -0.6,   // Image center point in complex plane
-  centerImag  =  0.0,
-  rangeReal   =  3.0,   // Image coverage in complex plane
-  rangeImag   =  3.0;
-
-boolean istouched = false;
-
-//  Initialization
-
-void setup(void) {
-  Serial.begin(115200);
-  Serial.println("Mandelbrot - Tap screen to increase zoom");
-
-  tft.begin();                      // Init TFT LCD screen
-  tft.setRotation(1);
-  tft.fillScreen(ILI9341_BLACK);
-  ts.begin();                       // Init Touch
-  ts.setRotation(3);
-}
-
-//  Main
-
-void loop() {
-  int64_t     n, a, b, a2, b2, posReal, posImag;
-  uint32_t    startTime, elapsedTime;
-
-  int32_t
-    startReal = (int64_t)((centerReal - rangeReal * 0.5)   * (float)(1 << bits)),
-    startImag = (int64_t)((centerImag + rangeImag * 0.5)   * (float)(1 << bits)),
-    incReal   = (int64_t)((rangeReal / (float)pixelWidth)  * (float)(1 << bits)),
-    incImag   = (int64_t)((rangeImag / (float)pixelHeight) * (float)(1 << bits));
-
-  startTime = millis();   // Calculate how long it takes to create an image
-  posImag   = startImag;
-  for(int y=0; y < pixelHeight; y++) {
-    posReal = startReal;
-    for(int x=0; x < pixelWidth; x++) {
-      a = posReal;
-      b = posImag;
-      for(n=iterations; n > 0 ; n--) {
-        a2 = (a * a) >> bits;
-        b2 = (b * b) >> bits;
-        if((a2 + b2) >= (4 << bits)) break;
-        b  = posImag + ((a * b) >> (bits - 1));
-        a  = posReal + a2 - b2;
-      }
-      tft.drawPixel(x, y, (n * 29)<<8 | (n * 67));
-      // Change the 29/67 to affect colors...
-      posReal += incReal;
-    }
-    posImag -= incImag;
-  }
-
-  elapsedTime = millis() - startTime;
-  Serial.print("Took ");
-  Serial.print(elapsedTime/1000.0); Serial.println(" secs");
-
-  tft.setCursor(2, 10);
-  tft.setTextColor(ILI9341_RED);
-  tft.setTextSize(2);
-  tft.print("Pass Complete: ");
-  tft.println(rangeReal);
-
-  while(istouched == false) { // When drawing complete, wait for touch
-    istouched = ts.touched();
-  }
-  if(istouched) {
-    tft.fillScreen(ILI9341_BLACK); // Blank screen
-    TS_Point p = ts.getPoint();    // Send Touch info to Serial Monitor
-    Serial.print("Pressure = ");
-    Serial.print(p.z);
-    Serial.print(", x = ");
-    Serial.print(p.x);
-    Serial.print(", y = ");
-    Serial.println(p.y);
-    rangeReal *= 0.90;              // Zoom in each iteration
-    rangeImag *= 0.90;
-    istouched = false;              // Reset Touch flag
-    if(rangeReal < 1.3) {           // Reset the Zoom
-      rangeReal = 3.0;
-      rangeImag = 3.0;
-    }
-  }
-}
-
-====================================================================
-
-====================================================================
-/* analogMeters.ino
- * Example animated Analog Meters using an ILI9341 240x320 TFT LCD.
- *
- * Needs Font 2 (also Font 4 if using large scale label, see notes.)
- *
- * Make sure all the display driver and pin comnenctions are correct
- * by editting the User_Setup.h file in the TFT_eSPI library folder.
- *
- * #################################################################
- * ## DON'T FORGET TO UPDATE THE User_Setup.h FILE IN THE LIBRARY ##
- * #################################################################
- */
-
-#include <TFT_eSPI.h>          // Hardware-specific Graphics library
-#include <SPI.h>
-
-TFT_eSPI tft = TFT_eSPI();     // Invoke custom eSPI library
-
-#define TFT_GREY 0x5AEB
-#define LOOP_PERIOD 35         // Display updates every 35ms
-
-float ltx=0;                   // Saved x coord of bottom of Needle
-uint16_t osx = 120, osy = 120; // Saved x & y coords
-uint32_t updateTime=0;         // Time for next update
-
-int old_analog =  -999;        // Value last displayed Analog
-int old_digital = -999;        // Value last displayed Digital
-
-int value[6]     = {  0,  0,  0,  0,  0,  0};
-int old_value[6] = { -1, -1, -1, -1, -1, -1};
-int d=0;
-
-
-void setup(void) {
-  Serial.begin(57600);
-
-  tft.init();
-  tft.setRotation(0);
-  tft.fillScreen(TFT_BLACK);    // Clear the screen.
-
-  analogMeter();                // Draw 1 Analog meter.
-
-  byte d=40;
-  plotLinear("A0", 0,   160);   // Draw 6 Linear Meters.
-  plotLinear("A1", 1*d, 160);
-  plotLinear("A2", 2*d, 160);
-  plotLinear("A3", 3*d, 160);
-  plotLinear("A4", 4*d, 160);
-  plotLinear("A5", 5*d, 160);
-
-  updateTime = millis();        // Next update time
-}
-
-
-void loop() {
-  if(updateTime <= millis()) {
-    updateTime = millis() + LOOP_PERIOD;
-
-    d+=4; if(d >= 360) d=0;
-
-    // value[0] = map(analogRead(A0), 0,1023, 0,100);
-    // Test with value from Analogue 0
-
-    // Create a Sine wave for testing.
-    value[0] = 50 + 50 * sin((d +   0) * 0.0174532925);
-    value[1] = 50 + 50 * sin((d +  60) * 0.0174532925);
-    value[2] = 50 + 50 * sin((d + 120) * 0.0174532925);
-    value[3] = 50 + 50 * sin((d + 180) * 0.0174532925);
-    value[4] = 50 + 50 * sin((d + 240) * 0.0174532925);
-    value[5] = 50 + 50 * sin((d + 300) * 0.0174532925);
-
-    //unsigned long t = millis();
-    plotPointer();
-    plotNeedle(value[0], 0);
-
-    Serial.println(millis()-t); // Print time taken for meter update
-  }
-}
-
-// -----------------------------------------------------------------
-//  Draw the Analog Meter on the screen
-// -----------------------------------------------------------------
-
-void analogMeter() {
-  // Meter outline
-  tft.fillRect(0,0, 239,126, TFT_GREY);
-  tft.fillRect(5,3, 230,119, TFT_WHITE);
-
-  tft.setTextColor(TFT_BLACK);  // Text color.
-  // Draw ticks every 5 degrees from -50 to +50 degrees.
-  // (100 deg. FSD swing)
-  for(int i=-50; i < 51; i+=5) { // Long scale tick length.
-    int tl=15;
-
-    // Coodinates of tick to draw.
-    float sx = cos((i - 90) * 0.0174532925);
-    float sy = sin((i - 90) * 0.0174532925);
-    uint16_t x0 = sx * (100 + tl) + 120;
-    uint16_t y0 = sy * (100 + tl) + 140;
-    uint16_t x1 = sx *  100 + 120;
-    uint16_t y1 = sy *  100 + 140;
-
-    // Coordinates of next tick for zone fill.
-    float sx2 = cos((i + 5 - 90) * 0.0174532925);
-    float sy2 = sin((i + 5 - 90) * 0.0174532925);
-    int x2 = sx2 * (100 + tl) + 120;
-    int y2 = sy2 * (100 + tl) + 140;
-    int x3 = sx2 * 100 + 120;
-    int y3 = sy2 * 100 + 140;
-
-    // Yellow zone limits.
-    //if(i >= -50 && i < 0) {
-    //  tft.fillTriangle(x0,y0, x1,y1, x2,y2, TFT_YELLOW);
-    //  tft.fillTriangle(x1,y1, x2,y2, x3,y3, TFT_YELLOW);
-    //}
-
-    // Green zone limits.
-    if(i >= 0 && i < 25) {
-      tft.fillTriangle(x0,y0, x1,y1, x2,y2, TFT_GREEN);
-      tft.fillTriangle(x1,y1, x2,y2, x3,y3, TFT_GREEN);
-    }
-
-    // Orange zone limits.
-    if(i >= 25 && i < 50) {
-      tft.fillTriangle(x0,y0, x1,y1, x2,y2, TFT_ORANGE);
-      tft.fillTriangle(x1,y1, x2,y2, x3,y3, TFT_ORANGE);
-    }
-
-    if(i%25 != 0) tl = 8;       // Short scale tick length.
-
-    // Recalculate coords in case tick lenght has changed.
-    x0 = sx * (100 + tl) + 120;
-    y0 = sy * (100 + tl) + 140;
-    x1 = sx * 100 + 120;
-    y1 = sy * 100 + 140;
-
-    // Draw tick...
-    tft.drawLine(x0,y0, x1,y1, TFT_BLACK);
-
-    // Check if Labels should be drawn, with position tweaks.
-    if(i%25 == 0) {             // Calculate Label positions.
-      x0 = sx * (100 + tl + 10) + 120;
-      y0 = sy * (100 + tl + 10) + 140;
-      switch (i/25) {
-        case -2: tft.drawCenterString(  "0", x0,y0-12, 2); break;
-        case -1: tft.drawCenterString( "25", x0,y0- 9, 2); break;
-        case  0: tft.drawCenterString( "50", x0,y0- 6, 2); break;
-        case  1: tft.drawCenterString( "75", x0,y0- 9, 2); break;
-        case  2: tft.drawCenterString("100", x0,y0-12, 2); break;
-      }
-    }
-
-    // Now draw the Arc of the scale.
-    sx = cos((i + 5 - 90) * 0.0174532925);
-    sy = sin((i + 5 - 90) * 0.0174532925);
-    x0 = sx * 100 + 120;
-    y0 = sy * 100 + 140;
-    // Draw scale Arc, don't draw the last part yet...
-    if(i < 50) tft.drawLine(x0,y0, x1,y1, TFT_BLACK);
-  }
-
-  tft.drawString("%RH", 5+230-40,119-20, 2); // Units, bottom right
-  tft.drawCenterString("%RH", 120,70, 4);    // Comment out, font 4
-  tft.drawRect(5,3, 230,119, TFT_BLACK);     // Draw Bezel line
-
-  plotNeedle(0,0);              // Put meter needle at 0.
-}
-
-// -----------------------------------------------------------------
-// Update Needle position:
-// This function is blocking while the Needle moves. Time depends on
-// ms_delay, 10ms minimizes Needle flicker if text is drawn within
-// Needle sweep area. Smaller values OK if text not in sweep area.
-// Zero for instant movement, but does not look realistic...
-// (NOTE: 100 increments for full Scale deflection)
-// -----------------------------------------------------------------
-
-void plotNeedle(int value, byte ms_delay) {
-  tft.setTextColor(TFT_BLACK, TFT_WHITE);
-  char buf[8]; dtostrf(value, 4, 0, buf);
-  tft.drawRightString(buf, 40,119-20, 2);
-
-  // Limit value to emmulate Needle end-stops.
-  if(value < -10) value = -10;
-  if(value > 110) value = 110;
-
-  // Move the Needle util new value reached.
-  while(!(value == old_analog)) {
-    if(old_analog < value) old_analog++;
-    else old_analog--;
-    // Update immediately if delay is 0.
-    if(ms_delay == 0) old_analog = value;
-
-    // Map value to angle.
-    float sdeg = map(old_analog, -10,110, -150,-30);
-
-    // Calcualte tip of Needle coords.
-    float sx = cos(sdeg * 0.0174532925);
-    float sy = sin(sdeg * 0.0174532925);
-
-    // Calculate x_delta of Needle start position.
-    // (Does not start at pivot point)
-    float tx = tan((sdeg + 90) * 0.0174532925);
-
-    // Erase old Needle image.
-    tft.drawLine(120+20*ltx-1,140-20, osx-1,osy, TFT_WHITE);
-    tft.drawLine(120+20*ltx,  140-20, osx,  osy, TFT_WHITE);
-    tft.drawLine(120+20*ltx+1,140-20, osx+1,osy, TFT_WHITE);
-
-    // Re-plot text under Needle.
-    tft.setTextColor(TFT_BLACK);
-    tft.drawCenterString("%RH", 120,70, 4); // Comment out if font 4
-
-    // Store new Needle end-coords for next erase.
-    ltx = tx;
-    osx = sx * 98 + 120;
-    osy = sy * 98 + 140;
-
-    // Draw the Needle in the new postion, The Magenta makes the
-    // needle a bit bolder. Draw 3 lines to thicken needle.
-    tft.drawLine(120+20*ltx-1,140-20, osx-1,osy, TFT_RED);
-    tft.drawLine(120+20*ltx,  140-20, osx,  osy, TFT_MAGENTA);
-    tft.drawLine(120+20*ltx+1,140-20, osx+1,osy, TFT_RED);
-
-    // Slow Needle down slightly as it approaches the new postion.
-    if(abs(old_analog - value) < 10) ms_delay += ms_delay/5;
-    delay(ms_delay);            // Wait before next update
-  }
-}
-
-// -----------------------------------------------------------------
-//  Draw a Linear Meter on the screen
-// -----------------------------------------------------------------
-
-void plotLinear(char *label, int x, int y) {
-  int w=36;
-  tft.drawRect(x,y, w,155, TFT_GREY);
-  tft.fillRect(x+2,y+19, w-3,155-38, TFT_WHITE);
-  tft.setTextColor(TFT_CYAN, TFT_BLACK);
-  tft.drawCenterString(label, x+w/2,y+2, 2);
-
-  for(int i=0; i < 110; i+=10) {
-    tft.drawFastHLine(x+20,y+27+i, 6, TFT_BLACK);
-  }
-  for(int i=0; i < 110; i+=50) {
-    tft.drawFastHLine(x+20,y+27+i, 9, TFT_BLACK);
-  }
-
-  tft.fillTriangle(x+3,y+127, x+3+16,y+127, x+3,y+127-5, TFT_RED);
-  tft.fillTriangle(x+3,y+127, x+3+16,y+127, x+3,y+127+5, TFT_RED);
-
-  tft.drawCenterString("---", x+w/2,y+155-18, 2);
-}
-
-// -----------------------------------------------------------------
-//  Adjust 6 Linear Meter pointer positions.
-// -----------------------------------------------------------------
-
-void plotPointer(void) {
-  int  dy = 187;
-  byte pw =  16;
-
-  tft.setTextColor(TFT_GREEN, TFT_BLACK);
-  // Move the 6 pointers 1 pixel towards new value...
-  for(int i=0; i < 6; i++) {
-    char buf[8]; dtostrf(value[i], 4, 0, buf);
-    tft.drawRightString(buf, i*40+36-5, 187-27+155-18, 2);
-
-    int dx = 3 + 40 * i;
-    if(value[i] <   0) value[i]=0;
-    // Limit value to emulate Needle end stops.
-    if(value[i] > 100) value[i]=100;
-
-    while(!(value[i] == old_value[i])) {
-      dy = 187 + 100 - old_value[i];
-      if(old_value[i] > value[i]) {
-        tft.drawLine(dx,dy-5, dx+pw,dy, TFT_WHITE);
-        old_value[i]--;
-        tft.drawLine(dx,dy+6, dx+pw,dy+1, TFT_RED);
-      } else {
-        tft.drawLine(dx,dy+5, dx+pw,dy, TFT_WHITE);
-        old_value[i]++;
-        tft.drawLine(dx,dy-6, dx+pw,dy-1, TFT_RED);
-      }
-    }
-  }
 }
 
 ====================================================================
