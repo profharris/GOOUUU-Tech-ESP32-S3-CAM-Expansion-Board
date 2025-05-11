@@ -138,7 +138,9 @@ designs have the same pins... this allows for a single 40-pin double
 row breakout header along the left side of the expansion board. The
 pinout of this breakout header, mirror-image matches the 40-pin
 “Yellow” headers, and all of the pins are well labled.
+</code></pre>
 
+<pre><code>
 ————————————————————————————————————————————————————————————————————
 Following is my diagram, illustrating the 2-way “ESP32-S3-WROOM-1”
 Development Board 40-pin “Yellow” and 42-pin “Black” header sockets.
@@ -158,6 +160,7 @@ Development Board 40-pin “Yellow” and 42-pin “Black” header sockets.
 
  8. Pins marked » or « are pins with position mismatches between the
     Yellow P1 & P2 header-pin sockets and the Black P3 & P3 sockets.
+ ————————————————————————————————————————————————————————————————————
 
        |GOOUUU ESP32-S3-CAM| or: “ESP32-S3-WROOM” (CAM Module)
        |   40-pin headers  |     “FREEVOVE ESP32-S3-WROOM”
@@ -196,6 +199,9 @@ Development Board 40-pin “Yellow” and 42-pin “Black” header sockets.
        |'—Black            |'—Black
        '—Yellow            '—Yellow
 
+</code></pre>
+
+<pre><code>
 ————————————————————————————————————————————————————————————————————
 GOOUUU Tech ESP32-S3-CAM Expansion Board
     MISC Pin connections/configurations:
@@ -216,6 +222,9 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
  •  [RST] Button: EN/RESET
  •  [KEY] Button: GPIO0/BOOT
 
+</code></pre>
+
+<pre><code>
 ————————————————————————————————————————————————————————————————————
 GOOUUU Tech ESP32-S3-CAM Expansion Board
     14-Pin SPI 2.8″ 240×320 TFT LCD header:
@@ -239,11 +248,10 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
 13. GND             GND            Power System Ground
 14. VCC             5V0            Power 5.0V
 
-————————————————————————————————————————————————————————————————————
 </code></pre>
-
 ====================================================================
 <pre><code>
+————————————————————————————————————————————————————————————————————
 KEY FEATURES OF TFT LCD 2.8″ 240×320 DISPLAY WITH TOUCHSCREEN:
 
     o 2.8″ TFT LCD with 240×320 resolution
