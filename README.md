@@ -93,6 +93,7 @@ QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO   |   | '-CS  
             ————————————————————————————————————————————————————————
 </code></pre>
 
+# 42-Pin “Black” header sockets
 <pre><code>
             The 42-Pin “Black” header sockets are for an ALT version
             of the “ESP-S3-DevKitC-1”. This ALT version has 42-pins
@@ -120,6 +121,7 @@ WARNING: I want to pointout this lower-Right ‘5VIN’ pin specifically
          to short out and burn-up your Dev board!
 </code></pre>
 
+# Very clever 2-way “Yellow” and “Black” header sockets
 <pre><code>
 ————————————————————————————————————————————————————————————————————
 The design engineers for the “GOOUUU Tech ESP32-S3-CAM Expansion
@@ -140,6 +142,7 @@ pinout of this breakout header, mirror-image matches the 40-pin
 “Yellow” headers, and all of the pins are well labled.
 </code></pre>
 
+# 40-pin “Yellow” and 42-pin “Black” header sockets
 <pre><code>
 ————————————————————————————————————————————————————————————————————
 Following is my diagram, illustrating the 2-way “ESP32-S3-WROOM-1”
@@ -201,6 +204,7 @@ Development Board 40-pin “Yellow” and 42-pin “Black” header sockets.
 
 </code></pre>
 
+# MISC Pin connections/configurations:
 <pre><code>
 ————————————————————————————————————————————————————————————————————
 GOOUUU Tech ESP32-S3-CAM Expansion Board
@@ -224,6 +228,7 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
 
 </code></pre>
 
+# 14-Pin SPI 2.8″ 240×320 TFT LCD header:
 <pre><code>
 ————————————————————————————————————————————————————————————————————
 GOOUUU Tech ESP32-S3-CAM Expansion Board
@@ -250,6 +255,8 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
 
 </code></pre>
 ====================================================================
+
+# TFT LCD 2.8″ 240×320 DISPLAY WITH TOUCHSCREEN
 <pre><code>
 ————————————————————————————————————————————————————————————————————
 KEY FEATURES OF TFT LCD 2.8″ 240×320 DISPLAY WITH TOUCHSCREEN:
@@ -374,6 +381,7 @@ ILI9341 Display	 XPT2046 Touchscreen
 
 
 ====================================================================
+# findSPIpins.ino
 <pre><code>
 // findSPIpins.ino
 // Find the default (Hardware) SPI pins for your board.
