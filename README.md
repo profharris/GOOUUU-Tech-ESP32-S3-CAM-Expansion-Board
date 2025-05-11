@@ -90,7 +90,7 @@ QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO   |   | '-CS  
             extra pin at the top and bottom of each header, an extra
             3V3 pin in the upper-Left, and an extra GND pin on the
             other 3 corners.
-            --------------------------------------------------------
+            ————————————————————————————————————————————————————————
 </code></pre>
 
 <pre><code>
@@ -121,7 +121,7 @@ WARNING: I want to pointout this lower-Right ‘5VIN’ pin specifically
 </code></pre>
 
 <pre><code>
-
+————————————————————————————————————————————————————————————————————
 The design engineers for the “GOOUUU Tech ESP32-S3-CAM Expansion
 Board” have done something very clever! They have cross-wired, where
 needed, the pins in the 40-pin “Yellow” header to the 42-pin “Black”
@@ -216,7 +216,7 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
  •  [RST] Button: EN/RESET
  •  [KEY] Button: GPIO0/BOOT
 
---------------------------------------------------------------------
+————————————————————————————————————————————————————————————————————
 GOOUUU Tech ESP32-S3-CAM Expansion Board
     14-Pin SPI 2.8″ 240×320 TFT LCD header:
 
@@ -242,6 +242,7 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
 ————————————————————————————————————————————————————————————————————
 </code></pre>
 
+====================================================================
 <pre><code>
 KEY FEATURES OF TFT LCD 2.8″ 240×320 DISPLAY WITH TOUCHSCREEN:
 
