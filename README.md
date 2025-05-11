@@ -220,14 +220,14 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
     with Touch:     Board:         Description:
 
  1. T-IRQ           × N/C          Touch Interrupt Output-Active LOW
- 2. T-DO <MISO>     GPIO41         Touch Data Out   (SPI MISO)
- 3. T-DIN <MOSI>    GPIO2          Touch Data In    (SPI MOSI)
+ 2. T-DO  (MISO)    GPIO41         Touch Data Out   (SPI MISO)
+ 3. T-DIN (MOSI)    GPIO2          Touch Data In    (SPI MOSI)
  4. T-CS            GPIO1          Touch Chip Select-Active LOW
- 5. T-CLK <SCK>     GPIO42         Touch Clock      (SPI SCK)
- 6. SDO <MISO>      GND            GND-Not Used     (SPI MISO)
+ 5. T-CLK (SCK)     GPIO42         Touch Clock      (SPI SCK)
+ 6. SDO   (MISO)    GND            GND-Not Used     (SPI MISO)
  7. LED             3V3            BackLight Enable-Active HIGH
  8. SCK             GPIO0          Display Clock    (SPI SCK)
- 9. SDI <MOSI>      GPIO45         Display Data In  (SPI MOSI)
+ 9. SDI   (MOSI)    GPIO45         Display Data In  (SPI MOSI)
 10. DC              GPIO47         Display Data/Command-HIGH = Data
 11. RESET           GPIO21         Display Reset Input-Active LOW
 12. CS              GPIO14         Display Chip Select-Active LOW
