@@ -1,5 +1,6 @@
 # GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board
 
+'''
 (WORK IN PROGRESS) Prof. Michael P. Harris
 .____________________________________________________________________________________.
 | Ø    ___  ¬R4        1 2 3 4      ¬R6   .-----------.    U2                      Ø |
@@ -53,7 +54,8 @@ QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO   |   | '-CS  
             (CAM Module), a clone of the “FREEVOVE ESP32-S3-WROOM”;
             both also work perfectly in the “Yellow” headers as all
             three of these DVP camera ready Dev boards have the same
-            pinouts and same SoC main chip the “ESP32-S3-WROOM-1”.
+            pinouts and same SoC main chip the “ESP32-S3-WROOM-1.
+'''
 
             A fourth development board using the “ESP32-S3-WROOM-1”
             SoC, the “YD-ESP32-S3” also called the “ESP32-S3-WROOM-1
