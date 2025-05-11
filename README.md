@@ -91,7 +91,9 @@ QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO   |   | '-CS  
             3V3 pin in the upper-Left, and an extra GND pin on the
             other 3 corners.
             --------------------------------------------------------
+</code></pre>
 
+<pre><code>
             The 42-Pin “Black” header sockets are for an ALT version
             of the “ESP-S3-DevKitC-1”. This ALT version has 42-pins
             instead of the original 44-pins and is 1 pin space wider
@@ -116,6 +118,9 @@ WARNING: I want to pointout this lower-Right ‘5VIN’ pin specifically
          GND (power ground) pin in the lower-Right. Plugging in a 5V
          pin into a GND header socket, or vice-versa, is a quick way
          to short out and burn-up your Dev board!
+</code></pre>
+
+<pre><code>
 
 The design engineers for the “GOOUUU Tech ESP32-S3-CAM Expansion
 Board” have done something very clever! They have cross-wired, where
