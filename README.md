@@ -1,6 +1,6 @@
 # GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board
 
-'''
+<pre><code>
 (WORK IN PROGRESS) Prof. Michael P. Harris
 .____________________________________________________________________________________.
 | Ø    ___  ¬R4        1 2 3 4      ¬R6   .-----------.    U2                      Ø |
@@ -55,8 +55,9 @@ QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO   |   | '-CS  
             both also work perfectly in the “Yellow” headers as all
             three of these DVP camera ready Dev boards have the same
             pinouts and same SoC main chip the “ESP32-S3-WROOM-1.
-'''
+</code></pre>
 
+<pre><code>
             A fourth development board using the “ESP32-S3-WROOM-1”
             SoC, the “YD-ESP32-S3” also called the “ESP32-S3-WROOM-1
             Dev”, --is a 44-pin board, but the top and bottom rows
@@ -234,6 +235,9 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
 14. VCC             5V0            Power 5.0V
 
 ————————————————————————————————————————————————————————————————————
+</code></pre>
+
+<pre><code>
 KEY FEATURES OF TFT LCD 2.8″ 240×320 DISPLAY WITH TOUCHSCREEN:
 
     o 2.8″ TFT LCD with 240×320 resolution
@@ -352,8 +356,11 @@ ILI9341 Display	 XPT2046 Touchscreen
     3	            1
 
 ————————————————————————————————————————————————————————————————————
+</code></pre>
+
 
 ====================================================================
+<pre><code>
 // findSPIpins.ino
 // Find the default (Hardware) SPI pins for your board.
 // Make sure you have the right board selected in: Tools > Boards...
@@ -376,5 +383,5 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 }
-
+</code></pre>
 ====================================================================
