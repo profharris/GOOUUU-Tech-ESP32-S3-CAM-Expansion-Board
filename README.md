@@ -318,7 +318,7 @@ possible to get the fastest screen updates.
         Display	Technology:	TFT LCD
                 Resolution:	240×320 pixels
                      Color:	RGB 65K color (16-bit 5:6:5)
-             Viewing Angle: ±60°
+             Viewing Angle: 60°
                 Interfaces:	SPI (Display and Touch)
          Operating Ratings:	DC Power Input	3.6 – 5.5V
          Operating Current:	<60mA (typical)
