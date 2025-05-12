@@ -1,6 +1,6 @@
 # GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board
 
-_WORK_ _IN_ _PROGRESS_    Prof. Michael P. Harris                        _05/11/2025_
+***WORK IN PROGRESS***    Prof. Michael P. Harris                   *05/11/2025*
 <pre><code>
 .____________________________________________________________________________________.
 | Ø   .………. ¬R4       S1·2·3·4      ¬R6   .-----------.    U2 P1·2·3·4             Ø |
@@ -47,7 +47,6 @@ _WORK_ _IN_ _PROGRESS_    Prof. Michael P. Harris                        _05/11/
 
 ## TWO sets of header-pin sockets (Yellow and Black)
 <pre><code>
-
 QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO
 ——————————— sets of header-pin sockets (Yellow and Black) to plug
             in your ESP32-S3-WROOM-1 Development boards.
@@ -115,15 +114,16 @@ QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO
             start with (extra) GND, GPIO1, GPIO2, TX0, RX0... and
             the lower-Left will end with GPIO11, GPIO12, 3V3. --AND
             most importantly, the lower-Right pin is ‘5VIN’.
-<pre><code>
-WARNING: I want to pointout this lower-Right ‘5VIN’ pin specifically
-———————— because all the other ESP32-S3 Dev boards mentioned, have a
-         GND (power ground) pin in the lower-Right. Plugging in a 5V
-         pin into a GND header socket, or vice-versa, is a quick way
-         to short out and burn-up your Dev board!
-</code></pre>
 
-————————————————————————————————————————————————————————————————————
+:warning: **Warning:**
+
+> [!WARNING]
+> I want to pointout this lower-Right ‘5VIN’ pin specifically because 
+> all the other ESP32-S3 Dev boards mentioned, have a `GND` (power 
+> ground) pin in the lower-Right.&nbsp; Plugging in a `5V` pin into 
+> a `GND` header socket, or vice-versa, is a quick way to short out 
+> and burn-up your Dev board!
+
 # Very clever 2-way “Yellow” and “Black” header sockets
 
 The design engineers for the “GOOUUU Tech ESP32-S3-CAM Expansion
@@ -163,7 +163,7 @@ Development Board `40-pin “Yellow”` & `42-pin “Black”` header sockets.
 
  8. Pins marked » or « are pins with position mismatches between the
     Yellow P1 & P2 header-pin sockets and the Black P3 & P3 sockets.
-    ————————————————————————————————————————————————————————————————
+
 <pre><code>
        ¦GOOUUU ESP32-S3-CAM¦ or: “ESP32-S3-WROOM” (CAM Module)
        ¦  `40-pin headers  ¦     “FREEVOVE ESP32-S3-WROOM”
@@ -221,8 +221,8 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
  +        LED D1: GPIO1
  +        LED D2: GPIO2
  +        LED D3: GPIO3
- + `[RST] Button: EN/RESET
- + `[KEY] Button: GPIO0/BOOT
+ +  ‹RST] Button: EN/RESET
+ +  ‹KEY] Button: GPIO0/BOOT
 
 # 14-Pin SPI 2.8″ 240×320 TFT LCD header:
 <pre><code>
@@ -302,7 +302,7 @@ SPI Interface:
 ——————————————
 
 This display incorporates a SPI interface which provides for fast
-display updates. It is a ´4-wire interface so it includes the CS
+display updates. It is a 4-wire interface so it includes the CS
 (Chip Select) pin.
 
 The Touch Screen also uses the SPI interface and CAN hook up to the
@@ -370,7 +370,7 @@ ILI9341 Display	 XPT2046 Touchscreen
     3	            1
 ```
 
-`===================================================================
+<hr>
 # findSPIpins.ino
 <pre><code>
 // findSPIpins.ino
@@ -396,4 +396,4 @@ void loop() {
   // put your main code here, to run repeatedly:
 }
 </code></pre>
-`===================================================================
+<hr>
