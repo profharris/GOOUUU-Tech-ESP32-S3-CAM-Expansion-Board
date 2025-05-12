@@ -53,21 +53,17 @@
 </code></pre>
 
 ## 40-Pin “Yellow” header sockets (primary)
-The `40-Pin “Yellow”` header sockets, are designed for the GOOUUU “ESP32-S3-CAM” board.<br/>
-The “ESP32-S3-WROOM” (CAM Module), a clone of the “FREEVOVE ESP32-S3-WROOM”;&nbsp; both<br/> 
-also work perfectly in the “Yellow” headers as all three of these DVP camera ready Dev<br/> 
-boards have the same pinouts and same SoC main chip the “ESP32-S3-WROOM-1.
+The `40-Pin “Yellow”` header sockets, are designed for the **GOOUUU “ESP32-S3-CAM”** board.<br/>
+The **“ESP32-S3-WROOM” (CAM Module)**, a clone of the **“FREEVOVE ESP32-S3-WROOM”**;&nbsp; both<br/> 
+also work perfectly in the “Yellow” headers as all three of these *DVP camera ready* Dev boards<br/> 
+have the same pinouts and same SoC main chip the **“ESP32-S3-WROOM-1”**.
 
-A fourth development board using the “ESP32-S3-WROOM-1”
-SoC, the “YD-ESP32-S3” also called the “ESP32-S3-WROOM-1
-Dev”, --is a 44-pin board, but the top and bottom rows
-of pins are just an extra 3V3 pin and three extra ground
-pins. -This board also works in the “Yellow” header pin
-sockets... just let the extra row of top and bottom pins
-hang over/extend past the headers alowing a 44-pin board
-to plug into a set of 40-pin sockets.  This development
-board does NOT have a DVP camera interface like our
-first three boards.
+A fourth development board using the **“ESP32-S3-WROOM-1”** SoC,&nbsp; the **“YD-ESP32-S3”** also called<br/> 
+the **“ESP32-S3-WROOM-1 Dev”**, --is a 44-pin board, but the top and bottom rows of pins are just an extra<br/> 
+3V3 pin and three extra ground pins.&nbsp; -This board also works in the “Yellow” header pin sockets...<br/> 
+just let the extra row of top and bottom pins hang over/extend past the headers alowing a 44-pin board to<br/> 
+plug into a set of 40-pin sockets.&nbsp; This development board does NOT have a DVP camera interface like<br/> 
+our first three boards.
 
 All 4 of these “ESP32-S3-WROOM-1” Dev boards are pinout
 backward compatible, -not counting the extra top/bottom
