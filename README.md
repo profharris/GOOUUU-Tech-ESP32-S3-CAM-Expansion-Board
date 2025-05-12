@@ -1,7 +1,6 @@
 # GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board
 
-
-_WORK _IN _PROGRESS_ Prof. Michael P. Harris                        _05/11/2025_
+_WORK_ _IN_ _PROGRESS_    Prof. Michael P. Harris                        _05/11/2025_
 <pre><code>
 .____________________________________________________________________________________.
 | Ø   .………. ¬R4       S1·2·3·4      ¬R6   .-----------.    U2 P1·2·3·4             Ø |
@@ -47,7 +46,7 @@ _WORK _IN _PROGRESS_ Prof. Michael P. Harris                        _05/11/2025_
 </code></pre>
 
 ——————————————————————————————————————————————————————————————
-#TWO sets of header-pin sockets (Yellow and Black)
+## TWO sets of header-pin sockets (Yellow and Black)
 <pre><code>
 
 QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO
@@ -298,7 +297,7 @@ data lines to prevent possible damage.
 </code></pre>
 
 ————————————————————————————————————————————————————————————————————
-##2.8″ TFT Display Technical Specifications:
+## 2.8″ TFT Display Technical Specifications:
 <pre><code>
 
 Module Power:
@@ -356,7 +355,7 @@ possible to get the fastest screen updates.
 </code></pre>
 
 ————————————————————————————————————————————————————————————————————
-##LCD 1x14 Header Specifications:
+## LCD 1x14 Header Specifications:
 <pre><code>
 
 LCD 1x14 Header Specifications:
@@ -384,7 +383,7 @@ LCD 1x14 Header Specifications:
 </code></pre>
 
 ————————————————————————————————————————————————————————————————————
-##Display Orientation & Touch Screen Orientation:
+## Display Orientation & Touch Screen Orientation:
 <pre><code>
 
 Display Orientation:
