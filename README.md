@@ -46,9 +46,9 @@
 </code></pre>
 
 ## TWO sets of header-pin sockets (Yellow and Black)
-<pre><code> &nbsp; &nbsp; nbsp; **QUICK NOTE:**&nbsp; This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO
- &nbsp; &nbsp; nbsp; ——————————— sets of header-pin sockets (Yellow and Black) to plug
- &nbsp; &nbsp; nbsp; in your **“ESP32-S3-WROOM-1”** Development boards.
+<pre><code> &nbsp; &nbsp; &nbsp; **QUICK NOTE:**&nbsp; This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO
+ &nbsp; &nbsp; &nbsp; ——————————— sets of header-pin sockets (Yellow and Black) to plug
+ &nbsp; &nbsp; &nbsp; in your **“ESP32-S3-WROOM-1”** Development boards.
 </code></pre>
 
 ## 40-Pin “Yellow” header sockets (primary)
