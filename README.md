@@ -1,7 +1,8 @@
 # GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board
 
-<pre><code>
+
 _WORK _IN _PROGRESS_ Prof. Michael P. Harris                        _05/11/2025_
+<pre><code>
 .____________________________________________________________________________________.
 | Ø   .………. ¬R4       S1·2·3·4      ¬R6   .-----------.    U2 P1·2·3·4             Ø |
 |     ¦W Ø¦        GND • • • •           —ô 5V0 sensor¦    Ø¨¨¦•¦ô¦o¦o¦¨¨Ø    I²C    |
@@ -19,12 +20,12 @@ _WORK _IN _PROGRESS_ Prof. Michael P. Harris                        _05/11/2025_
 | G2 o © G5     ´_G5  |©:¦ ESP32S3-N16R8 ¦:o| G2       T_DIN  ¦_3. T_DIN       G2    |
 |G42 o © G6     ´_G6  |©:¦         .………….¦:o| G42      T_CLK  ¦_4. T_CS        G1    |
 |G41 o © G7     ´_G7  |©:¦ ŒÆ F©   ¦QRCD¦¦:o| G41      T_DO   ¦_5. T_CLK       G42   |
-|G40 õ © G15    ´_G15 |©:| ° N16R8 '…………'¦:õ| G40~ SD_DATA    ¦_6. SDO/MISO   G46/GND|
+|G40 õ © G15    ´_G15 |©:¦ ° N16R8 '…………'¦:õ| G40~ SD_DATA    ¦_6. SDO/MISO   G46/GND|
 |G39 õ © G16    ´_G16 |©:'———————————————':õ| G39~ SD_CLK     ¦_7. LED/BL      3V3   |
 |G38 õ © G17    ´_G17 |© .………………………………………. õ| G38~ SD_CMD     ¦_8. SCK        G3/G0  |
 |G37 ð © G18    ´_G18 |© ¦ ::::::::::::: ¦ ð| G37÷ PSRAM      ¦_9. SDI/MOSI    G45   |
-|G36 ð © G8     ´_G8  |© ¦    Camera     ¦ ð¡ G36÷ PSRAM      ¦10. DC/RS       G47   |
-|G35 ð o G3  SCK  G3  |o ¯¯:::::::::::::¯¯ ð¡ G35÷ PSRAM      ¦11. RESET       G21   |
+|G36 ð © G8     ´_G8  |© ¦    Camera     ¦ ð| G36÷ PSRAM      ¦10. DC/RS       G47   |
+|G35 ð o G3  SCK  G3  |o ¯¯:::::::::::::¯¯ ð| G35÷ PSRAM      ¦11. RESET       G21   |
 | G0 o o G46 MISO G46 |o      GOOUUU       o| G0   BOOT ?SCK  ¦12. CS          G14   |
 |G45 o © G9     ´_G9  |©   ESP32-S3-CAM    o| G45       MOSI  ¦13. GND         GND   |
 |G48 ¤ © G10    ´_G10 |©   ¬ ¬     ¤ ¤ ‹¤› ¤| G48  RGB        ¦14. VCC         5V0   |
@@ -45,7 +46,7 @@ _WORK _IN _PROGRESS_ Prof. Michael P. Harris                        _05/11/2025_
                                                       0 D 4 1 7 5   3 6 2     1
 </code></pre>
 
-————————————————————————————————————————————————————————————————————
+——————————————————————————————————————————————————————————————
 #TWO sets of header-pin sockets (Yellow and Black)
 <pre><code>
 
