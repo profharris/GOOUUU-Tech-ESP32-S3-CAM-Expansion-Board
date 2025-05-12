@@ -46,9 +46,9 @@
 </code></pre>
 
 ## TWO sets of header-pin sockets (Yellow and Black)
-<pre><code> &nbsp; &nbsp; &nbsp; **QUICK NOTE:**&nbsp; This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO
- &nbsp; &nbsp; &nbsp; ——————————— sets of header-pin sockets (Yellow and Black) to plug
- &nbsp; &nbsp; &nbsp; in your **“ESP32-S3-WROOM-1”** Development boards.
+<pre><code> &nbsp; &nbsp; &nbsp; QUICK NOTE:&nbsp; This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO<br/>
+ &nbsp; &nbsp; &nbsp; ———————————&nbsp; sets of header-pin sockets (Yellow and Black) to plug in<br/>
+ &nbsp; &nbsp; &nbsp; your **“ESP32-S3-WROOM-1”** Development boards.
 </code></pre>
 
 ## 40-Pin “Yellow” header sockets (primary)
@@ -60,12 +60,13 @@ have the same pinouts, and same SoC main chip, the **“ESP32-S3-WROOM-1”**.
 A fourth development board using the **“ESP32-S3-WROOM-1”** SoC,&nbsp; the **“YD-ESP32-S3”**, also called<br/>
 the **“ESP32-S3-WROOM-1 Dev”**, --is a 44-pin board, but the top and bottom rows of pins are just an<br/>
 extra 3V3 pin and three extra ground pins.&nbsp; -This board also works in the “Yellow” header pin sockets...<br/>
-Just let the extra row of top & bottom pins hang over/extend past the headers alowing a 44-pin board<br/>
+Just let the extra row of top & bottom pins hang over/extend past the headers, allowing a 44-pin board<br/>
 to plug into a set of 40-pin sockets.&nbsp; This development board does NOT have a &nbsp;*DVP camera interface*<br/>
 like our first three boards.
 
-All four of these **“ESP32-S3-WROOM-1”** Dev boards are pinout *backward compatible*, -not counting the<br/>
-extra top & bottom pins,&nbsp; with the original **Espressif** 44-pin **“ESP-S3-DevKitC-1”**.<br/>
+All four of these **“ESP32-S3-WROOM-1”** Dev boards are pinout *backward compatible*, -not counting<br/>
+the extra top & bottom pins,&nbsp; with the original **Espressif**&nbsp; 44-pin **“ESP-S3-DevKitC-1”**.
+
 > **NOTE:**&nbsp; **DevKitC-1**,&nbsp; NOT DevKitM-1 *(M1 is NOT pin compatible)*.
 
 *Unfortunately*, this original **“ESP-S3-DevKitC-1”** will not plug into the “Yellow” headers, as this original<br/>
@@ -161,32 +162,32 @@ Development Board `40-pin “Yellow”` & `42-pin “Black”` header sockets.
 
        .—P1 (Yellow)       .—P2 (Yellow 40-pin header)
        ¦.—P3 (Black)       ¦.—P4 (Black 42-pin header)
-       ¦¦      ¦¦
-       ×• GND  ×• GND  NOTE¹: The DVP Camera
-  3V3  öö 3V3 same    »TXD oo  G1«        interface uses
-   EN  oo  EN same    »RXD oo  G2«        all the Yellow
- ´_G4  ©©  G4 same    »G1  oo TX0«        GPIO Left-side
- ´_G5  ©©  G5 same    »G2  oo RX0«        _pins except:
- ´_G6  ©©  G6 --same-- G42 oo G42         GPIO3, GPIO46,
- ´_G7  ©©  G7 --same-- G41 oo G41         and GPIO14.
- ´_G15 ©© G15 --same-- G40 õõ G40~  SD_Card GPIO40
- ´_G16 ©© G16 --same-- G39 õõ G39~    "     GPIO39
- ´_G17 ©© G17 --same-- G38 õõ G38~    "     GPIO38
- ´_G18 ©© G18 --same-- G37 ðð G37÷  PSRAM   GPIO37
- ´_G8  ©©  G8 --same-- G36 ðð G36÷    "     GPIO36
-  »G3  oø G19« D+ same G35 ðð G35÷    "     GPIO35
-  »G46 oø G20« D— same G0  oo  G0
-»´_G9  ©o  G3«    same G45 oo G45  NOTE²: Pin GPIO46 is
-»´_G10 ©o G46«    same G48 ¤¤ G48         INPUT only.
-»´_G11 ©©  G9«    same G47 oo G47         No pullups.
-»´_G12 ©© G10«    same G21 oo G21
-»´_G12 ©© G10«    same G21 oo G21
-»´_G13 ©© G11«     D— »G20 øo G14«
-  »G14 o© G12«     D+ »G19 ø© ´_G13«
-  »5V0 ôö 3V3«        »GND •ô 5VIN« («—— Be careful!)
-       ¦¦      ¦¦
-       ¦'—Black¦'—Black
-       '—Yellow'—Yellow
+       ¦¦                  ¦¦
+       **×•** GND              ×• GND            NOTE¹: The DVP Camera
+  3V3  **öö** 3V3 same    »TXD oo  G1«                  interface uses
+   EN  **oo**  EN same    »RXD oo  G2«                  all the Yellow
+ ´_G4  **©©**  G4 same    »G1  oo TX0«                  GPIO Left-side
+ ´_G5  **©©**  G5 same    »G2  oo RX0«                  _pins except:
+ ´_G6  **©©**  G6 --same-- G42 oo G42                   `GPIO3`, `GPIO46`,
+ ´_G7  **©©**  G7 --same-- G41 oo G41                   and `GPIO14`.
+ ´_G15 **©©** G15 --same-- G40 õõ G40~  SD_Card `GPIO40`
+ ´_G16 **©©** G16 --same-- G39 õõ G39~    "     `GPIO39`
+ ´_G17 **©©** G17 --same-- G38 õõ G38~    "     `GPIO38`
+ ´_G18 **©©** G18 --same-- G37 ðð G37÷  PSRAM   `GPIO37`
+ ´_G8  **©©**  G8 --same-- G36 ðð G36÷    "     `GPIO36`
+  »G3  **oø** G19« D+ same G35 ðð G35÷    "     `GPIO35`
+  »G46 **oø** G20« D— same G0  oo  G0
+»´_G9  **©o**  G3«    same G45 oo G45            NOTE²: Pin `GPIO46` is
+»´_G10 **©o** G46«    same G48 ¤¤ G48                   INPUT only.
+»´_G11 **©©**  G9«    same G47 oo G47                   No pullups.
+»´_G12 **©©** G10«    same G21 oo G21
+»´_G12 **©©** G10«    same G21 oo G21
+»´_G13 **©©** G11«     D— »G20 øo G14«
+  »G14 **o©** G12«     D+ »G19 ø© ´_G13«
+  »5V0 **ôö** 3V3«        »GND •ô 5VIN« («— Be careful!)
+       ¦¦                  ¦¦
+       ¦'—Black            ¦'—Black
+       '—Yellow            '—Yellow
 </code></pre>
 
 # MISC Pin connections/configurations:
