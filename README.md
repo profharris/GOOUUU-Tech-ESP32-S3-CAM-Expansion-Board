@@ -45,14 +45,12 @@ _WORK_ _IN_ _PROGRESS_    Prof. Michael P. Harris                        _05/11/
                                                       0 D 4 1 7 5   3 6 2     1
 </code></pre>
 
-——————————————————————————————————————————————————————————————
 ## TWO sets of header-pin sockets (Yellow and Black)
 <pre><code>
 
 QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO
 ——————————— sets of header-pin sockets (Yellow and Black) to plug
             in your ESP32-S3-WROOM-1 Development boards.
-
 </code></pre>
 
 ## 40-Pin “Yellow” header sockets (primary)
@@ -63,7 +61,6 @@ QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO
             three of these DVP camera ready Dev boards have the same
             pinouts and same SoC main chip the “ESP32-S3-WROOM-1.
 
-<pre><code>
             A fourth development board using the “ESP32-S3-WROOM-1”
             SoC, the “YD-ESP32-S3” also called the “ESP32-S3-WROOM-1
             Dev”, --is a 44-pin board, but the top and bottom rows
@@ -97,11 +94,9 @@ QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO
             3V3 pin in the upper-Left, and an extra GND pin on the
             other 3 corners.
             ————————————————————————————————————————————————————————
-</code></pre>
 
-————————————————————————————————————————————————————————————————————
 ## 42-Pin “Black” header sockets
-<pre><code>
+
             The 42-Pin “Black” header sockets are for an ALT version
             of the “ESP-S3-DevKitC-1”. This ALT version has 42-pins
             instead of the original 44-pins and is 1 pin space wider
@@ -120,8 +115,8 @@ QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO
             start with (extra) GND, GPIO1, GPIO2, TX0, RX0... and
             the lower-Left will end with GPIO11, GPIO12, 3V3. --AND
             most importantly, the lower-Right pin is ‘5VIN’.
-
-**WARNING:** I want to pointout this lower-Right ‘5VIN’ pin specifically
+<pre><code>
+WARNING: I want to pointout this lower-Right ‘5VIN’ pin specifically
 ———————— because all the other ESP32-S3 Dev boards mentioned, have a
          GND (power ground) pin in the lower-Right. Plugging in a 5V
          pin into a GND header socket, or vice-versa, is a quick way
@@ -130,7 +125,6 @@ QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO
 
 ————————————————————————————————————————————————————————————————————
 # Very clever 2-way “Yellow” and “Black” header sockets
-<pre><code>
 
 The design engineers for the “GOOUUU Tech ESP32-S3-CAM Expansion
 Board” have done something very clever! They have cross-wired, where
@@ -148,11 +142,8 @@ designs have the same pins... this allows for a single `40-pin` double
 row breakout header along the left side of the expansion board. The
 pinout of this breakout header, mirror-image matches the `40-pin`
 `“Yellow” headers`, and all of the pins are well labled.
-</code></pre>
 
-————————————————————————————————————————————————————————————————————
 # 40-pin “Yellow” & 42-pin “Black” header sockets diagram
-<pre><code>
 
 Following is my diagram, illustrating the 2-way “ESP32-S3-WROOM-1”
 Development Board `40-pin “Yellow”` & `42-pin “Black”` header sockets.
@@ -173,7 +164,7 @@ Development Board `40-pin “Yellow”` & `42-pin “Black”` header sockets.
  8. Pins marked » or « are pins with position mismatches between the
     Yellow P1 & P2 header-pin sockets and the Black P3 & P3 sockets.
     ————————————————————————————————————————————————————————————————
-
+<pre><code>
        ¦GOOUUU ESP32-S3-CAM¦ or: “ESP32-S3-WROOM” (CAM Module)
        ¦  `40-pin headers  ¦     “FREEVOVE ESP32-S3-WROOM”
        V   Yellow P1 & P2  V     “YD-ESP32-S3”/ESP32-S3-WROOM-1 Dev
@@ -210,12 +201,9 @@ Development Board `40-pin “Yellow”` & `42-pin “Black”` header sockets.
        ¦¦                  ¦¦
        ¦'—Black            ¦'—Black
        '—Yellow            '—Yellow
-
 </code></pre>
 
-————————————————————————————————————————————————————————————————————
 # MISC Pin connections/configurations:
-<pre><code>
 
 GOOUUU Tech ESP32-S3-CAM Expansion Board
     MISC Pin connections/configurations:
@@ -236,12 +224,8 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
  + `[RST] Button: EN/RESET
  + `[KEY] Button: GPIO0/BOOT
 
-</code></pre>
-
-————————————————————————————————————————————————————————————————————
 # 14-Pin SPI 2.8″ 240×320 TFT LCD header:
 <pre><code>
-
 GOOUUU Tech ESP32-S3-CAM Expansion Board
     ´14-Pin SPI 2.8″ 240×320 TFT LCD header:
 
@@ -263,12 +247,9 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
 12. CS              GPIO14        Display Chip Select, Active LOW
 13. GND             GND           Power System Ground
 14. VCC             5V0           Power 5.0V
-
 </code></pre>
 
-————————————————————————————————————————————————————————————————————
 # TFT LCD 2.8″ 240×320 DISPLAY WITH TOUCHSCREEN
-<pre><code>
 
 KEY FEATURES OF TFT LCD 2.8″ 240×320 DISPLAY WITH TOUCHSCREEN:
 
@@ -292,11 +273,8 @@ Internally the display operates at 3.3V, so if using with a 5V0
 microcontroller, be sure to include logic level shifters on the
 data lines to prevent possible damage.
 
-</code></pre>
 
-————————————————————————————————————————————————————————————————————
 ## 2.8″ TFT Display Technical Specifications:
-<pre><code>
 
 Module Power:
 —————————————
@@ -332,7 +310,7 @@ same pins as the display, but uses a separate CS to avoid conflict.
 
 For best performance the hardware SPI interface should be used if
 possible to get the fastest screen updates.
-
+```
         Display Controller:	ILITEK ILI9341
           Touch Controller:	XPT	XPT2046
 
@@ -348,14 +326,9 @@ possible to get the fastest screen updates.
          Module Size (PCB):	86×50mm     (3.39″×1.97″)
           Display diagonal:	71.12mm     (2.8″)
              Display (W×H):	57.6×43.2mm (2.27×1.7″)
-
-
-</code></pre>
-
-————————————————————————————————————————————————————————————————————
+```
 ## LCD 1x14 Header Specifications:
-<pre><code>
-
+```
 LCD 1x14 Header Specifications:
 ———————————————————————————————
 
@@ -377,32 +350,25 @@ LCD 1x14 Header Specifications:
            with your MCU.
 14. VCC   –Connect to 3.6V to 5.5V. Connect to your MCU 5V0, unless
             you have made the 3V3 option by soldering the J1 pads.
+```
 
-</code></pre>
-
-————————————————————————————————————————————————————————————————————
 ## Display Orientation & Touch Screen Orientation:
-<pre><code>
 
-Display Orientation:
-————————————————————
+### Display Orientation:
 
 The display can be rotated in all ´4 directions.  Use setRotation(n)
 to rotate the image to match the physical rotation where ‘n’ ranges
 from ´0 to ´3.
 
 You will also need to set the Rotation of the ‘Touch Screen’. The
-numbers DO NOT MATCH, so use one of the following combinations.
-
+numbers **DO NOT MATCH**, so use one of the following combinations.
+```
 ILI9341 Display	 XPT2046 Touchscreen
-    ´0	            ´2
-    ´1	            ´3
-    ´2	            ´0
-    ´3	            ´1
-
-————————————————————————————————————————————————————————————————————
-</code></pre>
-
+    0	            2
+    1	            3
+    2	            0
+    3	            1
+```
 
 `===================================================================
 # findSPIpins.ino
