@@ -56,14 +56,12 @@ QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO
 </code></pre>
 
 ## 40-Pin “Yellow” header sockets (primary)
-<pre><code>
             The `40-Pin “Yellow” header sockets`, are designed for
             the GOOUUU “ESP32-S3-CAM” board. The “ESP32-S3-WROOM”
             (CAM Module), a clone of the “FREEVOVE ESP32-S3-WROOM”;
             both also work perfectly in the “Yellow” headers as all
             three of these DVP camera ready Dev boards have the same
             pinouts and same SoC main chip the “ESP32-S3-WROOM-1.
-</code></pre>
 
 <pre><code>
             A fourth development board using the “ESP32-S3-WROOM-1”
