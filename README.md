@@ -262,7 +262,6 @@ data lines to prevent possible damage.
 ## 2.8″ TFT Display Technical Specifications:
 
 Module Power:
-—————————————
 
 SEE IMAGE:  TFT LCD 2.8″ 240×320 RGB ILI9341 with Touchscreen
 —» J1 Jumper Location
@@ -284,7 +283,6 @@ microcontrollers since these power sources often have limited
 current capability and may overheat.
 
 SPI Interface:
-——————————————
 
 This display incorporates a SPI interface which provides for fast
 display updates. It is a 4-wire interface so it includes the `CS`
@@ -341,12 +339,13 @@ LCD 1x14 Header Specifications:
 
 ### Display Orientation:
 
-The LCD display can be rotated in all ´4 directions.  Use `setRotation(n)`
-to rotate the image to match your desired physical rotation where ‘n’ 
-ranges from 0 to 3.
+The LCD display can be rotated in all 4-directions.  Use `setRotation(n)`
+to rotate<br/>
+the image to match your desired physical rotation where ‘n’ ranges from 0 to 3.
 
-You will also need to set the Rotation of the ‘Touch Screen’.&nbsp; The
-numbers **DO NOT MATCH**,&nbsp; so use one of the following combinations.
+You will also need to set the _rotation_ of the ‘Touch Screen’.&nbsp; The
+numbers<br/>
+**DO NOT MATCH**,&nbsp; so use one of the following combinations.
 ```
 ILI9341 Display  XPT2046 Touchscreen
         0               2
@@ -358,16 +357,16 @@ ILI9341 Display  XPT2046 Touchscreen
 <hr>
 # findSPIpins.ino
 <pre><code>
-// **findSPIpins.ino**
+// findSPIpins.ino
+<br/>
 // Find the default (Hardware) SPI pins for your board.
-// Make sure you have the right board selected in:&nbsp; **Tools —» Boards**...
-
-
+// Make sure you have the right board selected in:&nbsp; `Tools —» Boards`...
+<br/>
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);         // Initialize Serial communication
   while(!Serial);               // Wait for the Serial port to open
-
+  <br/>
   Serial.print(" MOSI: ");
   Serial.println(MOSI);
   Serial.print(" MISO: ");
