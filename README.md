@@ -47,18 +47,16 @@
 
 ## TWO sets of header-pin sockets (Yellow and Black)
 <pre><code>
-QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO
-——————————— sets of header-pin sockets (Yellow and Black) to plug
-in your ESP32-S3-WROOM-1 Development boards.
+> QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO
+> ——————————— sets of header-pin sockets (Yellow and Black) to plug
+> in your ESP32-S3-WROOM-1 Development boards.
 </code></pre>
 
 ## 40-Pin “Yellow” header sockets (primary)
-The `40-Pin “Yellow” header sockets`, are designed for
-the GOOUUU “ESP32-S3-CAM” board. The “ESP32-S3-WROOM”
-(CAM Module), a clone of the “FREEVOVE ESP32-S3-WROOM”;
-both also work perfectly in the “Yellow” headers as all
-three of these DVP camera ready Dev boards have the same
-pinouts and same SoC main chip the “ESP32-S3-WROOM-1.
+The `40-Pin “Yellow”` header sockets, are designed for the GOOUUU “ESP32-S3-CAM” board.<br/>
+The “ESP32-S3-WROOM” (CAM Module), a clone of the “FREEVOVE ESP32-S3-WROOM”;&nbsp; both<br/> 
+also work perfectly in the “Yellow” headers as all three of these DVP camera ready Dev<br/> 
+boards have the same pinouts and same SoC main chip the “ESP32-S3-WROOM-1.
 
 A fourth development board using the “ESP32-S3-WROOM-1”
 SoC, the “YD-ESP32-S3” also called the “ESP32-S3-WROOM-1
