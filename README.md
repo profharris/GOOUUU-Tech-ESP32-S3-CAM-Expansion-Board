@@ -40,42 +40,42 @@
 |          ¤   ¤      ‹•›   ‹•›  ¦USB-C¦   ¤          C D S T C I K D O K S N O Q    |
 | Ø       D2  D3      RST   KEY  '—————'  D1         ¦ô¦•¦o¦o¦o¦o¦o¦ö¦•¦o¦o¦o¦o¦×¦ Ø |
 '————————————————————————————————————————————————————————————————————————————————————'
- Pinout:   G   G       E     G G          5 G G G G G G 3 G G G G G ×
-           2   3       N     0 1          V N 1 2 4 4 3 V 4 4 1 2 4
-      0 D 4 1 7 5   3 6 2     1
+ Pinout:   G   G       E     G             G          5 G G G G G G 3 G G G G G ×
+           2   3       N     0             1          V N 1 2 4 4 3 V 4 4 1 2 4
+                                                      0 D 4 1 7 5   3 6 2     1
 </code></pre>
 
 ## TWO sets of header-pin sockets (Yellow and Black)
-<pre><code>
-> QUICK NOTE: This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO
-> ——————————— sets of header-pin sockets (Yellow and Black) to plug
-> in your ESP32-S3-WROOM-1 Development boards.
+<pre><code> &nbsp; &nbsp; nbsp; **QUICK NOTE:**&nbsp; This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO
+ &nbsp; &nbsp; nbsp; ——————————— sets of header-pin sockets (Yellow and Black) to plug
+ &nbsp; &nbsp; nbsp; in your **“ESP32-S3-WROOM-1”** Development boards.
 </code></pre>
 
 ## 40-Pin “Yellow” header sockets (primary)
 The `40-Pin “Yellow”` header sockets, are designed for the **GOOUUU “ESP32-S3-CAM”** board.<br/>
-The **“ESP32-S3-WROOM” (CAM Module)**, a clone of the **“FREEVOVE ESP32-S3-WROOM”**;&nbsp; both<br/>
-also work perfectly in the “Yellow” headers as all three of these *DVP camera ready* Dev boards have<br/>
-the same pinouts, and same SoC main chip, the **“ESP32-S3-WROOM-1”**.
+The **“ESP32-S3-WROOM”** (CAM Module), a clone of the **“FREEVOVE ESP32-S3-WROOM”**;&nbsp; both<br/>
+also work perfectly in the “Yellow” headers as all three of these &nbsp;*DVP camera ready*&nbsp; Dev boards<br/>
+have the same pinouts, and same SoC main chip, the **“ESP32-S3-WROOM-1”**.
 
 A fourth development board using the **“ESP32-S3-WROOM-1”** SoC,&nbsp; the **“YD-ESP32-S3”**, also called<br/>
 the **“ESP32-S3-WROOM-1 Dev”**, --is a 44-pin board, but the top and bottom rows of pins are just an<br/>
 extra 3V3 pin and three extra ground pins.&nbsp; -This board also works in the “Yellow” header pin sockets...<br/>
-Just let the extra row of top and bottom pins hang over/extend past the headers alowing a 44-pin board<br/>
-to plug into a set of 40-pin sockets.&nbsp; This development board does NOT have a DVP camera interface like<br/>
-our first three boards.
+Just let the extra row of top & bottom pins hang over/extend past the headers alowing a 44-pin board<br/>
+to plug into a set of 40-pin sockets.&nbsp; This development board does NOT have a &nbsp;*DVP camera interface*<br/>
+like our first three boards.
 
-All 4 of these **“ESP32-S3-WROOM-1”** Dev boards are pinout *backward compatible*, -not counting the<br/>
-extra top and bottom pins,&nbsp; with the original 44-pin **“ESP-S3-DevKitC-1”**.<br/>
-> **NOTE:**&nbsp; **DevKitC-1**, NOT DevKitM-1 (NOT pin compatible).
+All four of these **“ESP32-S3-WROOM-1”** Dev boards are pinout *backward compatible*, -not counting the<br/>
+extra top & bottom pins,&nbsp; with the original **Espressif** 44-pin **“ESP-S3-DevKitC-1”**.<br/>
+> **NOTE:**&nbsp; **DevKitC-1**,&nbsp; NOT DevKitM-1 *(M1 is NOT pin compatible)*.
 
-*Unfortunately*, this original **“ESP-S3-DevKitC-1”** will not plug into the “Yellow” headers as this original<br/>
+*Unfortunately*, this original **“ESP-S3-DevKitC-1”** will not plug into the “Yellow” headers, as this original<br/>
 board is narrower *(by 1 pin spacing)* than the other four boards.&nbsp; Otherwise it could plug in just like the<br/>
 **“YD-ESP32-S3”**.
 
+## Identifying **ESP32-S3-DevKitC-1** pin compatible boards
 **NOTE:**&nbsp; To identify one of these five **ESP32-S3-DevKitC-1** pin compatible boards...<br/>
 Look at the board with the two USB ports facing down.&nbsp; The Left-side pins will end with `GPIO13`, `GPIO14`<br/>
-then `5V0` *(and possibly an extra `GND`)*.&nbsp; The top Right-side pins will *(possibly start with a `GND` pin)* ten<br/>
+then `5V0` *(and possibly an extra `GND`)*.&nbsp; The top Right-side pins will *(possibly start with a `GND` pin)* then<br/>
 begin with `TXD`, `RXD`, `GPIO1`, then `GPIO2`.
 
 The 44-pin **“YD-ESP32-S3”** and **“ESP32-S3-DevKitC-1”** have 1 extra pin at the top and bottom of each<br/>
