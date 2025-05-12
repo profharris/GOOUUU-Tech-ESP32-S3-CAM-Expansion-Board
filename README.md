@@ -48,7 +48,7 @@
 ## TWO sets of header-pin sockets (Yellow and Black)
 <pre><code> &nbsp; &nbsp; &nbsp; QUICK NOTE:&nbsp; This GOOUUU Tech ESP32-S3-CAM Expansion Board has TWO<br/>
  &nbsp; &nbsp; &nbsp; ———————————&nbsp; sets of header-pin sockets (Yellow and Black) to plug in<br/>
- &nbsp; &nbsp; &nbsp; your **“ESP32-S3-WROOM-1”** Development boards.
+ &nbsp; &nbsp; &nbsp; your “ESP32-S3-WROOM-1” Development boards.
 </code></pre>
 
 ## 40-Pin “Yellow” header sockets (primary)
@@ -80,36 +80,36 @@ then `5V0` *(and possibly an extra `GND`)*.&nbsp; The top Right-side pins will *
 begin with `TXD`, `RXD`, `GPIO1`, then `GPIO2`.
 
 The 44-pin **“YD-ESP32-S3”** and **“ESP32-S3-DevKitC-1”** have 1 extra pin at the top and bottom of each<br/>
-header, --an extra `3V3` pin in the upper-Left, and an extra `GND` pin on the other 3 corners.
+header, --an extra `3V3` pin in the upper-Left,&nbsp; and an extra `GND` pin on the other 3 corners.
 
 ## 42-Pin “Black” header sockets
 
-The 42-Pin “Black” header sockets are for an ALT version
-of the “ESP-S3-DevKitC-1”. This ALT version has 42-pins
-instead of the original 44-pins and is 1 pin space wider
-like the four Dev boards mentioned above.
+The `42-Pin “Black” header` sockets are for an **ALT version**
+of the **“ESP-S3-DevKitC-1”**. This ALT version has<br/>
+`42-pins` instead of the original `44-pins`,&nbsp; and is 1 
+pin-space wider, like the four Dev boards mentioned above.
 
-Even though this 42-pin “ESP-S3-DevKitC-1_ALT-version”
-uses the same “ESP32-S3-WROOM-1” SoC, pinout is similar
-but NOT the same as the other 40 & 44-pin Dev boards...
-“ESP32-S3-GOOUUU-CAM”, “ESP32-S3-WROOM” (CAM Module),
-“FREEVOVE ESP32-S3-WROOM”, “YD-ESP32-S3” or the original
-44-pin “ESP-S3-DevKitC-1”.
+Even though this `42-pin` **“ESP-S3-DevKitC-1_ALT-version”**
+uses the same **“ESP32-S3-WROOM-1”** SoC,<br/>
+the pinout is similar but **NOT** the same as the other `40` & `44-pin` 
+Dev boards...&nbsp; **“ESP32-S3-GOOUUU-CAM”**,&nbsp; **“ESP32-S3-WROOM”** 
+(CAM Module),&nbsp; **“FREEVOVE ESP32-S3-WROOM”**,&nbsp; **“YD-ESP32-S3”**,&nbsp; 
+or the original `44-pin` **“ESP-S3-DevKitC-1”**.
 
-A quick way to identify this Dev board, besides 42-pins
-instead of 40 or 44-pins, is to look at the board with
-the two USB ports facing down. The upper-Right pins will
-start with (extra) GND, GPIO1, GPIO2, TX0, RX0... and
-the lower-Left will end with GPIO11, GPIO12, 3V3. --AND
-most importantly, the lower-Right pin is ‘5VIN’.
+A quick way to identify this Dev board, besides the `42-pins`
+instead of `40` or `44-pins`, is to look at the board<br/> 
+with the two USB ports facing down.&nbsp; The upper-Right pins will
+_start_ with (an extra) `GND`, `GPIO1`, `GPIO2`, `TX0`, `RX0`.&nbsp; 
+The lower-Left will _end_ with `GPIO11`, `GPIO12`, `3V3`.&nbsp; --AND
+most importantly,&nbsp; the lower-Right pin is `5VIN`.
 
 
 > [!WARNING]
-> I want to pointout this _lower-Right_ ‘5VIN’ pin specifically because
-> all the other ESP32-S3 Dev boards mentioned,<br>
+> I want to pointout this _lower-Right_ `5VIN` pin, specifically because
+> all of the other ESP32-S3 Dev boards mentioned,<br/>
 > have a `GND` (power ground) pin in the lower-Right.&nbsp; Plugging
-> in a `5V` pin into a `GND` header socket,<br>
-> or vice-versa, is a quick way to short out and burn-up your Dev board!
+> in a `5V` pin into a `GND` header socket, or vice-versa,<br/>
+> is a quick way to short out and burn-up your Dev board!
 
 # Very clever 2-way “Yellow” and “Black” header sockets
 
