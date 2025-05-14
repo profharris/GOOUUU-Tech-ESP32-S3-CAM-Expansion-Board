@@ -1,48 +1,50 @@
 # GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board
 
-***WORK IN PROGRESS*** &nbsp; &nbsp; Prof. Michael P. Harris &nbsp; &nbsp; *05/11/2025*
+***WORK IN PROGRESS*** &nbsp; &nbsp; Prof. Michael P. Harris &nbsp; &nbsp; *05/13/2025*
 <pre><code>
 .____________________________________________________________________________________.
-| Ø   .………. ¬R4       S1·2·3·4      ¬R6   .-----------.    U2 P1·2·3·4             Ø |
-|     ¦W Ø¦        GND • • • •           —ô 5V0 sensor¦    Ø¨¨¦•¦ô¦o¦o¦¨¨Ø    I²C    |
-| 5V0 ¦5  ¦ o      5V0 ô ô ô ô  o     G2 —oDATA DHT11 ¦    ¦   G V S S   ¦ Interface |
-|     ¦0  ¦ o G5   SIG o o o o  o G4     —× n/c temp  ¦    ¦   N C C D   ¦ ————————— |
-| GND ¦5  ¦ P7         G G G G  P8       —• GND humi  ¦    ¦   D C L A   ¦ GND — GND |
-|     ¯¨¨¨¯            1              U3  '-----------'    ¦             ¦ VCC — 5V0 |
-|   R3 POT               ._______________.                 ¦ 0.96″ OLED  ¦ SCL — G9  |
-|                        ¦ .….…. .…. .……¯¦    G##~ SD_Card ¦   64×128    ¦ SDA — G8  |
-|     DVP Camera ´_G##   ¦ ¦ ¦ ¦_¦ ¦_¦   ¦    G##÷ PSRAM   Ø……¨¨¨¨¨¨¨¨………Ø           |
+| Ø   .………. ¬R4       S1·2·3·4       ¬R6   .-----------.  U2  P1·2·3·4             Ø |
+|     ¦W Ø¦        GND • • • •            —ô 5V0 sensor¦   Ø¨¨¦•¦ô¦o¦o¦¨¨Ø    I²C    |
+| 5V0 ¦5  ¦ o VR   5V0 ô ô ô ô   o U3  G2 —oDATA DHT11 ¦   ¦   G V S S   ¦ Interface |
+|  G1 ¦0  ¦ o G1   SIG o o o o   o G2     —× n/c temp  ¦   ¦   N C C D   ¦ ————————— |
+| GND ¦5  ¦ P7         G G G G   P8       —• GND humi  ¦   ¦   D C L A   ¦ GND — GND |
+|     ¯¨¨¨¯            3 3 4 3         U3  '-----------'   ¦             ¦ VCC — 5V0 |
+|   R3 VR/POT          8 9 0 7                             ¦ 0.96″ OLED  ¦ SCL — G41 |
+|                        ._______________.                 ¦   64×128    ¦ SDA — G42 |
+|                        ¦ .….…. .…. .……¯¦    G##~ SD_Card Ø……¨¨¨¨¨¨¨¨………Ø           |
+|     DVP Camera ´_G##   ¦ ¦ ¦ ¦_¦ ¦_¦   ¦    G##÷ PSRAM                             |
 |                     .——¦ ¦ ¦           ¦——.                                        |
-|TXD o ö 3V3      3V3 |ö:¦——.··. .————/:•¦:o| G43  TX›        .____SPI LCD__ESP32-S3_|
-|RXD o o EN       RST |o:¦  WiFi ß    '——¦:o| G44  RX‹        ¦_1. T_IRQ       ×     |
+|TXD o ö 3V3      3V3 |ö:¦——.··. .————/:•¦:o| G43  TX› LED    .____SPI LCD__ESP32-S3_|
+|RXD o o EN       RST |o:¦  WiFi ß    '——¦:o| G44  RX‹        ¦_1. T_IRQ       × N/C |
 | G1 o © G4     ´_G4  |©:¦  ˜¨¨˜ °       ¦:o| G1       T_CS   ¦_2. T_DO        G41   |
 | G2 o © G5     ´_G5  |©:¦ ESP32S3-N16R8 ¦:o| G2       T_DIN  ¦_3. T_DIN       G2    |
 |G42 o © G6     ´_G6  |©:¦         .………….¦:o| G42      T_CLK  ¦_4. T_CS        G1    |
 |G41 o © G7     ´_G7  |©:¦ ŒÆ F©   ¦QRCD¦¦:o| G41      T_DO   ¦_5. T_CLK       G42   |
-|G40 õ © G15    ´_G15 |©:¦ ° N16R8 '…………'¦:õ| G40~ SD_DATA    ¦_6. SDO/MISO   G46/GND|
+|G40 õ © G15    ´_G15 |©:¦ ° N16R8 '…………'¦:õ| G40~ SD_DATA    ¦_6. SDO/MISO    G46   |
 |G39 õ © G16    ´_G16 |©:'———————————————':õ| G39~ SD_CLK     ¦_7. LED/BL      3V3   |
-|G38 õ © G17    ´_G17 |© .………………………………………. õ| G38~ SD_CMD     ¦_8. SCK        G3/G0  |
+|G38 õ © G17    ´_G17 |© .………………………………………. õ| G38~ SD_CMD     ¦_8. SCK         G3    |
 |G37 ð © G18    ´_G18 |© ¦ ::::::::::::: ¦ ð| G37÷ PSRAM      ¦_9. SDI/MOSI    G45   |
 |G36 ð © G8     ´_G8  |© ¦    Camera     ¦ ð| G36÷ PSRAM      ¦10. DC/RS       G47   |
 |G35 ð o G3  SCK  G3  |o ¯¯:::::::::::::¯¯ ð| G35÷ PSRAM      ¦11. RESET       G21   |
-| G0 o o G46 MISO G46 |o      GOOUUU       o| G0   BOOT ?SCK  ¦12. CS          G14   |
-|G45 o © G9     ´_G9  |©   ESP32-S3-CAM    o| G45       MOSI  ¦13. GND         GND   |
-|G48 ¤ © G10    ´_G10 |©   ¬ ¬     ¤ ¤ ‹¤› ¤| G48  RGB        ¦14. VCC         5V0   |
-|G47 o © G11    ´_G11 |©   ¨ ¨   PWR TX 48 o| G47         DC  '——————————————————————|
-|G21 o © G12    ´_G12 |©      ......       o| G21        RST                         |
+| G0 o o G46 MISO G46 |o      GOOUUU       o| G0   BOOT       ¦12. CS          G14   |
+|G45 o © G9     ´_G9  |©   ESP32-S3-CAM    o| G45      MOSI   ¦13. GND         GND   |
+|G48 ¤ © G10    ´_G10 |©   ¬ ¬     ¤ ¤ ‹¤› ¤| G48  RGB LED    ¦14. VCC         5V0   |
+|G47 o © G11    ´_G11 |©   ¨ ¨   PWR TX 48 o| G47      DC     '——————————————————————|
+|G21 o © G12    ´_G12 |©      ......       o| G21      RST                           |
 |G20 o © G13    ´_G13 |© RST ¦CH304G¦ BOOT ø| G20  D-           GOOUUU               |
-|G19 o o G14 CS   G14 |o ‹•›  ''''''   ‹•› ø| G19  D+   (ESP32-S3-CAM) V1.2       |
+|G19 o o G14 CS   G14 |o ‹•›  ''''''   ‹•› ø| G19  D+   (ESP32-S3-CAM) V1.2          |
 |GND • ô 5V0      5V0 |ô .......O T....... •| GND        2.8″ SPI TFT LCD 240×320    |
 |                     |  ¦ USB ¦T T¦ USB ¦  |                                        |
 |G46: Input Only      |  ¦  C  ¦G L¦  C  ¦  |                   M     M T   T   T    |
 |         ¬   ¬       '——'ESP32'———'CH343'——'         V G   R   O S L I C T D T I    |
 |         R5 R7      R1¬ R2¬                          C N C S D S C E S L C I D R    |
-|          ¤   ¤      ‹•›   ‹•›  ¦USB-C¦   ¤          C D S T C I K D O K S N O Q    |
+|          ¤   ¤      ‹•›   ‹•›  |USB-C|   ¤          C D S T C I K D O K S N O Q    |
 | Ø       D2  D3      RST   KEY  '—————'  D1         ¦ô¦•¦o¦o¦o¦o¦o¦ö¦•¦o¦o¦o¦o¦×¦ Ø |
 '————————————————————————————————————————————————————————————————————————————————————'
- Pinout:   G   G       E     G             G          5 G G G G G G 3 G G G G G ×
-           2   3       N     0             1          V N 1 2 4 4 3 V 4 4 1 2 4
-                                                      0 D 4 1 7 5   3 6 2     1
+ Pinout:   G   P       E     G             T          5 G G G G G G 3 G G G G G ×
+           4   W       N     0             X          V N 1 2 4 4 3 V 4 4 1 2 4
+           8   R                                      0 D 4 1 7 5   3 6 2     1
+
 </code></pre>
 
 ## TWO sets of header-pin sockets (Yellow and Black)
@@ -86,20 +88,20 @@ header, --an extra `3V3` pin in the upper-Left,&nbsp; and an extra `GND` pin on 
 
 The `42-Pin “Black” header` sockets are for an **ALT version**
 of the **“ESP-S3-DevKitC-1”**. This ALT version has<br/>
-`42-pins` instead of the original `44-pins`,&nbsp; and is 1 
+`42-pins` instead of the original `44-pins`,&nbsp; and is 1
 pin-space wider, like the four Dev boards mentioned above.
 
 Even though this `42-pin` **“ESP-S3-DevKitC-1_ALT-version”**
 uses the same **“ESP32-S3-WROOM-1”** SoC,<br/>
-the pinout is similar but **NOT** the same as the other `40` & `44-pin` 
-Dev boards...&nbsp; **“ESP32-S3-GOOUUU-CAM”**,&nbsp; **“ESP32-S3-WROOM”** 
-(CAM Module),&nbsp; **“FREEVOVE ESP32-S3-WROOM”**,&nbsp; **“YD-ESP32-S3”**,&nbsp; 
+the pinout is similar but **NOT** the same as the other `40` & `44-pin`
+Dev boards...&nbsp; **“ESP32-S3-GOOUUU-CAM”**,&nbsp; **“ESP32-S3-WROOM”**
+(CAM Module),&nbsp; **“FREEVOVE ESP32-S3-WROOM”**,&nbsp; **“YD-ESP32-S3”**,&nbsp;
 or the original `44-pin` **“ESP-S3-DevKitC-1”**.
 
 A quick way to identify this Dev board, besides the `42-pins`
-instead of `40` or `44-pins`, is to look at the board<br/> 
+instead of `40` or `44-pins`, is to look at the board<br/>
 with the two USB ports facing down.&nbsp; The upper-Right pins will
-_start_ with (an extra) `GND`, `GPIO1`, `GPIO2`, `TX0`, `RX0`.&nbsp; 
+_start_ with (an extra) `GND`, `GPIO1`, `GPIO2`, `TX0`, `RX0`.&nbsp;
 The lower-Left will _end_ with `GPIO11`, `GPIO12`, `3V3`.&nbsp; --AND
 most importantly,&nbsp; the lower-Right pin is `5VIN`.
 
@@ -113,19 +115,19 @@ most importantly,&nbsp; the lower-Right pin is `5VIN`.
 
 # Very clever 2-way “Yellow” and “Black” header sockets
 
-The design engineers for the “GOOUUU Tech ESP32-S3-CAM Expansion Board” 
-have done something very clever! They have _cross-wired_, where needed, 
-the pins in the `40-pin “Yellow”` header to the `42-pin “Black”` header 
+The design engineers for the “GOOUUU Tech ESP32-S3-CAM Expansion Board”
+have done something very clever! They have _cross-wired_, where needed,
+the pins in the `40-pin “Yellow”` header to the `42-pin “Black”` header
 to match the pinout functions.
 
 **For example:**&nbsp; the first four upper-Right pins of the `40-pin “Yellow”`
 header are:&nbsp; `1. TXD`, `2. RXD`, `3. GPIO1`, `4. GPIO2`.  The first five
 pins of the `42-pin “Black”` header are:&nbsp; `1. GND`, `2. GPIO1`, `3. GPIO2`,
 `4. TX0`, and `5. RX0`.&nbsp; Copper traces on the Expansion Board, connect the
-“Yellow” pin-1 `TXD` to the “Black” pin-4 `TX0`,&nbsp; and “Yellow” pin-2 `RXD` 
-to “Black” pin-5 `RX0`.&nbsp; Also `GPIO1` is _cross_ _connected_ to `GPIO1`,&nbsp; 
-`GPIO2` is _cross_ _connected_ to `GPIO2` and so on.&nbsp; Since all the 
-“ESP32-S3-WROOM-1” SoC designs have the same pins... this allows for a single 
+“Yellow” pin-1 `TXD` to the “Black” pin-4 `TX0`,&nbsp; and “Yellow” pin-2 `RXD`
+to “Black” pin-5 `RX0`.&nbsp; Also `GPIO1` is _cross_ _connected_ to `GPIO1`,&nbsp;
+`GPIO2` is _cross_ _connected_ to `GPIO2` and so on.&nbsp; Since all the
+“ESP32-S3-WROOM-1” SoC designs have the same pins... this allows for a single
 `40-pin` double-row breakout header along the Left-side of the expansion board.&nbsp;
 The pinout of this breakout header, _mirror-image_ matches the `40-pin`
 `“Yellow” headers`,&nbsp; and all of the pins are well labled.
@@ -188,28 +190,32 @@ Development Board `40-pin “Yellow”` & `42-pin “Black”` header sockets.
         '—Yellow              '—Yellow
 </code></pre>
 
-# MISC Pin connections/configurations:
+## MISC Pin connections/configurations:
 
 GOOUUU Tech ESP32-S3-CAM Expansion Board
     MISC Pin connections/configurations:
 
- + &nbsp; DHT11 DATA: `GPIO2`
- + &nbsp;R3 W505 Pot:
- + &nbsp; &nbsp;Jumper P7: `GPIO5`
- + &nbsp; &nbsp;Jumper P8: `GPIO4`
- + &nbsp; &nbsp;Header S1: `GPIO1`
- + &nbsp; &nbsp;Header S2:
- + &nbsp; &nbsp;Header S3:
- + &nbsp; &nbsp;Header S4:
- + &nbsp; &nbsp; &nbsp;I²C SDA: `GPIO8` &nbsp; &nbsp; &nbsp;{0.96″ OLED}  NOTE³: The I²C pins
- + &nbsp; &nbsp; &nbsp;I²C SCL: `GPIO9` &nbsp; &nbsp; &nbsp;{  64×128  }  are used by the camera
- + &nbsp; &nbsp; &nbsp; LED D1: `GPIO1`
- + &nbsp; &nbsp; &nbsp; LED D2: `GPIO2`
- + &nbsp; &nbsp; &nbsp; LED D3: `GPIO3`
+ + &nbsp; VR R3  W505 Pot: `GPIO1`
+ + &nbsp; U2 DHT11 sensor: `GPIO2`
+
+ + &nbsp; &nbsp;Jumper P7: `GPIO1`  (VR Enable)
+ + &nbsp; &nbsp;Jumper P8: `GPIO2`  (U2 Enable)
+
+ + &nbsp; &nbsp;Header S1: `GPIO38` (3-Wire PWM)
+ + &nbsp; &nbsp;Header S2: `GPIO39` (3-Wire PWM)
+ + &nbsp; &nbsp;Header S3: `GPIO40` (3-Wire PWM)
+ + &nbsp; &nbsp;Header S4: `GPIO37` (3-Wire PWM)
+
+ + &nbsp; &nbsp; &nbsp;I²C SCL: `GPIO41` &nbsp; &nbsp; &nbsp;{0.96″ OLED}
+ + &nbsp; &nbsp; &nbsp;I²C SDA: `GPIO42` &nbsp; &nbsp; &nbsp;{  64×128  }
+
+ + &nbsp; &nbsp; &nbsp; LED D1: `GPIO48` RGB LED
+ + &nbsp; &nbsp; &nbsp; LED D2: `PWR ON`
+ + &nbsp; &nbsp; &nbsp; LED D3: `GPIO43` TXD LED
  + ‹RST› Button: `EN/RESET`
  + ‹KEY› Button: `GPIO0/BOOT`
 
-# 14-Pin SPI 2.8″ 240×320 TFT LCD header:
+## 14-Pin SPI 2.8″ 240×320 TFT LCD header:
 <pre><code>
 GOOUUU Tech ESP32-S3-CAM Expansion Board
     ´14-Pin SPI 2.8″ 240×320 TFT LCD header:
@@ -222,10 +228,10 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
  2. T-DO  (MISO)    GPIO41        Touch Data Out    (SPI MISO)
  3. T-DIN (MOSI)    GPIO2         Touch Data In     (SPI MOSI)
  4. T-CS            GPIO1         Touch Chip Select, Active LOW
- 5. T-CLK (SCK)     GPIO42        Touch SPI Clock   (SPI SCK)
- 6. SDO   (MISO)    GPIO46/GND    GND-Not Used.     (SPI MISO)
+ 5. T-CLK (SCLK)    GPIO42        Touch SPI Clock   (SPI SCK)
+ 6. SDO   (MISO)    GPIO46        GND-Not Used.     (SPI MISO)
  7. LED             3V3           BackLight Enable,  Active HIGH
- 8. SCK             GPIO3/GPIO0   LCD SPI Clock     (SPI SCK)
+ 8. SCK   (SCLK)    GPIO3         LCD SPI Clock     (SPI SCK)
  9. SDI   (MOSI)    GPIO45        LCD Data In       (SPI MOSI)
 10. DC              GPIO47        LCD Data/Command,  HIGH = Data
 11. RESET           GPIO21        LCD Reset Input,   Active LOW
@@ -254,14 +260,14 @@ The modules have an `SD_Card` socket. This socket has separate
 connections to the opposite end of the board. Not needed with the
 **“ESP32-S3-CAM”**, as it already has a `TF SD_Card` on the backside.
 
-Internally the display logic perates at 3.3V, -so if using with a 5V0
-microcontroller, be sure to include logic level shifters on the
+Internally the display logic perates at 3.3V, -so if using with a
+5V0 Microcontroller, be sure to include logic level shifters on the
 data lines to prevent possible damage.
 
 
 ## 2.8″ TFT Display Technical Specifications:
 
-Module Power:
+### Module Power:
 
 SEE IMAGE:  TFT LCD 2.8″ 240×320 RGB ILI9341 with Touchscreen
 —» J1 Jumper Location
@@ -282,7 +288,7 @@ display from the built-in 3.3V available on Arduino and similar
 microcontrollers since these power sources often have limited
 current capability and may overheat.
 
-SPI Interface:
+### SPI Interface:
 
 This display incorporates a SPI interface which provides for fast
 display updates. It is a 4-wire interface so it includes the `CS`
