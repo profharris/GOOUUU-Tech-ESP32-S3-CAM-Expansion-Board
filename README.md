@@ -4,10 +4,10 @@
 ```
 ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB LEDs
                                                                        LED
-NOT Compatible (too narrow):
+***NOT Compatible (too narrow):***
  0. Espressif ESP32-S3-DevKitC-1 (no camera, no SD card)  44            ✓  1+RGB
 
-Yellow 40-pin headers:
+**Yellow 40-pin headers:**
 
  1. GOOUUU ESP32-S3-CAM     (DevKitC-1 clone + CAM + SD)  40     ✓  ✓  ✓  2+RGB
  2. ESP32-S3-WROOM CAM   (FREENOVE ESP32-S3-WROOM clone)  40     ✓  ✓  ✓  4+RGB
@@ -17,7 +17,7 @@ Yellow 40-pin headers:
  5. YD-ESP32-S3 (ESP32-S3-WROOM-1 Dev) (DevKitC-1 clone)  44            ✓  3+RGB
  6. WaveShare ESP32-S3-DEV-KIT-N8R8    (DevKitC-1 clone)  44            ✓  1+RGB
 
-Black 42-pin headers:
+** Black 42-pin headers: **
 
  7. ESP32-S3-DevKitC-1-ALT       (no camera, no SD card)  42            ✓  1+RGB
 ```
@@ -25,13 +25,13 @@ Black 42-pin headers:
 <pre><code>
 .___________________________________________________________________________________.
 | Ø  .………. ¬R4        S1·2·3·4      ¬R6   .-----------.  U2  P1·2·3·4             Ø |
-|    ¦W Ø¦         GND • • • •           —ô 5V0 sensor¦   Ø¨¨¦•¦ô¦o¦o¦¨¨Ø    I²C    |
-|5V0 ¦5  ¦«—o VR   5V0 ô ô ô ô   o U3 —» —oDATA DHT11 ¦   ¦   G V S S   ¦ Interface |
-|    ¦0  ¦  o G1   SIG o o o o   o G2    —× n/c temp  ¦   ¦   N C C D   ¦ ————————— |
-|GND ¦5  ¦ P7          G G G G  P8       —• GND humi  ¦   ¦   D C L A   ¦ GND — GND |
+|    ¦W Ø¦         GND • • • •           —ô 5V0 DHT11 ¦   Ø¨¨¦•¦ô¦o¦o¦¨¨Ø    I²C    |
+|5V0 ¦5  ¦«—o VR   5V0 ô ô ô ô   o U3 —» —oDATA sensor¦   ¦   G V S S   ¦ Interface |
+|    ¦0  ¦  o G1   SIG o o o o   o G2    —× n/c  temp ¦   ¦   N C C D   ¦ ————————— |
+|GND ¦5  ¦ P7          G G G G  P8       —• GND  humi ¦   ¦   D C L A   ¦ GND — GND |
 |    ¯¨¨¨¯             3 3 4 3        U3  '-----------'   ¦             ¦ VCC — 5V0 |
 | R3 VR/POT            8 9 0 7                            ¦ 0.96″ OLED  ¦ SCL — G41 |
-|                        .______________.                 ¦   64×128    ¦ SDA — G42 |
+|                        ._______________.                ¦   64×128    ¦ SDA — G42 |
 |                        ¦ .….…. .…. .……¯¦   G##~ SD_Card Ø……¨¨¨¨¨¨¨¨………Ø           |
 |     DVP Camera ´_G##   ¦ ¦ ¦ ¦_¦ ¦_¦   ¦   G##÷ PSRAM                             |
 |                     .——¦ ¦ ¦           ¦——.                                       |
@@ -44,7 +44,7 @@ Black 42-pin headers:
 |G40 õ © G15     ´_G15|©:¦ ° N16R8 '…………'¦:õ|G40~ SD_DATA   •S3¦_6. SDO/MISO  G46   |
 |G39 õ © G16     ´_G16|©:'———————————————':õ|G39~ SD_CLK    •S2¦_7. LED/BL    3V3   |
 |G38 õ © G17     ´_G17|© .………………………………………. õ|G38~ SD_CMD    •S1¦_8. SCK       G3    |
-|G37 ð © G18     ´_G18|© ¦ ::::::::::::: ¦ ð|G37÷ *PSRAM*   •S4¦_9. SDI/MOSI  G45   |
+|G37 ð © G18     ´_G18|© ¦ ::::::::::::: ¦ ð|G37÷ PSRAM     •S4¦_9. SDI/MOSI  G45   |
 |G36 ð © G8      ´_G8 |© ¦    Camera     ¦ ð|G36÷ PSRAM        ¦10. DC/RS     G47   |
 |G35 ð o G3  (SCK) G3 |o ¯¯:::::::::::::¯¯ ð|G35÷ PSRAM        ¦11. RESET     G21   |
 | G0 o o G46 (SDO) G46|o      GOOUUU       o|G0   ‹BOOT›       ¦12. CS        G14   |
