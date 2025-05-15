@@ -1,7 +1,7 @@
 # GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board
 
 ***WORK IN PROGRESS*** &nbsp; &nbsp; Prof. Michael P. Harris &nbsp; &nbsp; *05/13/2025*
-``
+```
 ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB LEDs
                                                                        LED
 NOT Compatible (too narrow):
