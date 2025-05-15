@@ -23,48 +23,48 @@ Black 42-pin headers:
 ```
 
 <pre><code>
-.____________________________________________________________________________________.
-| Ø  .………. ¬R4        S1·2·3·4       ¬R6   .-----------.  U2  P1·2·3·4             Ø |
-|    ¦W Ø¦         GND • • • •            —ô 5V0 sensor¦   Ø¨¨¦•¦ô¦o¦o¦¨¨Ø    I²C    |
-|5V0 ¦5  ¦«—o VR   5V0 ô ô ô ô    o U3 —» —oDATA DHT11 ¦   ¦   G V S S   ¦ Interface |
-|    ¦0  ¦  o G1   SIG o o o o    o G2    —× n/c temp  ¦   ¦   N C C D   ¦ ————————— |
-|GND ¦5  ¦  P7         G G G G    P8      —• GND humi  ¦   ¦   D C L A   ¦ GND — GND |
-|    ¯¨¨¨¯             3 3 4 3         U3  '-----------'   ¦             ¦ VCC — 5V0 |
-| R3 VR/POT            8 9 0 7                             ¦ 0.96″ OLED  ¦ SCL — G41 |
-|                        ._______________.                 ¦   64×128    ¦ SDA — G42 |
-|                        ¦ .….…. .…. .……¯¦    G##~ SD_Card Ø……¨¨¨¨¨¨¨¨………Ø           |
-|     DVP Camera ´_G##   ¦ ¦ ¦ ¦_¦ ¦_¦   ¦    G##÷ PSRAM                             |
-|                     .——¦ ¦ ¦           ¦——.                                        |
-|TXD ¤ ö 3V3      3V3 |ö:¦——.··. .————/:•¦:¤| G43  TX› LED    .____SPI LCD__ESP32-S3_|
-|RXD o o EN       RST |o:¦  WiFi ß    '——¦:o| G44  RX‹        ¦_1. T_IRQ       × N/C |
-| G1 o © G4     ´_G4  |©:¦  ˜¨¨˜ °       ¦:o| G1   VR• T_CS   ¦_2. T_DO        G41   |
-| G2 o © G5     ´_G5  |©:¦ ESP32S3-N16R8 ¦:o| G2   U3• T_DIN  ¦_3. T_DIN       G2    |
-|G42 o © G6     ´_G6  |©:¦         .………….¦:o| G42      T_CLK  ¦_4. T_CS        G1    |
-|G41 o © G7     ´_G7  |©:¦ ŒÆ F©   ¦QRCD¦¦:o| G41      T_DO   ¦_5. T_CLK       G42   |
-|G40 õ © G15    ´_G15 |©:¦ ° N16R8 '…………'¦:õ| G40~ SD_DATA  S3¦_6. SDO/MISO    G46   |
-|G39 õ © G16    ´_G16 |©:'———————————————':õ| G39~ SD_CLK   S2¦_7. LED/BL      3V3   |
-|G38 õ © G17    ´_G17 |© .………………………………………. õ| G38~ SD_CMD   S1¦_8. SCK         G3    |
-|G37 ð © G18    ´_G18 |© ¦ ::::::::::::: ¦ ð| G37÷ PSRAM    S4¦_9. SDI/MOSI    G45   |
-|G36 ð © G8     ´_G8  |© ¦    Camera     ¦ ð| G36÷ PSRAM      ¦10. DC/RS       G47   |
-|G35 ð o G3  SCK  G3  |o ¯¯:::::::::::::¯¯ ð| G35÷ PSRAM      ¦11. RESET       G21   |
-| G0 o o G46 MISO G46 |o      GOOUUU       o| G0   ‹BOOT›     ¦12. CS          G14   |
-|G45 o © G9     ´_G9  |©   ESP32-S3-CAM    o| G45      MOSI   ¦13. GND         GND   |
-|G48 ¤ © G10    ´_G10 |©   ¬ ¬     ¤ ¤ ‹¤› ¤| G48  RGB LED    ¦14. VCC         5V0   |
-|G47 o © G11    ´_G11 |©   ¨ ¨   PWR TX 48 o| G47      DC     '——————————————————————|
-|G21 o © G12    ´_G12 |©      ......       o| G21      RST                           |
-|G20 o © G13    ´_G13 |© RST ¦CH304G¦ BOOT ø| G20  D-           GOOUUU               |
-|G19 o o G14 CS   G14 |o ‹•›  ''''''   ‹•› ø| G19  D+   (ESP32-S3-CAM) V1.2          |
-|GND • ô 5V0      5V0 |ô .......O T....... •| GND        2.8″ SPI TFT LCD 240×320    |
-|                     |  ¦ USB ¦T T¦ USB ¦  |                                        |
-|G46: Input Only      |  ¦  C  ¦G L¦  C  ¦  |                   M     M T   T   T    |
-|         ¬   ¬       '——'ESP32'———'CH343'——'         V G   R   O S L I C T D T I    |
-|         R5 R7      R1¬ R2¬                          C N C S D S C E S L C I D R    |
-|          ¤   ¤      ‹•›   ‹•›  |USB-C|   ¤          C D S T C I K D O K S N O Q    |
-| Ø       D2  D3      RST   KEY  '—————'  D1         ¦ô¦•¦o¦o¦o¦o¦o¦ö¦•¦o¦o¦o¦o¦×¦ Ø |
-'————————————————————————————————————————————————————————————————————————————————————'
- Pinout:   G   P       E     G             T          5 G G G G G G 3 G G G G G ×
-           4   W       N     0             X          V N 1 2 4 4 3 V 4 4 1 2 4
-           8   R                                      0 D 4 1 7 5   3 6 2     1
+.___________________________________________________________________________________.
+| Ø  .………. ¬R4        S1·2·3·4      ¬R6   .-----------.  U2  P1·2·3·4             Ø |
+|    ¦W Ø¦         GND • • • •           —ô 5V0 sensor¦   Ø¨¨¦•¦ô¦o¦o¦¨¨Ø    I²C    |
+|5V0 ¦5  ¦«—o VR   5V0 ô ô ô ô   o U3 —» —oDATA DHT11 ¦   ¦   G V S S   ¦ Interface |
+|    ¦0  ¦  o G1   SIG o o o o   o G2    —× n/c temp  ¦   ¦   N C C D   ¦ ————————— |
+|GND ¦5  ¦ P7          G G G G  P8       —• GND humi  ¦   ¦   D C L A   ¦ GND — GND |
+|    ¯¨¨¨¯             3 3 4 3        U3  '-----------'   ¦             ¦ VCC — 5V0 |
+| R3 VR/POT            8 9 0 7                            ¦ 0.96″ OLED  ¦ SCL — G41 |
+|                        .______________.                 ¦   64×128    ¦ SDA — G42 |
+|                        ¦ .….…. .…. .……¯¦   G##~ SD_Card Ø……¨¨¨¨¨¨¨¨………Ø           |
+|     DVP Camera ´_G##   ¦ ¦ ¦ ¦_¦ ¦_¦   ¦   G##÷ PSRAM                             |
+|                     .——¦ ¦ ¦           ¦——.                                       |
+|TXD ¤ ö 3V3       3V3|ö:¦——.··. .————/:•¦:¤|G43  TX› LED      .__SPI-LCD__ESP32-S3_|
+|RXD o o EN        RST|o:¦  WiFi ß    '——¦:o|G44  RX‹          ¦_1. T_IRQ     × N/C |
+| G1 o © G4      ´_G4 |©:¦  ˜¨¨˜ °       ¦:o|G1   VR• (T_CS)   ¦_2. T_DO      G41   |
+| G2 o © G5      ´_G5 |©:¦ ESP32S3-N16R8 ¦:o|G2   U3• (T_DIN)  ¦_3. T_DIN     G2    |
+|G42 o © G6      ´_G6 |©:¦         .………….¦:o|G42  SDA (T_CLK)  ¦_4. T_CS      G1    |
+|G41 o © G7      ´_G7 |©:¦ ŒÆ F©   ¦QRCD¦¦:o|G41  SCL (T_DO)   ¦_5. T_CLK     G42   |
+|G40 õ © G15     ´_G15|©:¦ ° N16R8 '…………'¦:õ|G40~ SD_DATA   •S3¦_6. SDO/MISO  G46   |
+|G39 õ © G16     ´_G16|©:'———————————————':õ|G39~ SD_CLK    •S2¦_7. LED/BL    3V3   |
+|G38 õ © G17     ´_G17|© .………………………………………. õ|G38~ SD_CMD    •S1¦_8. SCK       G3    |
+|G37 ð © G18     ´_G18|© ¦ ::::::::::::: ¦ ð|G37÷ *PSRAM*   •S4¦_9. SDI/MOSI  G45   |
+|G36 ð © G8      ´_G8 |© ¦    Camera     ¦ ð|G36÷ PSRAM        ¦10. DC/RS     G47   |
+|G35 ð o G3  (SCK) G3 |o ¯¯:::::::::::::¯¯ ð|G35÷ PSRAM        ¦11. RESET     G21   |
+| G0 o o G46 (SDO) G46|o      GOOUUU       o|G0   ‹BOOT›       ¦12. CS        G14   |
+|G45 o © G9      ´_G9 |©   ESP32-S3-CAM    o|G45      (SDI)    ¦13. GND       GND   |
+|G48 ¤ © G10     ´_G10|©   ¬ ¬     ¤ ¤ ‹¤› ¤|G48  RGB LED      ¦14. VCC       5V0   |
+|G47 o © G11     ´_G11|©   ¨ ¨   PWR TX 48 o|G47      (DC)     '————————————————————|
+|G21 o © G12     ´_G12|©      ......       o|G21      (RST)                         |
+|G20 o © G13     ´_G13|© RST ¦CH304G¦ BOOT ø|G20  D-            GOOUUU              |
+|G19 o o G14 (CS)  G14|o ‹•›  ''''''   ‹•› ø|G19  D+     (ESP32-S3-CAM) V1.2        |
+|GND • ô 5V0       5V0|ô .......O T....... •|GND      2.8″ SPI TFT LCD 240×320      |
+|                     |  ¦ USB ¦T T¦ USB ¦  |                                       |
+|G46: Input Only      |  ¦  C  ¦G L¦  C  ¦  |                  M     M T   T   T    |
+|         ¬   ¬       '——'ESP32'———'CH343'——'        V G   R   O S L I C T D T I    |
+|         R5 R7      R1¬ R2¬                         C N C S D S C E S L C I D R    |
+|          ¤   ¤      ‹•›   ‹•›  |USB-C|   ¤         C D S T C I K D O K S N O Q    |
+| Ø       D2  D3      RST   KEY  '—————'  D1        ¦ô¦•¦o¦o¦o¦o¦o¦ö¦•¦o¦o¦o¦o¦×¦ Ø |
+'———————————————————————————————————————————————————————————————————————————————————'
+ Pinout:   G   P       E     G             T         5 G G G G G G 3 G G G G G ×
+           4   W       N     0             X         V N 1 2 4 4 3 V 4 4 1 2 4
+           8   R                                     0 D 4 1 7 5   3 6 2     1
 </code></pre>
 
 ## TWO sets of header-pin sockets (Yellow and Black)
