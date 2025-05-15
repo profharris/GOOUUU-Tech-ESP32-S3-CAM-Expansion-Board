@@ -4,10 +4,10 @@
 ```
 ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB LEDs
                                                                        LED
-***NOT Compatible (too narrow):***
+** NOT Compatible (too narrow): **
  0. Espressif ESP32-S3-DevKitC-1 (no camera, no SD card)  44            ✓  1+RGB
 
-**Yellow 40-pin headers:**
+** Yellow 40-pin headers: **
 
  1. GOOUUU ESP32-S3-CAM     (DevKitC-1 clone + CAM + SD)  40     ✓  ✓  ✓  2+RGB
  2. ESP32-S3-WROOM CAM   (FREENOVE ESP32-S3-WROOM clone)  40     ✓  ✓  ✓  4+RGB
@@ -22,7 +22,7 @@ ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB L
  7. ESP32-S3-DevKitC-1-ALT       (no camera, no SD card)  42            ✓  1+RGB
 ```
 
-<pre><code>
+<pre><code>GOOUUU Tech ESP32-S3-CAM Expansion Board
 .___________________________________________________________________________________.
 | Ø  .………. ¬R4        S1·2·3·4      ¬R6   .-----------.  U2  P1·2·3·4             Ø |
 |    ¦W Ø¦         GND • • • •           —ô 5V0 DHT11 ¦   Ø¨¨¦•¦ô¦o¦o¦¨¨Ø    I²C    |
