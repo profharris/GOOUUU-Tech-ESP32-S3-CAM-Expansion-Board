@@ -54,7 +54,7 @@ ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB L
 |G21 o © G12     ´_G12|©      ......       o|G21      (RST)                         |
 |G20 o © G13     ´_G13|© RST ¦CH304G¦ BOOT ø|G20  D-            GOOUUU              |
 |G19 o o G14 (CS)  G14|o ‹•›  ''''''   ‹•› ø|G19  D+     (ESP32-S3-CAM) V1.2        |
-|GND • ô 5V0       5V0|ô .......O T....... •|GND      2.8″ SPI TFT LCD 240×320      |
+|GND • ô 5V0       5V0|ô ._____.O T._____. •|GND      2.8″ SPI TFT LCD 240×320      |
 |                     |  ¦ USB ¦T T¦ USB ¦  |                                       |
 |G46: Input Only      |  ¦  C  ¦G L¦  C  ¦  |                  M     M T   T   T    |
 |         ¬   ¬       '——'ESP32'———'CH343'——'        V G   R   O S L I C T D T I    |
@@ -128,9 +128,9 @@ most importantly,&nbsp; the lower-Right pin is `5VIN`.
 
 > [!WARNING]
 > I want to pointout this _lower-Right_ `5VIN` pin, specifically because
-> all of the other ESP32-S3 Dev boards mentioned,<br/>
+> all of the other ESP32-S3 Dev boards mentioned,
 > have a `GND` (power ground) pin in the lower-Right.&nbsp; Plugging
-> in a `5V` pin into a `GND` header socket, or vice-versa,<br/>
+> in a `5V` pin into a `GND` header socket, or vice-versa,
 > is a quick way to short out and burn-up your Dev board!
 
 # Very clever 2-way “Yellow” and “Black” header sockets
