@@ -21,8 +21,10 @@ ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB L
 
  7. ESP32-S3-DevKitC-1-ALT       (no camera, no SD card)  42            ✓  1+RGB
 ```
+<hr>
 
-<pre><code>GOOUUU Tech ESP32-S3-CAM Expansion Board
+# GOOUUU Tech ESP32-S3-CAM Expansion Board
+<pre><code>
 .___________________________________________________________________________________.
 | Ø  .………. ¬R4        S1·2·3·4      ¬R6   .-----------.  U2  P1·2·3·4             Ø |
 |    ¦W Ø¦         GND • • • •           —ô 5V0 DHT11 ¦   Ø¨¨¦•¦ô¦o¦o¦¨¨Ø    I²C    |
@@ -94,6 +96,7 @@ the extra top & bottom pins,&nbsp; with the original **Espressif**&nbsp; 44-pin 
 *Unfortunately*, this original **“ESP-S3-DevKitC-1”** will not plug into the “Yellow” headers, as this original<br/>
 board is narrower *(by 1 pin spacing)* than the other four boards.&nbsp; Otherwise it could plug in just like the<br/>
 **“YD-ESP32-S3”**.
+<hr>
 
 ## Identifying **ESP32-S3-DevKitC-1** pin compatible boards
 **NOTE:**&nbsp; To identify one of these five **ESP32-S3-DevKitC-1** pin compatible boards...<br/>
@@ -103,6 +106,7 @@ begin with `TXD`, `RXD`, `GPIO1`, then `GPIO2`.
 
 The 44-pin **“YD-ESP32-S3”** and **“ESP32-S3-DevKitC-1”** have 1 extra pin at the top and bottom of each<br/>
 header, --an extra `3V3` pin in the upper-Left,&nbsp; and an extra `GND` pin on the other 3 corners.
+<hr>
 
 ## 42-Pin “Black” header sockets
 
@@ -132,6 +136,7 @@ most importantly,&nbsp; the lower-Right pin is `5VIN`.
 > have a `GND` (power ground) pin in the lower-Right.&nbsp; Plugging
 > in a `5V` pin into a `GND` header socket, or vice-versa,
 > is a quick way to short out and burn-up your Dev board!
+<hr>
 
 # Very clever 2-way “Yellow” and “Black” header sockets
 
@@ -209,13 +214,14 @@ Development Board `40-pin “Yellow”` & `42-pin “Black”` header sockets.
         ¦'—Black              ¦'—Black
         '—Yellow              '—Yellow
 </code></pre>
+<hr>
 
 ## MISC Pin connections/configurations:
 
 GOOUUU Tech ESP32-S3-CAM Expansion Board
     MISC Pin connections/configurations:
 
- + &nbsp; VR R3  W505 Pot: `GPIO1`
+ + &nbsp; VR R3&nbsp;  W505 Pot: `GPIO1`
  + &nbsp; U2 DHT11 sensor: `GPIO2`
 
  + &nbsp; &nbsp;Jumper P7: `GPIO1`  (VR Enable)
@@ -234,15 +240,16 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
  + &nbsp; &nbsp; &nbsp; LED D3: `GPIO43` TXD LED
  + ‹RST› Button: `EN/RESET`
  + ‹KEY› Button: `GPIO0/BOOT`
+<hr>
 
-## 14-Pin SPI 2.8″ 240×320 TFT LCD header:
+# 14-Pin SPI 2.8″ 240×320 TFT LCD header:
 <pre><code>
 GOOUUU Tech ESP32-S3-CAM Expansion Board
     ´14-Pin SPI 2.8″ 240×320 TFT LCD header:
 
     ILI9341 2.8″    GOOUUU Tech
     LCD Display     Expansion
-    with Touch:     Board:         Description:
+    with Touch:     Board:        Description:
 
  1. T-IRQ           × N/C         Touch Interrupt,   Active LOW
  2. T-DO  (MISO)    GPIO41        Touch Data Out    (SPI MISO)
@@ -260,7 +267,7 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
 14. VCC             5V0           Power 5.0V
 </code></pre>
 
-# TFT LCD 2.8″ 240×320 DISPLAY WITH TOUCH SCREEN
+## TFT LCD 2.8″ 240×320 DISPLAY WITH TOUCH SCREEN
 
 Key Features of the TFT LCD 2.8″ 240×320 Display with Touch Screen:
 
@@ -283,7 +290,6 @@ connections to the opposite end of the board. Not needed with the
 Internally the display logic perates at 3.3V, -so if using with a
 5V0 Microcontroller, be sure to include logic level shifters on the
 data lines to prevent possible damage.
-
 
 ## 2.8″ TFT Display Technical Specifications:
 
@@ -379,8 +385,8 @@ ILI9341 Display  XPT2046 Touchscreen
         2               0
         3               1
 ```
-
 <hr>
+
 # findSPIpins.ino
 <pre><code>
 // findSPIpins.ino
