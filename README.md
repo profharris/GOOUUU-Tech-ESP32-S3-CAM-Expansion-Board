@@ -1,13 +1,14 @@
 # GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board
 
-***WORK IN PROGRESS*** &nbsp; &nbsp; Prof. Michael P. Harris &nbsp; &nbsp; *05/13/2025*
+***WORK IN PROGRESS*** &nbsp; &nbsp; Prof. Michael P. Harris &nbsp; &nbsp; *05/13/2025*<br/>
 [GitHub Pages](https://pages.github.com/)
 ```
 ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB LEDs
                                                                        LED
 ** NOT Compatible (too narrow): **
- 0. [Espressif ESP32-S3-DevKitC-1](./images/0. Espressif ESP32-S3-DevKitC-1.jpg) (no camera, no SD card)  44            ✓  1+RGB
-
+ 0. Espressif ESP32-S3-DevKitC-1 (no camera, no SD card)  44            ✓  1+RGB
+```[Espressif ESP32-S3-DevKitC-1](./images/0. Espressif ESP32-S3-DevKitC-1)
+```
 ** Yellow 40-pin headers: **
 
  1. GOOUUU ESP32-S3-CAM     (DevKitC-1 clone + CAM + SD)  40     ✓  ✓  ✓  2+RGB
