@@ -1,4 +1,3 @@
-
 // findSPIpins.ino
 
 // Find the default (Hardware) SPI pins for your board.
