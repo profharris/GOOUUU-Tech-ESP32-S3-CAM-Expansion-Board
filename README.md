@@ -181,6 +181,8 @@ The pinout of this breakout header, _mirror-image_ matches the `40-pin`
 
 # 40-pin “Yellow” & 42-pin “Black” header sockets diagram
 
+![GOOUUU-Tech ESP32-S3-CAM Expansion Board _Yello_w & _Black_ headers](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/GOOOUUU%20Tech%20ESP32-S3-CAM%20Expansion%20Board-2.jpg)
+
 Following is my diagram,&nbsp; illustrating the 2-way “ESP32-S3-WROOM-1”
 Development Board `40-pin “Yellow”` & `42-pin “Black”` header sockets.
 
