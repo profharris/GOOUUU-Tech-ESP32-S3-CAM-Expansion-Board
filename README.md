@@ -3,7 +3,7 @@
 ***WORK IN PROGRESS*** &nbsp; &nbsp; Prof. Michael P. Harris &nbsp; &nbsp; *05/13/2025*<br/>
 [GitHub Pages](https://pages.github.com/)
 
-## NOT Compatible _(too narrow)_:
+## Development Boards, NOT Compatible _(too narrow)_:
 ```
 ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB LEDs
                                                                        LED
