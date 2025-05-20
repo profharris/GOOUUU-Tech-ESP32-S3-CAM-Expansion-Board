@@ -267,7 +267,11 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
  + ‹KEY› Button: `GPIO0/BOOT`
 <hr>
 
-# 14-Pin SPI 2.8″ 240×320 TFT LCD header:
+# 2.8″ 240×320 SPI TFT LCD Display (ILI9341)
+
+![2.8″ 240×320 SPI TFT LCD Display](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/ILI9341%202.8in%20240x320%20TFT%20Display.jpg)
+
+## 14-Pin SPI 2.8″ 240×320 TFT LCD header:
 <pre><code>
 GOOUUU Tech ESP32-S3-CAM Expansion Board
     ´14-Pin SPI 2.8″ 240×320 TFT LCD header:
@@ -291,6 +295,8 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
 13. GND             GND           Power System Ground
 14. VCC             5V0           Power 5.0V
 </code></pre>
+
+![14-Pin SPI 2.8″ 240×320 TFT LCD header](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/ILI9341%202.8in%20240x320%20TFT%20Display-5.jpg)
 
 ## TFT LCD 2.8″ 240×320 DISPLAY WITH TOUCH SCREEN
 
@@ -321,7 +327,9 @@ data lines to prevent possible damage.
 ### Module Power:
 
 SEE IMAGE:  TFT LCD 2.8″ 240×320 RGB ILI9341 with Touchscreen
-—» J1 Jumper Location
+—» `J1` Jumper Location
+
+![J1 Jumper Location](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/ILI9341%202.8in%20240x320%20TFT%20Display-6.jpg)
 
 The module power comes in on the VCC pin. The module includes an
 on-board 3.3V regulator, so the module should normally be operated
