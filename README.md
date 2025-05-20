@@ -40,7 +40,7 @@ ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB L
 > [8. ESP32-S3-DevKitC-1-ALT](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/8.%20ESP32-S3-DevKitC-1-ALT.jpg)
 <hr>
 
-# GOOUUU Tech ESP32-S3-CAM Expansion Board
+# GOOUUU Tech ESP32-S3-CAM Expansion Board Diagram
 <pre><code>
 .___________________________________________________________________________________.
 | Ø  .………. ¬R4        S1·2·3·4      ¬R6   .-----------.  U2  P1·2·3·4             Ø |
