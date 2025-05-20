@@ -1,11 +1,12 @@
 # GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board
 
 ***WORK IN PROGRESS*** &nbsp; &nbsp; Prof. Michael P. Harris &nbsp; &nbsp; *05/13/2025*
+[GitHub Pages](https://pages.github.com/)
 ```
 ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB LEDs
                                                                        LED
 ** NOT Compatible (too narrow): **
- 0. Espressif ESP32-S3-DevKitC-1 (no camera, no SD card)  44            ✓  1+RGB
+ 0. [Espressif ESP32-S3-DevKitC-1](./images/0. Espressif ESP32-S3-DevKitC-1.jpg) (no camera, no SD card)  44            ✓  1+RGB
 
 ** Yellow 40-pin headers: **
 
@@ -16,10 +17,11 @@ ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB L
 
  5. YD-ESP32-S3 (ESP32-S3-WROOM-1 Dev) (DevKitC-1 clone)  44            ✓  3+RGB
  6. WaveShare ESP32-S3-DEV-KIT-N8R8    (DevKitC-1 clone)  44            ✓  1+RGB
+ 7. WeAct Studio ESP32-S3-A/B Core     (DevKitC-1 clone)  44            ✓  1+RGB
 
 ** Black 42-pin headers: **
 
- 7. ESP32-S3-DevKitC-1-ALT       (no camera, no SD card)  42            ✓  1+RGB
+ 8. ESP32-S3-DevKitC-1-ALT       (no camera, no SD card)  42            ✓  1+RGB
 ```
 <hr>
 
@@ -38,20 +40,20 @@ ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB L
 |     DVP Camera ´_G##   ¦ ¦ ¦ ¦_¦ ¦_¦   ¦   G##÷ PSRAM                             |
 |                     .——¦ ¦ ¦           ¦——.                                       |
 |TXD ¤ ö 3V3       3V3|ö:¦——.··. .————/:•¦:¤|G43  TX› LED      .__SPI-LCD__ESP32-S3_|
-|RXD o o EN        RST|o:¦  WiFi ß    '——¦:o|G44  RX‹          ¦_1. T_IRQ     × N/C |
-| G1 o © G4      ´_G4 |©:¦  ˜¨¨˜ °       ¦:o|G1   VR• (T_CS)   ¦_2. T_DO      G41   |
-| G2 o © G5      ´_G5 |©:¦ ESP32S3-N16R8 ¦:o|G2   U3• (T_DIN)  ¦_3. T_DIN     G2    |
-|G42 o © G6      ´_G6 |©:¦         .………….¦:o|G42  SDA (T_CLK)  ¦_4. T_CS      G1    |
-|G41 o © G7      ´_G7 |©:¦ ŒÆ F©   ¦QRCD¦¦:o|G41  SCL (T_DO)   ¦_5. T_CLK     G42   |
-|G40 õ © G15     ´_G15|©:¦ ° N16R8 '…………'¦:õ|G40~ SD_DATA   •S3¦_6. SDO/MISO  G46   |
-|G39 õ © G16     ´_G16|©:'———————————————':õ|G39~ SD_CLK    •S2¦_7. LED/BL    3V3   |
-|G38 õ © G17     ´_G17|© .………………………………………. õ|G38~ SD_CMD    •S1¦_8. SCK       G3    |
-|G37 ð © G18     ´_G18|© ¦ ::::::::::::: ¦ ð|G37÷ PSRAM     •S4¦_9. SDI/MOSI  G45   |
-|G36 ð © G8      ´_G8 |© ¦    Camera     ¦ ð|G36÷ PSRAM        ¦10. DC/RS     G47   |
-|G35 ð o G3  (SCK) G3 |o ¯¯:::::::::::::¯¯ ð|G35÷ PSRAM        ¦11. RESET     G21   |
-| G0 o o G46 (SDO) G46|o      GOOUUU       o|G0   ‹BOOT›       ¦12. CS        G14   |
-|G45 o © G9      ´_G9 |©   ESP32-S3-CAM    o|G45      (SDI)    ¦13. GND       GND   |
-|G48 ¤ © G10     ´_G10|©   ¬ ¬     ¤ ¤ ‹¤› ¤|G48  RGB LED      ¦14. VCC       5V0   |
+|RXD o o EN        RST|o:¦  WiFi ß    '——¦:o|G44  RX‹          ¦_1. T_IRQ      × N/C|
+| G1 o © G4      ´_G4 |©:¦  ˜¨¨˜ °       ¦:o|G1   VR• (T_CS)   ¦_2. T_DO       G41  |
+| G2 o © G5      ´_G5 |©:¦ ESP32S3-N16R8 ¦:o|G2   U3• (T_DIN)  ¦_3. T_DIN      G2   |
+|G42 o © G6      ´_G6 |©:¦         .………….¦:o|G42  SDA (T_CLK)  ¦_4. T_CS       G1   |
+|G41 o © G7      ´_G7 |©:¦ ŒÆ F©   ¦QRCD¦¦:o|G41  SCL (T_DO)   ¦_5. T_CLK      G42  |
+|G40 õ © G15     ´_G15|©:¦ ° N16R8 '…………'¦:õ|G40~ SD_DATA   •S3¦_6. SDO (MISO) G46  |
+|G39 õ © G16     ´_G16|©:'———————————————':õ|G39~ SD_CLK    •S2¦_7. LED (BL)   3V3  |
+|G38 õ © G17     ´_G17|© .………………………………………. õ|G38~ SD_CMD    •S1¦_8. SCK        G3   |
+|G37 ð © G18     ´_G18|© ¦ ::::::::::::: ¦ ð|G37÷ PSRAM     •S4¦_9. SDI (MOSI) G45  |
+|G36 ð © G8      ´_G8 |© ¦    Camera     ¦ ð|G36÷ PSRAM        ¦10. DC         G47  |
+|G35 ð o G3  (SCK) G3 |o ¯¯:::::::::::::¯¯ ð|G35÷ PSRAM        ¦11. RST        G21  |
+| G0 o o G46 (SDO) G46|o      GOOUUU       o|G0   ‹BOOT›       ¦12. CS         G14  |
+|G45 o © G9      ´_G9 |©   ESP32-S3-CAM    o|G45      (SDI)    ¦13. GND        GND  |
+|G48 ¤ © G10     ´_G10|©   ¬ ¬     ¤ ¤ ‹¤› ¤|G48  RGB LED      ¦14. VCC        5V0  |
 |G47 o © G11     ´_G11|©   ¨ ¨   PWR TX 48 o|G47      (DC)     '————————————————————|
 |G21 o © G12     ´_G12|©      ......       o|G21      (RST)                         |
 |G20 o © G13     ´_G13|© RST ¦CH304G¦ BOOT ø|G20  D-            GOOUUU              |
