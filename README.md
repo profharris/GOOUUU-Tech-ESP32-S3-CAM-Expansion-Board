@@ -26,6 +26,7 @@ ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB L
 > [2. ESP32-S3-WROOM CAM](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/2.%20ESP32-S3-WROOM%20(CAM).jpg)<br/>
 > [3. FREENOVE ESP32-S3-WROOM (CAM)](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/3.%20FREENOVE%20ESP32-S3-WROOM%20(CAM).jpg)<br/>
 > [4. FREENOVE ESP32-S3-WROOM Lite](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/3.%20FREENOVE%20ESP32-S3-WROOM%20(CAM).jpg)<br/>
+> <br/>
 > [5. YD-ESP32-S3 (ESP32-S3-WROOM-1 Dev)](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/5.%20YD-ESP32-S3%20(ESP32-S3%20Dev).jpg)<br/>
 > [6. WaveShare ESP32-S3-DEV-KIT-N8R8](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/6.%20WaveShare%20ESP32-S3-DEV-Kit-N8R8.jpg)<br/>
 > [7. WeAct Studio ESP32-S3-A/B Core](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/7.%20WeAct%20Studio%20ESP32-S3-AB.jpg)
