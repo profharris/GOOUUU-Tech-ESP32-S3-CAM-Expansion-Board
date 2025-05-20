@@ -192,24 +192,25 @@ Development Board `40-pin “Yellow”` & `42-pin “Black”` header sockets.
     the “Yellow” **P1** & **P2** header-pin sockets and the Black **P3** & **P3** sockets.
 
 <pre><code>
-        ¦ GOOUUU ESP32-S3-CAM ¦ or: “ESP32-S3-WROOM” (CAM Module)
+        ¦ GOOUUU ESP32-S3-CAM ¦ or: “ESP32-S3-WROOM” (CAM)
         ¦   `40-pin headers`  ¦     “FREEVOVE ESP32-S3-WROOM”
         V  “Yellow” P1 & P2   V     “YD-ESP32-S3”/ESP32-S3-WROOM-1 Dev
-
+                                    “WaveShare ESP32-S3-DEV-KIT-N8R8”
+                                    “WeAct Studio ESP32-S3-A/B Core”
          ¦ ESP32-S3-DevKitC-1  ¦
          ¦ `42-pin ALT VERSION`¦
-         V    Black P3 & P4    V
+         V   “Black” P3 & P4   V
 
-        .—P1 (Yellow)         .—P2 (“Yellow” 40-pin header)
-        ¦.—P3 (Black)         ¦.—P4 (Black 42-pin header)
+        .—P1 (“Yellow”)       .—P2 (“Yellow” 40-pin headers)
+        ¦.—P3 (“Black”)       ¦.—P4 (“Black” 42-pin headers)
         ¦¦                    ¦¦
-        ×•  GND               ×•  GND            NOTE¹: The DVP Camera
-  3V3   öö  3V3 same    »TXD  oo  G1«                   interface uses
-   EN   oo   EN same    »RXD  oo  G2«                   all the Yellow
- ´_G4   ©©   G4 same    »G1   oo  TX0«                  GPIO Left-side
- ´_G5   ©©   G5 same    »G2   oo  RX0«                  _pins except:
- ´_G6   ©©   G6 --same-- G42  oo  G42                   `GPIO3`, `GPIO46`,
- ´_G7   ©©   G7 --same-- G41  oo  G41                   and `GPIO14`.
+        ×•  GND               ×•  GND               NOTE¹: The DVP Camera
+  3V3   öö  3V3 same    »TXD  oo  G1«                      interface uses
+   EN   oo   EN same    »RXD  oo  G2«                      all the Yellow
+ ´_G4   ©©   G4 same    »G1   oo  TX0«                     GPIO Left-side
+ ´_G5   ©©   G5 same    »G2   oo  RX0«                     _pins_ except:
+ ´_G6   ©©   G6 --same-- G42  oo  G42                      `GPIO3`, `GPIO46`,
+ ´_G7   ©©   G7 --same-- G41  oo  G41                      and `GPIO14`.
  ´_G15  ©©  G15 --same-- G40  õõ  G40~  SD_Card `GPIO40`
  ´_G16  ©©  G16 --same-- G39  õõ  G39~    "     `GPIO39`
  ´_G17  ©©  G17 --same-- G38  õõ  G38~    "     `GPIO38`
@@ -217,14 +218,14 @@ Development Board `40-pin “Yellow”` & `42-pin “Black”` header sockets.
  ´_G8   ©©   G8 --same-- G36  ðð  G36÷    "     `GPIO36`
   »G3   oø  G19« D+ same G35  ðð  G35÷    "     `GPIO35`
   »G46  oø  G20« D- same G0   oo  G0
-»´_G9   ©o   G3«    same G45  oo  G45            NOTE²: Pin `GPIO46` is
-»´_G10  ©o  G46«    same G48  ¤¤  G48                   INPUT only.
-»´_G11  ©©   G9«    same G47  oo  G47                   No pullups.
+»´_G9   ©o   G3«    same G45  oo  G45               NOTE²: Pin `GPIO46` is
+»´_G10  ©o  G46«    same G48  ¤¤  G48                      INPUT only.
+»´_G11  ©©   G9«    same G47  oo  G47                      No pullups.
 »´_G12  ©©  G10«    same G21  oo  G21
 »´_G12  ©©  G10«    same G21  oo  G21
 »´_G13  ©©  G11«     D- »G20  øo  G14«
   »G14  o©  G12«     D+ »G19  ø©  ´_G13«
-  »5V0  ôö  3V3«        »GND  •ô  5VIN« («— Be careful!)
+  »5V0  ôö  3V3«        »GND  •ô  5VIN« («— _Be careful!_)
         ¦¦                    ¦¦
         ¦'—Black              ¦'—Black
         '—Yellow              '—Yellow
