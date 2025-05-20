@@ -11,7 +11,7 @@ ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB L
 ```
 > [0. Espressif ESP32-S3-DevKitC-1](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/0.%20Espressif%20ESP32-S3-DevKitC-1.jpg)
 
-## Yellow 40-pin headers:&nbsp; &nbsp;_(also 44-pin with top & bottom overhang!)_
+## _Use_ Yellow 40-pin headers:&nbsp; &nbsp;_(also 44-pin with top & bottom overhang!)_
 ```
  1. GOOUUU ESP32-S3-CAM     (DevKitC-1 clone + CAM + SD)  40     ✓  ✓  ✓  2+RGB
  2. ESP32-S3-WROOM CAM   (FREENOVE ESP32-S3-WROOM clone)  40     ✓  ✓  ✓  4+RGB
@@ -22,19 +22,19 @@ ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB L
  6. WaveShare ESP32-S3-DEV-KIT-N8R8    (DevKitC-1 clone)  44            ✓  1+RGB
  7. WeAct Studio ESP32-S3-A/B Core     (DevKitC-1 clone)  44            ✓  1+RGB
 ```
-> [1. GOOUUU ESP32-S3-CAM](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/0.%20Espressif%20ESP32-S3-DevKitC-1.jpg)<br/>
-> [2. ESP32-S3-WROOM CAM](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/0.%20Espressif%20ESP32-S3-DevKitC-1.jpg)<br/>
-> [3. FREENOVE ESP32-S3-WROOM (CAM)](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/0.%20Espressif%20ESP32-S3-DevKitC-1.jpg)<br/>
-> [4. FREENOVE ESP32-S3-WROOM Lite](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/0.%20Espressif%20ESP32-S3-DevKitC-1.jpg)<br/>
-> [5. YD-ESP32-S3 (ESP32-S3-WROOM-1 Dev)](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/0.%20Espressif%20ESP32-S3-DevKitC-1.jpg)<br/>
-> [6. WaveShare ESP32-S3-DEV-KIT-N8R8](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/0.%20Espressif%20ESP32-S3-DevKitC-1.jpg)<br/>
-> [7. WeAct Studio ESP32-S3-A/B Core](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/0.%20Espressif%20ESP32-S3-DevKitC-1.jpg)
+> [1. GOOUUU ESP32-S3-CAM](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/1.%20GOOUUU%20ESP32-S3-CAM.jpg)<br/>
+> [2. ESP32-S3-WROOM CAM](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/2.%20ESP32-S3-WROOM%20(CAM).jpg)<br/>
+> [3. FREENOVE ESP32-S3-WROOM (CAM)](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/3.%20FREENOVE%20ESP32-S3-WROOM%20(CAM).jpg)<br/>
+> [4. FREENOVE ESP32-S3-WROOM Lite](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/3.%20FREENOVE%20ESP32-S3-WROOM%20(CAM).jpg)<br/>
+> [5. YD-ESP32-S3 (ESP32-S3-WROOM-1 Dev)](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/5.%20YD-ESP32-S3%20(ESP32-S3%20Dev).jpg)<br/>
+> [6. WaveShare ESP32-S3-DEV-KIT-N8R8](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/6.%20WaveShare%20ESP32-S3-DEV-Kit-N8R8.jpg)<br/>
+> [7. WeAct Studio ESP32-S3-A/B Core](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/7.%20WeAct%20Studio%20ESP32-S3-AB.jpg)
 
-## Black 42-pin headers:
+## _Use_ Black 42-pin headers:
 ```
  8. ESP32-S3-DevKitC-1-ALT       (no camera, no SD card)  42            ✓  1+RGB
 ```
-> [8. ESP32-S3-DevKitC-1-ALT](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/0.%20Espressif%20ESP32-S3-DevKitC-1.jpg)
+> [8. ESP32-S3-DevKitC-1-ALT](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/8.%20ESP32-S3-DevKitC-1-ALT.jpg)
 <hr>
 
 # GOOUUU Tech ESP32-S3-CAM Expansion Board
