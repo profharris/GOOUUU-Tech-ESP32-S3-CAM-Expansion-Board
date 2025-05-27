@@ -1,6 +1,6 @@
 # GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board
 
-***WORK IN PROGRESS*** &nbsp; &nbsp; Prof. Michael P. Harris &nbsp; &nbsp; *05/13/2025*<br/>
+***A WORK IN PROGRESS*** &nbsp; &nbsp; Prof. Michael P. Harris &nbsp; &nbsp; *05/28/2025*<br/>
 [GitHub Pages](https://pages.github.com/)
 
 ![GOOUUU-Tech ESP32-S3-CAM Expansion Board](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/GOOOUUU%20Tech%20ESP32-S3-CAM%20Expansion%20Board-1.jpg)
@@ -13,12 +13,14 @@ ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB L
 ```
 > [0. Espressif ESP32-S3-DevKitC-1](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/0.%20Espressif%20ESP32-S3-DevKitC-1.jpg)
 
-## _Use_ the “Yellow” 40-pin headers:&nbsp; &nbsp;_(also 44-pin with top & bottom overhang!)_
+## _Use_ the “Yellow” 40-pin headers:&nbsp; &nbsp;_(also 44-pin with top & bottom pin overhang!)_
 ```
+ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB LEDs
+                                                                       LED
  1. GOOUUU ESP32-S3-CAM     (DevKitC-1 clone + CAM + SD)  40     ✓  ✓  ✓  2+RGB
  2. ESP32-S3-WROOM CAM   (FREENOVE ESP32-S3-WROOM clone)  40     ✓  ✓  ✓  4+RGB
  3. FREENOVE ESP32-S3-WROOM (CAM)                         40     ✓  ✓  ✓  4+RGB
- 4. FREENOVE ESP32-S3-WROOM Lite (no camera)              40            ✓  4+RGB
+ 4. FREENOVE ESP32-S3-WROOM-Lite (no camera)              40            ✓  4+RGB
 
  5. YD-ESP32-S3 (ESP32-S3-WROOM-1 Dev) (DevKitC-1 clone)  44            ✓  3+RGB
  6. WaveShare ESP32-S3-DEV-KIT-N8R8    (DevKitC-1 clone)  44            ✓  1+RGB
@@ -35,6 +37,8 @@ ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB L
 
 ## _Use_ the “Black” 42-pin headers:
 ```
+ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB LEDs
+                                                                       LED
  8. ESP32-S3-DevKitC-1-ALT       (no camera, no SD card)  42            ✓  1+RGB
 ```
 > [8. ESP32-S3-DevKitC-1-ALT](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/8.%20ESP32-S3-DevKitC-1-ALT.jpg)
@@ -45,14 +49,14 @@ ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB L
 .___________________________________________________________________________________.
 | Ø  .………. ¬R4        S1·2·3·4      ¬R6   .-----------.  U2  P1·2·3·4             Ø |
 |    ¦W Ø¦         GND • • • •           —ô 5V0 DHT11 ¦   Ø¨¨¦•¦ô¦o¦o¦¨¨Ø    I²C    |
-|5V0 ¦5  ¦«—o VR   5V0 ô ô ô ô   o U3 —» —oDATA sensor¦   ¦   G V S S   ¦ Interface |
-|    ¦0  ¦  o G1   SIG o o o o   o G2    —× n/c  temp ¦   ¦   N C C D   ¦ ————————— |
+|5V0 ¦5  ¦«—Þ VR   5V0 ô ô ô ô   Þ U3 —» —oDATA sensor¦   ¦   G V S S   ¦ Interface |
+|    ¦0  ¦  Þ G1   SIG o o o o   Þ G2    —× n/c  temp ¦   ¦   N C C D   ¦ ————————— |
 |GND ¦5  ¦ P7          G G G G  P8       —• GND  humi ¦   ¦   D C L A   ¦ GND — GND |
 |    ¯¨¨¨¯             3 3 4 3        U3  '-----------'   ¦             ¦ VCC — 5V0 |
 | R3 VR/POT            8 9 0 7                            ¦ 0.96″ OLED  ¦ SCL — G41 |
 |                        ._______________.                ¦   64×128    ¦ SDA — G42 |
 |                        ¦ .….…. .…. .……¯¦   G##~ SD_Card Ø……¨¨¨¨¨¨¨¨………Ø           |
-|     DVP Camera ´_G##   ¦ ¦ ¦ ¦_¦ ¦_¦   ¦   G##÷ PSRAM                             |
+|     DVP Camera ´_G##   ¦ ¦ ¦ ¦_¦ ¦_¦   ¦   G##÷ PSRAM                            |
 |                     .——¦ ¦ ¦           ¦——.                                       |
 |TXD ¤ ö 3V3       3V3|ö:¦——.··. .————/:•¦:¤|G43  TX› LED      .__SPI-LCD__ESP32-S3_|
 |RXD o o EN        RST|o:¦  WiFi ß    '——¦:o|G44  RX‹          ¦_1. T_IRQ      × N/C|
@@ -94,57 +98,64 @@ ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB L
 
 ## 40-Pin “Yellow” header sockets _(primary)_
 The `40-Pin “Yellow”` header sockets, are designed for the **GOOUUU “ESP32-S3-CAM”** board.&nbsp;
-A second, third, and fourth compatible Dev Boards are the &nbsp;**“ESP32-S3-WROOM”** (CAM),&nbsp; 
+A second, third, and fourth compatible Dev Boards are the &nbsp;**“ESP32-S3-WROOM”** (CAM),&nbsp;
 a clone of the **“FREEVOVE ESP32-S3-WROOM”** (CAM);&nbsp; and its’ sibling the &nbsp;
 **“FREEVOVE ESP32-S3-WROOM-Lite”** _(no camera interface)_. all three of these Dev Boards also
-work perfectly in the “Yellow” headers &nbsp;--as all three of these &nbsp;*DVP camera ready*&nbsp; 
+work perfectly in the “Yellow” headers &nbsp;--as all three of these &nbsp;*DVP camera ready*&nbsp;
 Dev boards have the same pinouts,&nbsp; and same SoC main chip,&nbsp; the **“ESP32-S3-WROOM-1”**.
 
-A fourth, fifth, and sixth development boards using the **“ESP32-S3-WROOM-1”** SoC,&nbsp; are the **“YD-ESP32-S3”**, 
-also called the **“ESP32-S3-WROOM-1 Dev”**,&nbsp; the **“WaveShare ESP32-S3-DEV-KIT-N8R8”**,&nbsp; and 
-the **“WeAct Studio ESP32-S3-A/B Core”**.&nbsp; All three of these are 44-pin boards,&nbsp; _(like_
-_the original ESP32-S3-DevKitC-1)__ &nbsp;--but the top and bottom rows of pins are just an 
-extra `3V3` pin and three extra ground pins.&nbsp; --These board also works in the “Yellow” header pin sockets...
-&nbsp;Just let the extra row of top & bottom pins hang over/extend past the headers, allowing your 44-pin board
-to plug into a set of 40-pin sockets.&nbsp; These development boards do NOT have a &nbsp;*DVP camera interface*
+A fourth, fifth, and sixth development boards using the **“ESP32-S3-WROOM-1”** SoC,&nbsp;
+are the **“YD-ESP32-S3”**,&nbsp; also called the **“ESP32-S3-WROOM-1 Dev”**,&nbsp; the
+**“WaveShare ESP32-S3-DEV-KIT-N8R8”**,&nbsp; and the **“WeAct Studio ESP32-S3-A/B Core”**.&nbsp;
+All three of these are `44-pin` boards,&nbsp; _(like the original ESP32-S3-DevKitC-1)_ &nbsp;
+--but the top and bottom rows of pins are just an extra `3V3` pin and three extra `GND` pins.&nbsp;
+--These board also works in the “Yellow” header pin sockets...
+&nbsp;Just let the extra row of top & bottom pins hang over/extend past the headers, allowing
+your `44-pin` board to plug into a set of `40-Pin “Yellow”`header sockets.&nbsp;
+These development boards do NOT have a &nbsp;*DVP camera interface*
 like our first three boards.
 
-All seven of these **“ESP32-S3-WROOM-1”** Dev boards are pinout *backward compatible*,&nbsp; -not counting
-the extra top & bottom pins,&nbsp; with the original **Espressif**&nbsp; 44-pin **“ESP-S3-DevKitC-1”**.
+All seven of these **“ESP32-S3-WROOM-1”** Dev boards are pinout *backward compatible*,&nbsp;
+-not counting the extra top & bottom pins,&nbsp; with the original **Espressif**&nbsp;
+`44-pin` **“ESP-S3-DevKitC-1”**.
 
 > **NOTE:**&nbsp; **DevKitC-1**,&nbsp; NOT DevKitM-1 *(M1 is NOT pin compatible)*.
 
-*Unfortunately*, the original **“ESP-S3-DevKitC-1”** will not plug into the “Yellow” headers,&nbsp; as this original
-Dev Board is narrower *(by 1 pin spacing)* than the other seven Dev Boards.&nbsp; Otherwise it could plug in just like the
-other 44-pin boards,&nbsp; like the inexpensive workhorse **“YD-ESP32-S3”**.
+*Unfortunately*, the original **“ESP-S3-DevKitC-1”** will not plug into the “Yellow”
+headers,&nbsp; as this original Dev Board is narrower *(by 1 pin spacing)* than the
+other seven Dev Boards.&nbsp; Otherwise it could plug in just like the
+other `44-pin` boards,&nbsp; like the inexpensive workhorse **“YD-ESP32-S3”**.
 <hr>
 
 ## Identifying **ESP32-S3-DevKitC-1** pin compatible boards
-**NOTE:**&nbsp; To identify one of these seven 40-pin **ESP32-S3-DevKitC-1** pin compatible boards...&nbsp;
-Look at the board with the two USB ports facing down.&nbsp; The Left-side pins will end with `GPIO13`, `GPIO14`,
-then `5V0` _(and possibly an extra `GND`)_.&nbsp; The top Right-side pins will _(possibly start with a `GND` pin)_ 
-then begin with `TXD`, `RXD`, `GPIO1`, then `GPIO2`.
+**NOTE:**&nbsp; To identify one of these seven `40-pin` **ESP32-S3-DevKitC-1**
+pin compatible boards...&nbsp; Look at the board with the two USB ports facing
+down.&nbsp; The Left-side pins will end with `GPIO13`, `GPIO14`, then `5V0`
+_(and possibly an extra `GND`)_.&nbsp;
 
-The 44-pin boards, like the **“YD-ESP32-S3”** and **“ESP32-S3-DevKitC-1”**,&nbsp; have 1 extra pin 
-at the top and bottom of each header,&nbsp; --an extra `3V3` pin in the upper-Left,&nbsp; 
-nd an extra `GND` pin on the other 3 corners.
+The top Right-side pins will _(possibly start with a `GND` pin)_&nbsp; then
+begin with `TXD`, `RXD`, `GPIO1`, then `GPIO2`.
+
+The `44-pin` boards,&nbsp; like the **“YD-ESP32-S3”** and **“ESP32-S3-DevKitC-1”**,&nbsp;
+have 1 extra pin at the top and bottom of each header,&nbsp; --an extra `3V3` pin
+in the upper-Left,&nbsp; and an extra `GND` pin on the other 3 corners.
 <hr>
 
 ## 42-Pin “Black” header sockets
 
 The `42-Pin “Black” header` sockets are for an **ALT version**
-of the **“ESP-S3-DevKitC-1”**. This ALT version has
+of the **“ESP-S3-DevKitC-1”**.&nbsp; This ALT version has
 `42-pins` instead of the original `44-pins`,&nbsp; and is 1
 pin-space wider,&nbsp; like the Dev boards mentioned above.
 
 Even though this `42-pin` **“ESP-S3-DevKitC-1_ALT-version”**
-uses the same **“ESP32-S3-WROOM-1”** SoC,&nbsp; 
-the pinout is similar but **NOT** the same as the other `40` & `44-pin`
+uses the same **“ESP32-S3-WROOM-1”** SoC,&nbsp; the pinout is
+similar but **NOT** the same as the other `40-pin` & `44-pin`
 Dev boards...&nbsp; **“ESP32-S3-GOOUUU-CAM”**,&nbsp; **“ESP32-S3-WROOM”**
-(CAM Module),&nbsp; **“FREEVOVE ESP32-S3-WROOM”**,&nbsp; **“YD-ESP32-S3”**,&nbsp;
+(CAM),&nbsp; **“FREEVOVE ESP32-S3-WROOM”**,&nbsp; **“YD-ESP32-S3”**,&nbsp;
 or the original `44-pin` **“ESP-S3-DevKitC-1”**.
 
-A quick way to identify this Dev board, besides the `42-pins`
+A quick way to identify this Development board, besides the `42-pins`
 instead of `40` or `44-pins`,&nbsp; is to look at the board with
 the two USB ports facing down.&nbsp; The upper-Right pins will
 _start_ with _(an extra)_ `GND`, `GPIO1`, `GPIO2`, `TX0`, `RX0`.&nbsp;
@@ -153,19 +164,19 @@ most importantly,&nbsp; the lower-Right pin is `5VIN`.
 
 
 > [!WARNING]
-> I want to pointout this _lower-Right_ `5VIN` pin, specifically because
-> all of the other ESP32-S3 Dev boards mentioned,
-> have a `GND` (power ground) pin in the lower-Right.&nbsp; Plugging
+> I want to pointout this _lower-Right_ `5VIN` pin, specifically
+> because, All of the other ESP32-S3 Dev boards mentioned, have
+> a `GND` (power ground) pin in the lower-Right.&nbsp; Plugging
 > in a `5V` pin into a `GND` header socket, or vice-versa,
 > is a quick way to short out and burn-up your Dev board!
 <hr>
 
 # Very clever 2-way “Yellow” and “Black” header sockets
 
-The design engineers for the “GOOUUU Tech ESP32-S3-CAM Expansion Board”
-have done something very clever! They have _cross-wired_, where needed,
-the pins in the `40-pin “Yellow”` header to the `42-pin “Black”` header
-to match the pinout functions.
+The design engineers for the _“GOOUUU Tech ESP32-S3-CAM Expansion Board”_
+have done something very clever!&nbsp; They have _cross-wired_,&nbsp; where
+needed,&nbsp; the pins in the `40-pin “Yellow”` header to the `42-pin “Black”`
+header to match the pinout functions.
 
 **For example:**&nbsp; the first four upper-Right pins of the `40-pin “Yellow”`
 header are:&nbsp; `1. TXD`, `2. RXD`, `3. GPIO1`, `4. GPIO2`.  The first five
@@ -173,11 +184,12 @@ pins of the `42-pin “Black”` header are:&nbsp; `1. GND`, `2. GPIO1`, `3. GPI
 `4. TX0`, and `5. RX0`.&nbsp; Copper traces on the Expansion Board, connect the
 “Yellow” pin-1 `TXD` to the “Black” pin-4 `TX0`,&nbsp; and “Yellow” pin-2 `RXD`
 to “Black” pin-5 `RX0`.&nbsp; Also `GPIO1` is _cross_ _connected_ to `GPIO1`,&nbsp;
-`GPIO2` is _cross_ _connected_ to `GPIO2` and so on.&nbsp; Since all the
-“ESP32-S3-WROOM-1” SoC designs have the same pins... this allows for a single
-`40-pin` double-row breakout header along the Left-side of the expansion board.&nbsp;
-The pinout of this breakout header, _mirror-image_ matches the `40-pin`
-`“Yellow” headers`,&nbsp; and all of the pins are well labled.
+`GPIO2` is _cross_ _connected_ to `GPIO2` and so on.&nbsp;
+
+Since all the “ESP32-S3-WROOM-1” SoC designs have the same set of pins... this
+allows for a single `40-pin` double-row breakout header along the Left-side of
+the Expansion Board.&nbsp; The pinout of this breakout header, _mirror-image_
+matches the `40-pin` `“Yellow” headers`,&nbsp; and all of the pins are well labled.
 
 # 40-pin “Yellow” & 42-pin “Black” header sockets diagram
 
@@ -274,7 +286,7 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
 ## 14-Pin SPI 2.8″ 240×320 TFT LCD header:
 <pre><code>
 GOOUUU Tech ESP32-S3-CAM Expansion Board
-    ´14-Pin SPI 2.8″ 240×320 TFT LCD header:
+    `14-Pin` SPI 2.8″ 240×320 ILI9341 TFT LCD header:
 
     ILI9341 2.8″    GOOUUU Tech
     LCD Display     Expansion
@@ -296,6 +308,52 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
 14. VCC             5V0           Power 5.0V
 </code></pre>
 
+### SPECIAL NOTE: Touch Screen SPI pins versus the LCD SPI pins:
+
+As noted above and on the on the Expansion Board Diagram #1,&nbsp; the
+SPI XPT2046 Touch Screen controller on the 2.8in TFT LCD Display
+is wired/configured to the following pins:
+
+> | XPT2046 Pin  | Description       | ESP32-S3 Pin |
+> |    :---:     |-------------------|     :---:    |
+> | T-IRQ        | Touch Interrupt   | N/C          |
+> | T-CLK (SCLK) | Touch SPI SCLK    | GPIO42       |
+> | T-DO  (MISO) | Touch SPI MISO    | GPIO41       |
+> | T-DIN (MOSI) | Touch SPI MOSI    | GPIO2        |
+> | T-CS         | Touch Chip Select | GPIO1        |
+
+The SPI control pins for the ILI9341 2.8in 240×320 TFT LCD Display itself are:
+> | ILI9341 Pin  | Description       | ESP32-S3 Pin |
+> |    :---:     |-------------------|     :---:    |
+> | SCK   (SCLK) | LCD SPI SCLK      | GPIO3        |
+> | SDO   (MISO) | LCD SPI MISO      | GPIO46       |
+> | SDI   (MOSI) | LCD SPI MOSI      | GPIO45       |
+> | CS           | LCD Chip Select   | GPIO14       |
+
+The *XPT2046 Touch Screen controller* is supported for SPI based displays.&nbsp;
+The SPI bus for the Touch controller is _“shared”_ with the SPI TFT LCD,&nbsp;
+and ‘only’ an additional CS _(Chip Select)_ pin is needed.
+
+This means that the three SPI Touch pins:&nbsp; `T-CLK` (SCLK), `T-DO` (MISO),
+and `T-DIN` (MOSI),&nbsp; could have been wired/configured to the _“same”_
+corresponding SPI TFT LCD pins:&nbsp; `SCK` (SCLK) - `GPIO3`, `SDO` (MISO)
+- `GPIO46`, and `SDI` (MOSI) - `GPIO45`.&nbsp; Only the individual *CS*
+_(Chip Select)_ lines needed to be assigned to seperate GPIO pins.&nbsp;
+*This could have freed up ‘three’ ESP32-S3-WROOM pins*.
+
+This is very important,&nbsp; because as configured,&nbsp; if you are using
+one of the *ESP32-S3-WROOM* boards with a _“DVP Camera”_ interface &nbsp;and
+_“NOT sharing”_ those three primary SPI pins,&nbsp; you now have ‘zero’ pins
+availiable.&nbsp; --And that is ‘0’ pins free _after_ giving up the `I²C`
+interface on `SCL` - `GPIO41` and `SDA` - `GPIO41`&nbsp; to the Touch Screen
+interface.
+
+As wired/configured,&nbsp; if you want an `I²C interface`, you need to give up
+`Touch Screen` capability,&nbsp; and vice-versa.&nbsp; If the 3 rimary SPI pins
+were _“shared”_ &nbsp;we could have both with ‘1’ pin left over.&nbsp; We could
+even add a `buzzer` audio interface or possibily a Analog 1-pin `keypad`, etc.
+<hr>
+
 ![14-Pin SPI 2.8″ 240×320 TFT LCD header](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/ILI9341%202.8in%20240x320%20TFT%20Display-5.jpg)
 
 ## TFT LCD 2.8″ 240×320 DISPLAY WITH TOUCH SCREEN
@@ -303,24 +361,25 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
 Key Features of the TFT LCD 2.8″ 240×320 Display with Touch Screen:
 
 + 2.8″ TFT LCD with 240×320 resolution
-+ 65K colors using a ILI9341 controller
-+ Resistive Touch Screen with an XPT2046 controller
-+ SPI 4-wire LCD interface     (SCK, MOSI, DC, CS)
-+ SPI 4-wire SD_Card interface (SCK, MOSI, MISO, CS)
++ 65K 16-BIT colors using a ILI9341 controller
++ Resistive Touch Screen using an XPT2046 controller
++ SPI 4-wire ILI9341 LCD interface (SCK,    SDI_MOSI, SDO_MIS0, CS)
++ SPI 4-wire XPT2046 Touch Screen  (T-CLK,  T-DIN,    T-DO,     T-CS)
++ SPI 4-wire SD_Card interface     (SD_SCK, SD_MOSI,  SD_MISO,  SD_CS)
 + 3.6V to 5.5V module operation
 + 3.3V logic compatible only
 
 These full color displays are large enough for many applications
-even when using Touch. The supplied stylus is helpful when using
-smaller touch targets.
+even when using Touch.&nbsp; The supplied ‘stylus’ is helpful when
+using smaller touch targets.
 
-The modules have an `SD_Card` socket. This socket has separate
-connections to the opposite end of the board. Not needed with the
-**“ESP32-S3-CAM”**, as it already has a `TF SD_Card` on the backside.
+The LCD module has an `SD_Card` socket.&nbsp; This socket has separate
+connections on the opposite end of the board.&nbsp; Not needed with the
+**“ESP32-S3-CAM”**,&nbsp; as it already has a `TF SD_Card` on its’ backside.
 
-Internally the display logic perates at 3.3V, -so if using with a
-5V0 Microcontroller, be sure to include logic level shifters on the
-data lines to prevent possible damage.
+Internally the display logic operates at `3.3V`,&nbsp; -so if using with
+a `5V0` Microcontroller,&nbsp; be sure to include _logic level shifters_
+on the data lines to prevent possible damage.
 
 ## 2.8″ TFT Display Technical Specifications:
 
@@ -331,30 +390,31 @@ SEE IMAGE:  TFT LCD 2.8″ 240×320 RGB ILI9341 with Touchscreen
 
 ![J1 Jumper Location](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/ILI9341%202.8in%20240x320%20TFT%20Display-6.jpg)
 
-The module power comes in on the VCC pin. The module includes an
-on-board 3.3V regulator, so the module should normally be operated
-with 3.6V to 5.5V power on this pin to feed the regulator. Current
-draw is typically 55mA-60mA.
+The LCD module power comes in on the `VCC` pin.&nbsp; The LCD includes an
+on-board 3.3V regulator,&nbsp; so the LCD should normally be operated
+with `3.6V` to `5.5V` power on this pin to feed the regulator.&nbsp;
+Current draw is typically 55mA-60mA.
 
-If you would prefer to operate the module directly from a 3.3V power
-source, there are two solder pads labeled ‘J1’. By solder shorting
-these two pads together, the regulator is bypassed and the module
-can be powered directly from 3.3V.
+If you would prefer to operate the LCD module directly from a `3.3V`
+power source,&nbsp; there are two solder pads labeled ‘*J1*’. By solder
+shorting these two pads together,&nbsp; the 3V3 regulator is bypassed
+and the LCD module can be powered directly from `3.3V`.
 
-In general, it is best to operate the display off of 5V0 to ensure
-enough power is available.  Be careful of trying to operate the
-display from the built-in 3.3V available on Arduino and similar
-microcontrollers since these power sources often have limited
-current capability and may overheat.
+In general,&nbsp; it is best to operate the display off of `5V0` to
+ensure enough power is available.&nbsp;  Be careful of trying to
+operate the the display from the built-in 3.3V available on Arduino
+and similar microcontrollers since these power sources often have
+limited current capability and may overheat.
 
-### SPI Interface:
+### LCD SPI Interface:
 
-This display incorporates a SPI interface which provides for fast
-display updates. It is a 4-wire interface so it includes the `CS`
-(Chip Select) pin.
+This LCD display incorporates a SPI interface which provides for fast
+display updates.&nbsp; It is a 4-wire interface,&nbsp; so it includes
+a `CS` _(Chip Select)_ pin.
 
-The Touch Screen also uses the SPI interface and CAN hook up to the
-same pins as the display, but uses a separate `CS` to avoid conflicts.
+The _Touch Screen_ also uses the SPI interface and _CAN_ hook up to the
+“same pins” as the LCD display,&nbsp; but uses a separate `CS` _(Chip Select)_
+to avoid conflicts.
 
 For best performance the _hardware_ _SPI_ interface should be used if
 possible to get the fastest screen updates.
@@ -366,7 +426,7 @@ possible to get the fastest screen updates.
                 Resolution: 240×320 pixels
                      Color: RGB 65K color (16-bit 5:6:5)
              Viewing Angle: 60°
-                Interfaces: SPI (LCD Display & Touch)
+                Interfaces: SPI (LCD Display, Touch, and SD_Card)
          Operating Ratings: DC Power Input 3.6V – 5.5V
          Operating Current: 55mA-60mA (typical)
 
@@ -404,13 +464,21 @@ LCD 1x14 Header Specifications:
 
 ### Display Orientation:
 
-The LCD display can be rotated in all 4-directions.  Use `setRotation(n)`
-to rotate<br/>
-the image to match your desired physical rotation where ‘n’ ranges from 0 to 3.
+The LCD display output can be _rotated_ in all 4-directions.&nbsp;
+Use &nbsp;`setRotation(_n_)`&nbsp; to rotate the image to match your
+desired physical rotation where _‘n’_ ranges from 0 to 3.
 
-You will also need to set the _rotation_ of the ‘Touch Screen’.&nbsp; The
-numbers<br/>
-**DO NOT MATCH**,&nbsp; so use one of the following combinations.
+You will also need to set the _rotation_ of the ‘*Touch Screen*’.&nbsp;
+The configuration numbers **DO NOT MATCH**,&nbsp; so use one of the
+following combinations.
+
+> | Rotation | ILI9341 Display | XPT2046 Touchscreen |
+> |   :---:  |      :---:      |        :---:        |
+> |     0°   |        0        |          2          |
+> |    90°   |        1        |          3          |
+> |   180°   |        2        |          0          |
+> |   270°   |        3        |          1          |
+
 ```
 ILI9341 Display  XPT2046 Touchscreen
         0               2
