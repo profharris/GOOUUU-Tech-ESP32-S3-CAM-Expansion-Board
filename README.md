@@ -13,7 +13,7 @@ ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB L
 ```
 > [0. Espressif ESP32-S3-DevKitC-1](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/0.%20Espressif%20ESP32-S3-DevKitC-1.jpg)
 
-## _Use_ the “Yellow” 40-pin headers:<br/>_(also 44-pin with top & bottom pin overhang!)_
+## _Use_ the “Yellow” 40-pin (20+20) headers:<br/>_(also 44-pin (22+22) with top & bottom pin overhang!)_
 ```
 ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB LEDs
                                                                        LED
@@ -35,7 +35,7 @@ ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB L
 > [6. WaveShare ESP32-S3-DEV-KIT-N8R8](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/6.%20WaveShare%20ESP32-S3-DEV-Kit-N8R8.jpg)<br/>
 > [7. WeAct Studio ESP32-S3-A/B Core](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/7.%20WeAct%20Studio%20ESP32-S3-AB.jpg)
 
-## _Use_ the “Black” 42-pin headers:
+## _Use_ the “Black” 42-pin (21+21) headers:
 ```
 ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB LEDs
                                                                        LED
