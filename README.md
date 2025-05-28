@@ -494,8 +494,7 @@ following combinations.
 ## DVP Camera interface:
 
 ### ESP32-S3-WROOM-1 Camera Interface (OV2640)
-<pre><code>
-———————————————————————————————————————————————————————————————————————
+<pre><code>———————————————————————————————————————————————————————————————————————
  Uses ALL but 3 IO pins on the   ESP32-S3-WROOM-1    Camera Interface
  Left-side of ESP32-S3-WROOM-1   (Left Side Pins)    (FPC 0.5mm 24P)
                                   1.     3V3         1. NC      ×
