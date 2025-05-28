@@ -117,9 +117,10 @@ headers,&nbsp; allowing your `44-pin (22+22)` board to plug into a set of
 `40-Pin (20+20) “Yellow”`header sockets.&nbsp; These development boards do NOT have a
 &nbsp;*DVP camera interface* like our first three boards.
 
-All seven of these **“ESP32-S3-WROOM-1”** Dev boards are pinout &nbsp;***backward compatible***,&nbsp;
--not counting the extra top & bottom pins,&nbsp; with the original **Espressif**&nbsp;
-`44-pin (22+22)` ***“ESP-S3-DevKitC-1”***.
+All seven of these **“ESP32-S3-WROOM-1”** Dev boards are pinout&nbsp;
+***backward compatible***,&nbsp; -not counting the extra top & bottom 
+pins,&nbsp; with the original **Espressif**&nbsp; `44-pin (22+22)` 
+***“ESP-S3-DevKitC-1”***.
 
 > **NOTE:**&nbsp; **DevKitC-1**,&nbsp; NOT DevKitM-1 *(M1 is NOT pin compatible)*.
 
@@ -417,7 +418,7 @@ with `3.6V` to `5.5V` power on this pin to feed the regulator.&nbsp;
 Current draw is typically 55mA-60mA.
 
 If you would prefer to operate the LCD module directly from a `3.3V`
-power source,&nbsp; there are two solder pads labeled ‘*J1*’.&nbsp;
+power source,&nbsp; there are two solder pads labeled ‘**J1**’.&nbsp;
 By solder shorting these two pads together,&nbsp; the 3V3 regulator
 is bypassed and the LCD module can be powered directly from `3.3V`.
 
@@ -535,6 +536,53 @@ following combinations.
 ————————————————————————————————————————————————————————————————————
 </code></pre>
 <hr>
+
+## SDIO SD_Card interface:&nbsp; _(GPIO38, GPIO39, & GPIO40)_
+
+The **SPI** _SD_Card interface_&nbsp; on the TFT LCD is not needed brcause
+the **“ESP32-S3-CAM”**,&nbsp; already has a `TF SD_Card` slot on its’ backside.
+
+> **DO NOT CONFUSE:**&nbsp; the ***SPI*** _SD_Card interface_&nbsp; on the
+> LCD TFT module pins&nbsp; _(SD_SCK, SD_MOSI, SD_MISO, SD_CS)_,&nbsp;
+> which we are not using,&nbsp; with the ***SDIO*** _SD_Card interface_&nbsp;
+> to the TF SD_Card slot on the backside of the “DVP Camera capable”
+> Dev boards.&nbsp;
+ 
+This _high speed_ advanced &nbsp;***SDIO*** _SD_Card interface_&nbsp; 
+is configured on reserved pins&nbsp; _(GPIO38 &nbsp;**SD_CMD**,&nbsp; 
+GPIO39 &nbsp;**SD_CLK**,&nbsp; and GPIO40 &nbsp;**SD_DATA**)_.
+
+See example usage in `\code`.&nbsp; _...to be continued..._
+<hr>
+
+## SPI ƒlash and PSRAM _(GPIO26..GPIO32)_:
+
+GPIO26 to GPIO32 are connected to the integrated SPI ƒlash and PSRAM
+and are not recommended for other uses.&nbsp; They are not exposed on 
+these particular boards, but if they are exposed on your board, avoid 
+using them:
+
+    + GPIO26 (ƒlash/PSRAM SPICS1)
+    + GPIO27 (ƒlash/PSRAM SPIHD)
+    + GPIO28 (ƒlash/PSRAM SPIWP)
+    + GPIO29 (ƒlash/PSRAM SPICS0)
+    + GPIO30 (ƒlash/PSRAM SPICLK)
+    + GPIO31 (ƒlash/PSRAM SPIQ)
+    + GPIO32 (ƒlash/PSRAM SPID)
+
+### Missing _N/C_ Pins: _GPIO33_ & _GPIO34_
+
+## OPI PSRAM additional Pins _(GPIO35..GPIO37)_:
+
+**IN ADDITION:**&nbsp; For boards with _Octal SPI ƒlash/PSRAM_ memory 
+embedded,&nbsp; for example all boards with an **ESP32-S3-WROOM-1** 
+module and boards with **ESP32-S3-WROOM-2** modules,&nbsp; --pins 
+`GPIO35`,&nbsp; `GPIO36` &nbsp;and `GPIO37` are reserved for internal 
+communication between the _ESP32-S3_ and the _Octal SPI ƒlash/PSRAM_ 
+memory,&nbsp; and thus are NOT available for external use.
+————————————————————————————————————————————————————————————————————
+<hr>
+<br/>
 
 # findSPIpins.ino
 <pre><code>
