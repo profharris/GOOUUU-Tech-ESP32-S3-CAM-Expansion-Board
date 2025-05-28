@@ -538,9 +538,9 @@ following combinations.
 </code></pre>
 <hr>
 
-## SDIO SD_Card interface:&nbsp; _(GPIO38, GPIO39, & GPIO40)_
+### SDIO SD_Card interface:&nbsp; _(GPIO38, GPIO39, & GPIO40)_
 
-The **SPI** _SD_Card interface_&nbsp; on the TFT LCD is not needed brcause
+The **SPI** _SD_Card interface_&nbsp; on the TFT LCD is not needed because
 the **“ESP32-S3-CAM”**,&nbsp; already has a `TF SD_Card` slot on its’ backside.
 
 > **DO NOT CONFUSE:**&nbsp; the ***SPI*** _SD_Card interface_&nbsp; on the
@@ -556,20 +556,20 @@ GPIO39 &nbsp;**SD_CLK**,&nbsp; and GPIO40 &nbsp;**SD_DATA**)_.
 See example usage in `\code`.&nbsp; _...to be continued..._
 <hr>
 
-## SPI ƒlash and PSRAM _(GPIO26..GPIO32)_:
+### SPI ƒlash and PSRAM _(GPIO26..GPIO32)_:
 
 GPIO26 to GPIO32 are connected to the integrated SPI ƒlash and PSRAM
 and are not recommended for other uses.&nbsp; They are not exposed on
-these particular boards, but if they are exposed on your board, avoid
-using them:
+these particular Dev boards, but if they are exposed on your board, 
+avoid using them:
 
-    + GPIO26 (ƒlash/PSRAM SPICS1)
-    + GPIO27 (ƒlash/PSRAM SPIHD)
-    + GPIO28 (ƒlash/PSRAM SPIWP)
-    + GPIO29 (ƒlash/PSRAM SPICS0)
-    + GPIO30 (ƒlash/PSRAM SPICLK)
-    + GPIO31 (ƒlash/PSRAM SPIQ)
-    + GPIO32 (ƒlash/PSRAM SPID)
++ GPIO26 (ƒlash/PSRAM SPICS1)
++ GPIO27 (ƒlash/PSRAM SPIHD)
++ GPIO28 (ƒlash/PSRAM SPIWP)
++ GPIO29 (ƒlash/PSRAM SPICS0)
++ GPIO30 (ƒlash/PSRAM SPICLK)
++ GPIO31 (ƒlash/PSRAM SPIQ)
++ GPIO32 (ƒlash/PSRAM SPID)
 
 ### Missing _N/C_ Pins: _GPIO33_ & _GPIO34_
 
