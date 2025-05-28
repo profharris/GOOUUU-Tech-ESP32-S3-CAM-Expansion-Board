@@ -359,9 +359,10 @@ interface on `SCL` - `GPIO41` and `SDA` - `GPIO42`&nbsp; to the Touch Screen
 interface.
 
 As wired/configured,&nbsp; if you want an `I²C interface`, you need to give up
-`Touch Screen` capability,&nbsp; and vice-versa.&nbsp; If the 3 rimary SPI pins
-were _“shared”_ &nbsp;we could have both with ‘1’ pin left over.&nbsp; We could
-even add a `buzzer` audio interface or possibily a Analog 1-pin `keypad`, etc.
+`Touch Screen` capability,&nbsp; and vice-versa.&nbsp; If the 3 primary SPI pins
+were _“shared”_, &nbsp;we could have both,&nbsp; with ‘1’ pin left over.&nbsp;
+We could even add a `buzzer` audio interface or possibily a Analog 1-pin `keypad`,
+etc.
 <hr>
 
 ![14-Pin SPI 2.8″ 240×320 TFT LCD header](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/ILI9341%202.8in%20240x320%20TFT%20Display-5.jpg)
@@ -381,11 +382,11 @@ Key Features of the TFT LCD 2.8″ 240×320 Display with Touch Screen:
 
 These full color displays are large enough for many applications
 even when using Touch.&nbsp; The supplied ‘stylus’ is helpful when
-using smaller touch targets.
-
-The LCD module has an `SD_Card` socket.&nbsp; This socket has separate
-connections on the opposite end of the board.&nbsp; Not needed with the
-**“ESP32-S3-CAM”**,&nbsp; as it already has a `TF SD_Card` on its’ backside.
+using smaller touch targets.&nbsp; The LCD module has an `SD_Card`
+socket.&nbsp; This socket has separate connections on the opposite
+end of the LCD TFT board.&nbsp; Not needed with the
+**“ESP32-S3-CAM”**,&nbsp; as it already has a `TF SD_Card` on its’
+backside.
 
 Internally the display logic operates at `3.3V`,&nbsp; -so if using with
 a `5V0` Microcontroller,&nbsp; be sure to include _logic level shifters_
@@ -406,9 +407,9 @@ with `3.6V` to `5.5V` power on this pin to feed the regulator.&nbsp;
 Current draw is typically 55mA-60mA.
 
 If you would prefer to operate the LCD module directly from a `3.3V`
-power source,&nbsp; there are two solder pads labeled ‘*J1*’. By solder
-shorting these two pads together,&nbsp; the 3V3 regulator is bypassed
-and the LCD module can be powered directly from `3.3V`.
+power source,&nbsp; there are two solder pads labeled ‘*J1*’.&nbsp;
+By solder shorting these two pads together,&nbsp; the 3V3 regulator
+is bypassed and the LCD module can be powered directly from `3.3V`.
 
 In general,&nbsp; it is best to operate the display off of `5V0` to
 ensure enough power is available.&nbsp;  Be careful of trying to
@@ -419,12 +420,12 @@ limited current capability and may overheat.
 ### LCD SPI Interface:
 
 This LCD display incorporates a SPI interface which provides for fast
-display updates.&nbsp; It is a 4-wire interface,&nbsp; so it includes
+display updates.&nbsp; It is a 4-wire SPI interface,&nbsp; so it includes
 a `CS` _(Chip Select)_ pin.
 
 The _Touch Screen_ also uses the SPI interface and _CAN_ hook up to the
-“same pins” as the LCD display,&nbsp; but uses a separate `CS` _(Chip Select)_
-to avoid conflicts.
+_“same SPI pins”_ as the LCD display,&nbsp; but use a separate `CS`
+_(Chip Select)_ to avoid conflicts.
 
 For best performance the _hardware_ _SPI_ interface should be used if
 possible to get the fastest screen updates.
@@ -475,27 +476,19 @@ LCD 1x14 Header Specifications:
 ### Display Orientation:
 
 The LCD display output can be _rotated_ in all 4-directions.&nbsp;
-Use &nbsp;`setRotation(_n_)`&nbsp; to rotate the image to match your
+Use &nbsp;`setRotation(n)`&nbsp; to rotate the image to match your
 desired physical rotation where _‘n’_ ranges from 0 to 3.
 
 You will also need to set the _rotation_ of the ‘*Touch Screen*’.&nbsp;
 The configuration numbers **DO NOT MATCH**,&nbsp; so use one of the
 following combinations.
 
-> | Rotation | ILI9341 Display | XPT2046 Touchscreen |
-> |   :---:  |      :---:      |        :---:        |
-> |     0°   |        0        |          2          |
-> |    90°   |        1        |          3          |
-> |   180°   |        2        |          0          |
-> |   270°   |        3        |          1          |
-
-```
-ILI9341 Display  XPT2046 Touchscreen
-        0               2
-        1               3
-        2               0
-        3               1
-```
+> | *Rotation* | *ILI9341 Display* | *XPT2046 Touchscreen* |
+> |    :---:   |       :---:       |        :---:          |
+> |       0°   |         0         |          2            |
+> |      90°   |         1         |          3            |
+> |     180°   |         2         |          0            |
+> |     270°   |         3         |          1            |
 <hr>
 
 # findSPIpins.ino
