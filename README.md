@@ -268,25 +268,25 @@ header sockets.
 GOOUUU Tech ESP32-S3-CAM Expansion Board
     MISC Pin connections/configurations:
 
- + &nbsp; VR R3&nbsp;  W505 Pot: `GPIO1`
- + &nbsp; U2 DHT11 sensor: `GPIO2`
++ &nbsp; VR R3&nbsp;  W505 Pot: `GPIO1`
++ &nbsp; U2 DHT11 sensor: `GPIO2`
 
- + &nbsp; &nbsp;Jumper P7: `GPIO1`  (VR Enable)
- + &nbsp; &nbsp;Jumper P8: `GPIO2`  (U2 Enable)
++ &nbsp; &nbsp;Jumper P7: `GPIO1`  (VR Enable)
++ &nbsp; &nbsp;Jumper P8: `GPIO2`  (U2 Enable)
 
- + &nbsp; &nbsp;Header S1: `GPIO38` (3-Wire PWM)
- + &nbsp; &nbsp;Header S2: `GPIO39` (3-Wire PWM)
- + &nbsp; &nbsp;Header S3: `GPIO40` (3-Wire PWM)
- + &nbsp; &nbsp;Header S4: `GPIO37` (3-Wire PWM)
++ &nbsp; &nbsp;Header S1: `GPIO38` (3-Wire PWM)
++ &nbsp; &nbsp;Header S2: `GPIO39` (3-Wire PWM)
++ &nbsp; &nbsp;Header S3: `GPIO40` (3-Wire PWM)
++ &nbsp; &nbsp;Header S4: `GPIO37` (3-Wire PWM)
 
- + &nbsp; &nbsp; &nbsp;I²C SCL: `GPIO41` &nbsp; &nbsp; &nbsp;{0.96″ OLED}
- + &nbsp; &nbsp; &nbsp;I²C SDA: `GPIO42` &nbsp; &nbsp; &nbsp;{  64×128  }
++ &nbsp; &nbsp; &nbsp;I²C SCL: `GPIO41` &nbsp; &nbsp; &nbsp;{0.96″ OLED}
++ &nbsp; &nbsp; &nbsp;I²C SDA: `GPIO42` &nbsp; &nbsp; &nbsp;{  64×128  }
 
- + &nbsp; &nbsp; &nbsp; LED D1: `GPIO48` RGB LED
- + &nbsp; &nbsp; &nbsp; LED D2: `PWR ON`
- + &nbsp; &nbsp; &nbsp; LED D3: `GPIO43` TXD LED
- + ‹RST› Button: `EN/RESET`
- + ‹KEY› Button: `GPIO0/BOOT`
++ &nbsp; &nbsp; &nbsp; LED D1: `GPIO48` RGB LED
++ &nbsp; &nbsp; &nbsp; LED D2: `PWR ON`
++ &nbsp; &nbsp; &nbsp; LED D3: `GPIO43` TXD LED
++ ‹RST› Button: `EN/RESET`
++ ‹KEY› Button: `GPIO0/BOOT`
 <hr>
 <br/>
 
@@ -560,7 +560,7 @@ See example usage in `\code`.&nbsp; _...to be continued..._
 
 GPIO26 to GPIO32 are connected to the integrated SPI ƒlash and PSRAM
 and are not recommended for other uses.&nbsp; They are not exposed on
-these particular Dev boards, but if they are exposed on your board, 
+these particular Dev boards, but if they are exposed on your board,
 avoid using them:
 
 + GPIO26 (ƒlash/PSRAM SPICS1)
