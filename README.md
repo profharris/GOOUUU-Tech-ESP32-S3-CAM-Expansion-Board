@@ -118,8 +118,8 @@ headers,&nbsp; allowing your `44-pin (22+22)` board to plug into a set of
 &nbsp;*DVP camera interface* like our first three boards.
 
 All seven of these **“ESP32-S3-WROOM-1”** Dev boards are pinout&nbsp;
-***backward compatible***,&nbsp; -not counting the extra top & bottom 
-pins,&nbsp; with the original **Espressif**&nbsp; `44-pin (22+22)` 
+***backward compatible***,&nbsp; -not counting the extra top & bottom
+pins,&nbsp; with the original **Espressif**&nbsp; `44-pin (22+22)`
 ***“ESP-S3-DevKitC-1”***.
 
 > **NOTE:**&nbsp; **DevKitC-1**,&nbsp; NOT DevKitM-1 *(M1 is NOT pin compatible)*.
@@ -399,8 +399,8 @@ its’ backside.
 > to the TF SD_Card slot on the backside of the “DVP Camera capable”
 > Dev boards.&nbsp;
 >
-> This _high speed_ advanced &nbsp;***SDIO*** _SD_Card interface_&nbsp; 
-> is configured on reserved pins&nbsp; _(GPIO38 &nbsp;**SD_CMD**,&nbsp; 
+> This _high speed_ advanced &nbsp;***SDIO*** _SD_Card interface_&nbsp;
+> is configured on reserved pins&nbsp; _(GPIO38 &nbsp;**SD_CMD**,&nbsp;
 > GPIO39 &nbsp;**SD_CLK**,&nbsp; and GPIO40 &nbsp;**SD_DATA**)_.
 
 ## 2.8″ TFT LCD Display Technical Specifications:
@@ -501,35 +501,36 @@ following combinations.
 > |     180°   |         2         |          0            |
 > |     270°   |         3         |          1            |
 <hr>
+<br/>
 
 ## DVP Camera interface:
 
-### ESP32-S3-WROOM-1 Camera Interface (OV2640)
+### ESP32-S3-WROOM-1 &nbsp;Camera Interface&nbsp; (OV2640)
 <pre><code>———————————————————————————————————————————————————————————————————————
  Uses ALL but 3 IO pins on the   ESP32-S3-WROOM-1    Camera Interface
  Left-side of ESP32-S3-WROOM-1   (Left Side Pins)    (FPC 0.5mm 24P)
                                   1.     3V3         1. NC      ×
 44-pin (22+22) & 40-pin (20+20)   2.  1. 3V3         2. AGND    GND
-                                  3.  2. EN   ‹RST›  3. SDA     I2C_SIOD
-    I2C_SIOD    SDA IO4  .··..·›  4.  3. IO4         4. AVDD    VDD_2V8
-    I2C_SIOC    SCL IO5  .··..·›  5.  4. IO5         5. SCL     I2C_SIOC
-    DVP_VSYNC       IO6  ······›  6.  5. IO6         6. RESET   10K~VDD_2V8
-    DVP_HREF        IO7  ······›  7.  6. IO7         7. VSYNC   DVP_VSYNC
-    XMCLK           IO15 ······›  8.  7. IO15        8. PWDN    10K~GND
-    DVP_Y9      D7  IO16 ······›  9.  8. IO16        9. HREF    DVP_HREF
-    DVP_Y8      D6  IO17 ······› 10.  9. IO17       10. DVDD    VDD_1V5
-    DVP_Y7      D5  IO18 ······› 11. 10. IO18       11. DOVDD   VDD_2V8
-    DVP_Y4      D2  IO8  ······› 12. 11. IO8        12. Y9      DVP_Y9
-                               » 13. 12. IO3        13. XCLK    XMCLK
-                               » 14. 13. IO46       14. Y8      DVP_Y8
-    DVP_Y3      D1  IO9  ······› 15. 14. IO9        15. DGND    GND
-    DVP_Y5      D3  IO10 ······› 16. 15. IO10       16. Y7      DVP_Y7
-    DVP_Y2      D0  IO11 ······› 17. 16. IO11       17. PCLK    DVP_PCLK
-    DVP_Y6      D4  IO12 ······› 18. 17. IO12       18. Y6      DVP_Y6
-    DVP_PCLK        IO13 ······› 19. 18. IO13       19. Y2      DVP_Y2
-                               » 20. 19. IO14       20. Y5      DVP_Y5
-                                 21. 20. 5V0  VBUS  21. Y3      DVP_Y3
-    VDD_3V3     AMS1117-3.3      22.     GND        22. Y4      DVP_Y4
+                                  3.  2. EN   ‹RST›  3. SDA     CAM_SIOD
+    CAM_SIOD    SDA IO4  .··..·›  4.  3. IO4         4. AVDD    VDD_2V8
+    CAM_SIOC    SCL IO5  .··..·›  5.  4. IO5         5. SCL     CAM_SIOC
+    CAM_VSYNC       IO6  ······›  6.  5. IO6         6. RESET   10K~VDD_2V8
+    CAM_HREF        IO7  ······›  7.  6. IO7         7. VSYNC   CAM_VSYNC
+    CAM_XCLK        IO15 ······›  8.  7. IO15        8. PWDN    10K~GND
+    CAM_Y9      D7  IO16 ······›  9.  8. IO16        9. HREF    CAM_HREF
+    CAM_Y8      D6  IO17 ······› 10.  9. IO17       10. DVDD    VDD_1V5
+    CAM_Y7      D5  IO18 ······› 11. 10. IO18       11. DOVDD   VDD_2V8
+    CAM_Y4      D2  IO8  ······› 12. 11. IO8        12. Y9      CAM_Y9
+                               » 13. 12. IO3        13. XCLK    CAM_XCLK
+                               » 14. 13. IO46       14. Y8      CAM_Y8
+    CAM_Y3      D1  IO9  ······› 15. 14. IO9        15. DGND    GND
+    CAM_Y5      D3  IO10 ······› 16. 15. IO10       16. Y7      CAM_Y7
+    CAM_Y2      D0  IO11 ······› 17. 16. IO11       17. PCLK    CAM_PCLK
+    CAM_Y6      D4  IO12 ······› 18. 17. IO12       18. Y6      CAM_Y6
+    CAM_PCLK        IO13 ······› 19. 18. IO13       19. Y2      CAM_Y2
+                               » 20. 19. IO14       20. Y5      CAM_Y5
+                                 21. 20. 5V0  VBUS  21. Y3      CAM_Y3
+    VDD_3V3     AMS1117-3.3      22.     GND        22. Y4      CAM_Y4
     VDD_2V8     ME621C28                            23. NC      ×
     VDD_1V5     ME621C15                            24. NC      ×
 
@@ -547,9 +548,9 @@ the **“ESP32-S3-CAM”**,&nbsp; already has a `TF SD_Card` slot on its’ back
 > which we are not using,&nbsp; with the ***SDIO*** _SD_Card interface_&nbsp;
 > to the TF SD_Card slot on the backside of the “DVP Camera capable”
 > Dev boards.&nbsp;
- 
-This _high speed_ advanced &nbsp;***SDIO*** _SD_Card interface_&nbsp; 
-is configured on reserved pins&nbsp; _(GPIO38 &nbsp;**SD_CMD**,&nbsp; 
+
+This _high speed_ advanced &nbsp;***SDIO*** _SD_Card interface_&nbsp;
+is configured on reserved pins&nbsp; _(GPIO38 &nbsp;**SD_CMD**,&nbsp;
 GPIO39 &nbsp;**SD_CLK**,&nbsp; and GPIO40 &nbsp;**SD_DATA**)_.
 
 See example usage in `\code`.&nbsp; _...to be continued..._
@@ -558,8 +559,8 @@ See example usage in `\code`.&nbsp; _...to be continued..._
 ## SPI ƒlash and PSRAM _(GPIO26..GPIO32)_:
 
 GPIO26 to GPIO32 are connected to the integrated SPI ƒlash and PSRAM
-and are not recommended for other uses.&nbsp; They are not exposed on 
-these particular boards, but if they are exposed on your board, avoid 
+and are not recommended for other uses.&nbsp; They are not exposed on
+these particular boards, but if they are exposed on your board, avoid
 using them:
 
     + GPIO26 (ƒlash/PSRAM SPICS1)
@@ -574,11 +575,11 @@ using them:
 
 ## OPI PSRAM additional Pins _(GPIO35..GPIO37)_:
 
-**IN ADDITION:**&nbsp; For boards with _Octal SPI ƒlash/PSRAM_ memory 
-embedded,&nbsp; for example all boards with an **ESP32-S3-WROOM-1** 
-module and boards with **ESP32-S3-WROOM-2** modules,&nbsp; --pins 
-`GPIO35`,&nbsp; `GPIO36` &nbsp;and `GPIO37` are reserved for internal 
-communication between the _ESP32-S3_ and the _Octal SPI ƒlash/PSRAM_ 
+**IN ADDITION:**&nbsp; For boards with _Octal SPI ƒlash/PSRAM_ memory
+embedded,&nbsp; for example all boards with an **ESP32-S3-WROOM-1**
+module and boards with **ESP32-S3-WROOM-2** modules,&nbsp; --pins
+`GPIO35`,&nbsp; `GPIO36` &nbsp;and `GPIO37` are reserved for internal
+communication between the _ESP32-S3_ and the _Octal SPI ƒlash/PSRAM_
 memory,&nbsp; and thus are NOT available for external use.
 ————————————————————————————————————————————————————————————————————
 <hr>
