@@ -294,20 +294,20 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
 ![2.8″ 240×320 SPI TFT LCD Display](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/ILI9341%202.8in%20240x320%20TFT%20Display.jpg)
 <br/>
 
-## 14-Pin SPI 2.8″ 240×320 TFT LCD header:
+## 14-Pin SPI 2.8in 240×320 TFT LCD header:
 
 ### GOOUUU Tech ESP32-S3-CAM Expansion Board<br/>14-Pin SPI 2.8in 240×320 ILI9341 TFT LCD header:
 
-| **ILI9341 2.8″<br/>LCD Display<br/>with Touch:** | **GOOUUU Tech<br/>Expansion<br/>Board:** | <br/><br/>**Description:** |
+| **ILI9341 2.8in<br/>LCD Display<br/>with Touch:** | **GOOUUU Tech<br/>Expansion<br/>Board:** | <br/><br/>**Description:** |
 |------------------|     :---:       |--------------------------------|
 | 1. T-IRQ         |    × _N/C_      | Touch Interrupt,   _Active LOW_|
 | 2. T-DO  (MISO)  |    GPIO41       | Touch Data Out    (SPI MISO)   |
 | 3. T-DIN (MOSI)  |    GPIO2        | Touch Data In     (SPI MOSI)   |
 | 4. T-CS          |    GPIO1        | Touch Chip Select, _Active LOW_|
-| 5. T-CLK (SCLK)  |    GPIO42       | Touch SPI Clock   (SPI SCK)    |
+| 5. T-CLK (SCLK)  |    GPIO42       | Touch SPI Clock   (SPI SCLK)   |
 | 6. SDO   (MISO)  |    GPIO46       | GND _Not Used_    (SPI MISO)   |
 | 7. LED           |    3V3          | BackLight Enable, _Active HIGH_|
-| 8. SCK   (SCLK)  |    GPIO3        | LCD SPI Clock     (SPI SCK)    |
+| 8. SCK   (SCLK)  |    GPIO3        | LCD SPI Clock     (SPI SCLK)   |
 | 9. SDI   (MOSI)  |    GPIO45       | LCD Data In       (SPI MOSI)   |
 |10. DC            |    GPIO47       | LCD Data/Command, _HIGH = Data_|
 |11. RESET         |    GPIO21       | LCD Reset input,   _Active LOW_|
@@ -322,22 +322,22 @@ As noted above and on the on the Expansion Board Diagram #1,&nbsp; the
 SPI XPT2046 Touch Screen controller on the 2.8in TFT LCD Display
 is wired/configured to the following pins:
 
-> | *XPT2046 Pin*  | *Description*     | *ESP32-S3 Pin* |
-> |     :---:      |-------------------|      :---:     |
-> | T-IRQ          | Touch Interrupt   | N/C            |
-> | T-CLK (SCLK)   | Touch SPI SCLK    | GPIO42         |
-> | T-DO  (MISO)   | Touch SPI MISO    | GPIO41         |
-> | T-DIN (MOSI)   | Touch SPI MOSI    | GPIO2          |
-> | T-CS           | Touch Chip Select | GPIO1          |
+> | **XPT2046 Pin** | **Description**   | **ESP32-S3 Pin** |
+> |     :---:       |-------------------|       :---:      |
+> | T-IRQ           | Touch Interrupt   | N/C              |
+> | T-CLK (SCLK)    | Touch SPI SCLK    | GPIO42           |
+> | T-DO  (MISO)    | Touch SPI MISO    | GPIO41           |
+> | T-DIN (MOSI)    | Touch SPI MOSI    | GPIO2            |
+> | T-CS            | Touch Chip Select | GPIO1            |
 
 The SPI control pins for the ILI9341 2.8in 240×320 TFT LCD Display itself are:
 
-> | *ILI9341 Pin* | *Description*     | *ESP32-S3 Pin* |
-> |     :---:     |-------------------|      :---:     |
-> | SCK   (SCLK)  | LCD SPI SCLK      | GPIO3          |
-> | SDO   (MISO)  | LCD SPI MISO      | GPIO46         |
-> | SDI   (MOSI)  | LCD SPI MOSI      | GPIO45         |
-> | CS            | LCD Chip Select   | GPIO14         |
+> | **ILI9341 Pin** | **Description**   | **ESP32-S3 Pin** |
+> |      :---:      |-------------------|       :---:      |
+> | SCK   (SCLK)    | LCD SPI SCLK      | GPIO3            |
+> | SDO   (MISO)    | LCD SPI MISO      | GPIO46           |
+> | SDI   (MOSI)    | LCD SPI MOSI      | GPIO45           |
+> | CS              | LCD Chip Select   | GPIO14           |
 
 The *XPT2046 Touch Screen controller* is supported for SPI based displays.&nbsp;
 The SPI bus for the Touch controller is _“shared”_ with the SPI TFT LCD,&nbsp;
