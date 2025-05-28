@@ -298,9 +298,7 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
 
 ### GOOUUU Tech ESP32-S3-CAM Expansion Board<br/>14-Pin SPI 2.8in 240×320 ILI9341 TFT LCD header:
 
-| **ILI9341 2.8″**<br/> | **GOOUUU Tech**<br/> | <br/>                               |
-| **LCD Display**<br/>  | **Expansion**<br/>   | <br/>                               |
-| **with Touch:**  | **Board:**      | **Description:**               |
+| **ILI9341 2.8″<br/>LCD Display<br/>with Touch:** | **GOOUUU Tech<br/>Expansion<br/>Board:** | <br/><br/>**Description:** |
 |------------------|     :---:       |--------------------------------|
 | 1. T-IRQ         |    × _N/C_      | Touch Interrupt,   _Active LOW_|
 | 2. T-DO  (MISO)  |    GPIO41       | Touch Data Out    (SPI MISO)   |
