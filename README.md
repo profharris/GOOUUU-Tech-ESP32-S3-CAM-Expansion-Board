@@ -324,7 +324,7 @@ SPI XPT2046 Touch Screen controller on the 2.8in TFT LCD Display
 is wired/configured to the following pins:
 
 > | *XPT2046 Pin*  | *Description*     | *ESP32-S3 Pin* |
-> |     :---:      |-------------------|      :--- :    |
+> |     :---:      |-------------------|      :---:     |
 > | T-IRQ          | Touch Interrupt   | N/C            |
 > | T-CLK (SCLK)   | Touch SPI SCLK    | GPIO42         |
 > | T-DO  (MISO)   | Touch SPI MISO    | GPIO41         |
