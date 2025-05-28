@@ -571,9 +571,9 @@ avoid using them:
 + GPIO31 (ƒlash/PSRAM SPIQ)
 + GPIO32 (ƒlash/PSRAM SPID)
 
-### Missing _N/C_ Pins: _GPIO33_ & _GPIO34_
+### Missing _N/C_ Pins:&nbsp; _GPIO33_ & _GPIO34_
 
-## OPI PSRAM additional Pins _(GPIO35..GPIO37)_:
+## OPI PSRAM additional Pins:&nbsp; _(GPIO35..GPIO37)_:
 
 **IN ADDITION:**&nbsp; For boards with _Octal SPI ƒlash/PSRAM_ memory
 embedded,&nbsp; for example all boards with an **ESP32-S3-WROOM-1**
@@ -581,7 +581,7 @@ module and boards with **ESP32-S3-WROOM-2** modules,&nbsp; --pins
 `GPIO35`,&nbsp; `GPIO36` &nbsp;and `GPIO37` are reserved for internal
 communication between the _ESP32-S3_ and the _Octal SPI ƒlash/PSRAM_
 memory,&nbsp; and thus are NOT available for external use.
-————————————————————————————————————————————————————————————————————
+———————————————————————————————————————————————————
 <hr>
 <br/>
 
