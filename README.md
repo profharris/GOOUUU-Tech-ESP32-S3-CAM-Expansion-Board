@@ -380,17 +380,27 @@ Key Features of the TFT LCD 2.8″ 240×320 Display with Touch Screen:
 + 3.6V to 5.5V module operation
 + 3.3V logic compatible only
 
-These full color displays are large enough for many applications
-even when using Touch.&nbsp; The supplied ‘stylus’ is helpful when
-using smaller touch targets.&nbsp; The LCD module has an `SD_Card`
-socket.&nbsp; This socket has separate connections on the opposite
-end of the LCD TFT board.&nbsp; Not needed with the
-**“ESP32-S3-CAM”**,&nbsp; as it already has a `TF SD_Card` on its’
-backside.
+Internally,&nbsp; the LCD display logic operates at `3.3V`,&nbsp; 
+-so if you use the LCD TFT module with a `5V0` Microcontroller,&nbsp; 
+be sure to include _logic level shifters_ on the data lines to prevent 
+possible damage.
 
-Internally the display logic operates at `3.3V`,&nbsp; -so if using with
-a `5V0` Microcontroller,&nbsp; be sure to include _logic level shifters_
-on the data lines to prevent possible damage.
+These full color displays are large enough for many applications
+even when using _Touch_.&nbsp; The supplied ‘stylus’ is helpful when
+using smaller Touch targets.&nbsp; The LCD TFT module has an `SD_Card`
+socket.&nbsp; This socket has separate connections on the opposite
+end of the LCD TFT board.&nbsp; This is not needed with the
+**“ESP32-S3-CAM”**,&nbsp; as it already has a `TF SD_Card` slot on 
+its’ backside.
+
+> **DO NOT CONFUSE:**&nbsp; the ***SPI*** _SD_Card interface_&nbsp; on the 
+> LCD TFT module pins&nbsp; _(SD_SCK, SD_MOSI, SD_MISO, SD_CS)_,&nbsp; 
+> which we are not using,&nbsp; with the ***SDIO*** _SD_Card interface_&nbsp; 
+> to the TF SD_Card slot on the backside of the “DVP Camera capable” 
+> Dev boards.&nbsp; 
+>
+> This _high speed_ advanced ***SDIO*** _SD_Card interface_ is configured on 
+> reserved pins _(GPIO38 **SD_CMD**, GPIO39 **SD_CLK**, and GPIO40 **SD_DATA**)_. 
 
 ## 2.8″ TFT LCD Display Technical Specifications:
 
