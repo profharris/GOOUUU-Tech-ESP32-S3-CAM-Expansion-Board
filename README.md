@@ -287,35 +287,36 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
  + ‹RST› Button: `EN/RESET`
  + ‹KEY› Button: `GPIO0/BOOT`
 <hr>
+<br/>
 
 # 2.8″ 240×320 SPI TFT LCD Display (ILI9341)
 
 ![2.8″ 240×320 SPI TFT LCD Display](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/ILI9341%202.8in%20240x320%20TFT%20Display.jpg)
+<br/>
 
 ## 14-Pin SPI 2.8″ 240×320 TFT LCD header:
-<pre><code>
-GOOUUU Tech ESP32-S3-CAM Expansion Board
-    `14-Pin` SPI 2.8″ 240×320 ILI9341 TFT LCD header:
 
-    ILI9341 2.8″    GOOUUU Tech
-    LCD Display     Expansion
-    with Touch:     Board:        Description:
+### GOOUUU Tech ESP32-S3-CAM Expansion Board<br/>14-Pin SPI 2.8in 240×320 ILI9341 TFT LCD header:
 
- 1. T-IRQ           × N/C         Touch Interrupt,   Active LOW
- 2. T-DO  (MISO)    GPIO41        Touch Data Out    (SPI MISO)
- 3. T-DIN (MOSI)    GPIO2         Touch Data In     (SPI MOSI)
- 4. T-CS            GPIO1         Touch Chip Select, Active LOW
- 5. T-CLK (SCLK)    GPIO42        Touch SPI Clock   (SPI SCK)
- 6. SDO   (MISO)    GPIO46        GND-Not Used.     (SPI MISO)
- 7. LED             3V3           BackLight Enable,  Active HIGH
- 8. SCK   (SCLK)    GPIO3         LCD SPI Clock     (SPI SCK)
- 9. SDI   (MOSI)    GPIO45        LCD Data In       (SPI MOSI)
-10. DC              GPIO47        LCD Data/Command,  HIGH = Data
-11. RESET           GPIO21        LCD Reset Input,   Active LOW
-12. CS              GPIO14        LCD Chip Select,   Active LOW
-13. GND             GND           Power System Ground
-14. VCC             5V0           Power 5.0V
-</code></pre>
+| **ILI9341 2.8″** | **GOOUUU Tech** |                                |
+| **LCD Display**  | **Expansion**   |                                |
+| **with Touch:**  | **Board:**      | **Description:**               |
+|------------------|     :---:       |--------------------------------|
+| 1. T-IRQ         |    × _N/C_      | Touch Interrupt,   _Active LOW_|
+| 2. T-DO  (MISO)  |    GPIO41       | Touch Data Out    (SPI MISO)   |
+| 3. T-DIN (MOSI)  |    GPIO2        | Touch Data In     (SPI MOSI)   |
+| 4. T-CS          |    GPIO1        | Touch Chip Select, _Active LOW_|
+| 5. T-CLK (SCLK)  |    GPIO42       | Touch SPI Clock   (SPI SCK)    |
+| 6. SDO   (MISO)  |    GPIO46       | GND _Not Used_    (SPI MISO)   |
+| 7. LED           |    3V3          | BackLight Enable, _Active HIGH_|
+| 8. SCK   (SCLK)  |    GPIO3        | LCD SPI Clock     (SPI SCK)    |
+| 9. SDI   (MOSI)  |    GPIO45       | LCD Data In       (SPI MOSI)   |
+|10. DC            |    GPIO47       | LCD Data/Command, _HIGH = Data_|
+|11. RESET         |    GPIO21       | LCD Reset input,   _Active LOW_|
+|12. CS            |    GPIO14       | LCD Chip Select,   _Active LOW_|
+|13. GND           |    GND          | Power System       Ground      |
+|14. VCC           |    5V0          | Power System       5V0         |
+<br/>
 
 ### SPECIAL NOTE:&nbsp; Touch Screen SPI pins versus the LCD SPI pins:
 
