@@ -78,8 +78,8 @@ ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB L
 |G20 o © G13     ´_G13|© RST ¦CH304G¦ BOOT ø|G20  D-            GOOUUU              |
 |G19 o o G14 (CS)  G14|o ‹•›  ''''''   ‹•› ø|G19  D+     (ESP32-S3-CAM) V1.2        |
 |GND • ô 5V0       5V0|ô ._____.O T._____. •|GND      2.8″ SPI TFT LCD 240×320      |
-|                     |  ¦ USB ¦T T¦ USB ¦  |                                       |
-|G46: Input Only      |  ¦  C  ¦G L¦  C  ¦  |                  M     M T   T   T    |
+|                     |  | USB |T T| USB |  |                                       |
+|G46: Input Only      |  |  C  |G L|  C  |  |                  M     M T   T   T    |
 |         ¬   ¬       '——'ESP32'———'CH343'——'        V G   R   O S L I C T D T I    |
 |         R5 R7      R1¬ R2¬                         C N C S D S C E S L C I D R    |
 |          ¤   ¤      ‹•›   ‹•›  |USB-C|   ¤         C D S T C I K D O K S N O Q    |
@@ -495,32 +495,34 @@ following combinations.
 
 <pre><code>
 ———————————————————————————————————————————————————————————————————————
-ESP32-S3-WROOM Camera Interface  ESP32-S3-WROOM-1   Camera Interface
-———————————————————————————————  (Left Side Pins)   (FPC 0.5mm 24P)
- Uses all but 3 IO pins on the    1.     3V3         1. NC      ×
- Left-side of ESP32-S3-WROOM-1    2.  1. 3V3         2. AGND    GND
-                                  3.  2. EN   [RST]  3. SDA     I2C_SIOD
-    I2C_SIOD    SDA IO4           4.  3. IO4         4. AVDD    VDD_2V8
-    I2C_SIOC    SCL IO5           5.  4. IO5         5. SCL     I2C_SIOC
-    DVP_VSYNC       IO6           6.  5. IO6         6. RESET   10K~VDD_2V8
-    DVP_HREF        IO7           7.  6. IO7         7. VSYNC   DVP_VSYNC
-    XMCLK           IO15          8.  7. IO15        8. PWDN    10K~GND
-    DVP_Y9      D7  IO16          9.  8. IO16        9. HREF    DVP_HREF
-    DVP_Y8      D6  IO17         10.  9. IO17       10. DVDD    VDD_1V5
-    DVP_Y7      D5  IO18         11. 10. IO18       11. DOVDD   VDD_2V8
-    DVP_Y4      D2  IO8          12. 11. IO8        12. Y9      DVP_Y9
-                              »  13. 12. IO3        13. XCLK    XMCLK
-                              »  14. 13. IO46       14. Y8      DVP_Y8
-    DVP_Y3      D1  IO9          15. 14. IO9        15. DGND    GND
-    DVP_Y5      D3  IO10         16. 15. IO10       16. Y7      DVP_Y7
-    DVP_Y2      D0  IO11         17. 16. IO11       17. PCLK    DVP_PCLK
-    DVP_Y6      D4  IO12         18. 17. IO12       18. Y6      DVP_Y6
-    DVP_PCLK        IO13         19. 18. IO13       19. Y2      DVP_Y2
-                              »  20. 19. IO14       20. Y5      DVP_Y5
+ESP32-S3-WROOM Camera Interface  (OV2640)
+——————————————————————————————— 
+ Uses _ALL_ but *3* IO pins on the   *ESP32-S3-WROOM-1*   *Camera Interface*
+ Left-side of ESP32-S3-WROOM-1   _(Left Side Pins)_   _(FPC 0.5mm 24P)_
+                                  1.     3V3         1. NC      ×
+44-pin (22+22) & 40-pin (20+20)   2.  1. 3V3         2. AGND    GND
+                                  3.  2. EN   ‹RST›  3. SDA     I2C_SIOD
+    I2C_SIOD    SDA IO4  .··..·›  4.  3. IO4         4. AVDD    VDD_2V8
+    I2C_SIOC    SCL IO5  .··..·›  5.  4. IO5         5. SCL     I2C_SIOC
+    DVP_VSYNC       IO6  ······›  6.  5. IO6         6. RESET   10K~VDD_2V8
+    DVP_HREF        IO7  ······›  7.  6. IO7         7. VSYNC   DVP_VSYNC
+    XMCLK           IO15 ······›  8.  7. IO15        8. PWDN    10K~GND
+    DVP_Y9      D7  IO16 ······›  9.  8. IO16        9. HREF    DVP_HREF
+    DVP_Y8      D6  IO17 ······› 10.  9. IO17       10. DVDD    VDD_1V5
+    DVP_Y7      D5  IO18 ······› 11. 10. IO18       11. DOVDD   VDD_2V8
+    DVP_Y4      D2  IO8  ······› 12. 11. IO8        12. Y9      DVP_Y9
+                               » 13. 12. IO3        13. XCLK    XMCLK
+                               » 14. 13. IO46       14. Y8      DVP_Y8
+    DVP_Y3      D1  IO9  ······› 15. 14. IO9        15. DGND    GND
+    DVP_Y5      D3  IO10 ······› 16. 15. IO10       16. Y7      DVP_Y7
+    DVP_Y2      D0  IO11 ······› 17. 16. IO11       17. PCLK    DVP_PCLK
+    DVP_Y6      D4  IO12 ······› 18. 17. IO12       18. Y6      DVP_Y6
+    DVP_PCLK        IO13 ······› 19. 18. IO13       19. Y2      DVP_Y2
+                               » 20. 19. IO14       20. Y5      DVP_Y5
                                  21. 20. 5V0  VBUS  21. Y3      DVP_Y3
-    VDD_3V3         AMS1117-3.3  22.     GND        22. Y4      DVP_Y4
-    VDD_2V8         ME621C28                        23. NC      ×
-    VDD_1V5         ME621C15                        24. NC      ×
+    VDD_3V3     AMS1117-3.3      22.     GND        22. Y4      DVP_Y4
+    VDD_2V8     ME621C28                            23. NC      ×
+    VDD_1V5     ME621C15                            24. NC      ×
 
 ————————————————————————————————————————————————————————————————————
 </code></pre>
