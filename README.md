@@ -290,14 +290,14 @@ GOOUUU Tech ESP32-S3-CAM Expansion Board
 <hr>
 <br/>
 
-# 2.8″ 240×320 SPI TFT LCD Display (ILI9341)
+# LCD 2.8in 240×320 SPI TFT Display (ILI9341)
 
 ![2.8″ 240×320 SPI TFT LCD Display](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/ILI9341%202.8in%20240x320%20TFT%20Display.jpg)
 <br/>
 
 ## 14-Pin SPI 2.8in 240×320 TFT LCD header:
 
-### GOOUUU Tech ESP32-S3-CAM Expansion Board<br/>14-Pin SPI 2.8in 240×320 ILI9341 TFT LCD header:
+### GOOUUU Tech ESP32-S3-CAM Expansion Board<br/>14-Pin SPI 2.8in 240×320 ILI9341 TFT header:
 
 | **ILI9341 2.8in<br/>LCD Display<br/>with Touch:** | **GOOUUU Tech<br/>Expansion<br/>Board:** | <br/><br/>**Description:** |
 |------------------|     :---:       |--------------------------------|
