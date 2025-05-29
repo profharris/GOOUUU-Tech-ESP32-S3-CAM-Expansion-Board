@@ -202,7 +202,7 @@ well labled.
 
 ## 40-pin (20+20) “Yellow” & 42-pin (21+21) “Black” header sockets diagram
 
-![GOOUUU-Tech ESP32-S3-CAM Expansion Board _Yello_w & _Black_ headers](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/GOOOUUU%20Tech%20ESP32-S3-CAM%20Expansion%20Board-2.jpg)
+![GOOUUU-Tech ESP32-S3-CAM Expansion Board _Yellow_ & _Black_ headers](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/GOOUUU%20ESP32-S3-CAM%20Expansion%20Board-2.jpg)
 
 Following is my diagram,&nbsp; illustrating the 2-way “ESP32-S3-WROOM-1”
 Development Board `40-pin (20+20) “Yellow”` & `42-pin (21+21) “Black”`
