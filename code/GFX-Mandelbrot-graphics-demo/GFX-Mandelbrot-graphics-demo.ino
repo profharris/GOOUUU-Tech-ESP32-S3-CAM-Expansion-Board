@@ -5,7 +5,7 @@
  *             (...Not required, but it helps.)
  *
  * Mandelbrot Test Program to exercise the 240×320 ILI9341 TFT LCD
- * with touch, using the GFX graphics and Touchscreen libraries.
+ * with touch, using the GFX graphics and Touch Screen libraries.
  * Based loosely on an Adafruit Mandelbrot example.
  * Adapted by: Prof. Michael P. Harris
  *
@@ -88,12 +88,12 @@ float
   rangeReal   =   3.0,  // Image coverage in a complex plane
   rangeImag   =   3.0;
 
-boolean istouched = false;  // Touchscreen flag
+boolean isTouched = false;  // Touch Screen flag
 
 
 void setup() {
   Serial.begin(115200);          // Initialize Serial communication
-  while(!Serial);                // Wait for the Serial port to open
+  while(!Serial);                // Wait for the Serial Port to open
 
   Serial.println("GFX Mandelbrot ~ Tap screen to increase zoom");
 
@@ -115,7 +115,7 @@ void loop() {
     incReal   = (int64_t)((rangeReal / (float)pixelWidth)  * (float)(1 << bits)),
     incImag   = (int64_t)((rangeImag / (float)pixelHeight) * (float)(1 << bits));
 
-  startTime = millis();   // Calculate time taken to create an image
+  startTime = millis();   // Calculate time taken to render an image
   posImag   = startImag;
   for(int y=0; y < pixelHeight; y++) {
     posReal = startReal;
@@ -130,7 +130,7 @@ void loop() {
         a  = posReal + a2 - b2;
       }
       tft.drawPixel(x,y, (n * 29)<<8 | (n * 67));
-      // Change the 29 and/or 67 to affect colors...
+      // Adjust the 29 and/or 67 to affect colors...
       posReal += incReal;
     }
     posImag -= incImag;
@@ -146,10 +146,10 @@ void loop() {
   tft.print("Pass Complete: ");
   tft.println(rangeReal);
 
-  while(istouched == false) { // When render complete wait for Touch
-    istouched = ts.touched(); // Check for Touch...
+  while(isTouched == false) { // When render complete wait for Touch
+    isTouched = ts.touched(); // Check for Touch...
   }
-  if(istouched) {
+  if(isTouched) {
     tft.fillScreen(ILI9341_BLACK); // Clear the screen
     TS_Point p = ts.getPoint();    // ..Touch info to Serial Monitor
     Serial.print("Pressure = ");
@@ -158,9 +158,9 @@ void loop() {
     Serial.print(p.x);
     Serial.print(", y = ");
     Serial.println(p.y);
-    rangeReal *= 0.90;              // Zoom in each iteration
+    rangeReal *= 0.90;              // Zoom In each iteration
     rangeImag *= 0.90;
-    istouched = false;              // Reset Touch flag
+    isTouched = false;              // Reset Touch Screen flag
     if(rangeReal < 1.3) {           // Reset the Zoom
        rangeReal = 3.0;
        rangeImag = 3.0;
