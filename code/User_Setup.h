@@ -202,9 +202,8 @@
 // ###### EDIT THE PIN NUMBERS IN THE LINES FOLLOWING TO SUIT YOUR ESP32 SETUP   ######
 
 // For ESP32-S3 Dev board (only tested with ILI9341 display)
-// The hardware SPI can be mapped to any pins
-
-                    // Typical board default pins - change to match your board
+// The hardware SPI can be mapped to any pin
+// Typical board default pins - change to match your board
 #define TFT_CS   14 //     10 or 34 (FSPI CS0) 
 #define TFT_MOSI 45 //     11 or 35 (FSPI D)
 #define TFT_SCLK  3 //     12 or 36 (FSPI CLK)
