@@ -39,6 +39,9 @@ boards generally do NOT have a &nbsp;*DVP camera interface*.
 This practice of skipping the extra pins at the top and bottom is so wide spread,&nbsp;
 that the majority of ESP32-S3-WROOM-1 development boards today are `40-Pin (20+20)`.
 
-1. [Espressif ESP32-S3-DevKitC-1 44-pin pinout](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/ESP32-S3-DevKitC-1%2044-pins%20pinout.jpg)<br/>
-2. [GOOUUU ESP32-S3-CAM 40-pin pinout](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/GOOUUU%20ESP32-S3-CAM%2040-pins%20pinout.png)
+> 1. 44-pin pinout [Espressif ESP32-S3-DevKitC-1 44-pin pinout](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/ESP32-S3-DevKitC-1%2044-pins%20pinout.jpg)<br/>
+> 2. 40-pin pinout [GOOUUU ESP32-S3-CAM 40-pin pinout](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/GOOUUU%20ESP32-S3-CAM%2040-pins%20pinout.png).
+<hr>
+
+
 
