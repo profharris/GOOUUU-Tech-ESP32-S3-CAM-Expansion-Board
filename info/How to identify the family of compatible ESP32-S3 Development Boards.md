@@ -23,9 +23,9 @@ it was designed for their very own&nbsp;
 ## The “Yellow” 40-pin (20+20) headers
 
 The big majority of the compatible Development Boards I've discovered,&nbsp;
-are either _40-pin_ (20+20),&nbsp; and plug directly into the _“Yellow” 40-pin headers_,&nbsp;
+are either _40-pin_ (20+20),&nbsp; and plug directly into the _“Yellow” 40-pin (20+20) headers_,&nbsp;
 **-or-** are _44-pin_ (22+22) Development Boards,&nbsp; which plug the _“Yellow” 40-pin headers_&nbsp;
-by skipping/overlaping the top and bottom row of pins.
+by skipping/overlaping the top and bottom rows of pins.
 
 The `44-pin` (22+22) boards,&nbsp; share the same pinout as the original&nbsp;
 [Espressif ESP32-S3-DevKitC-1](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/0.%20Espressif%20ESP32-S3-DevKitC-1.jpg).
@@ -38,4 +38,8 @@ boards generally do NOT have a &nbsp;*DVP camera interface*.
 
 This practice of skipping the extra pins at the top and bottom is so wide spread,&nbsp;
 that the majority of ESP32-S3-WROOM-1 development boards today are `40-Pin (20+20)`.
+
+[Espressif ESP32-S3-DevKitC-1 44-pin pinout](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/ESP32-S3-DevKitC-1%2044-pins%20pinout.jpg)<br/>
+[GOOUUU ESP32-S3-CAM 40-pin pinout](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/GOOUUU%20ESP32-S3-CAM%2040-pins%20pinout.png).
+
 
