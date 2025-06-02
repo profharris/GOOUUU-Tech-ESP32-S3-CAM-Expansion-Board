@@ -604,7 +604,7 @@ memory,&nbsp; and thus are NOT available for external use.
 <br/>
 
 # findSPIpins.ino
-<pre><code>
+```C++
 // findSPIpins.ino
 <br/>
 // Find the default (Hardware) SPI pins for your board.
@@ -628,5 +628,5 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 }
-</code></pre>
+```
 <hr>
