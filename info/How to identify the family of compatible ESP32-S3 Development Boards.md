@@ -8,7 +8,7 @@
 
 ![GOOUUU-Tech ESP32-S3-CAM Expansion Board _Yellow_ & _Black_ headers](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/GOOUUU%20ESP32-S3-CAM%20Expansion%20Board-2.jpg)
 
-As I've been working with the **GOOUUU Tech ESP32-S3-CAM Expansion Board**,&nbsp;
+As I’ve been working with the **GOOUUU Tech ESP32-S3-CAM Expansion Board**,&nbsp;
 I have identified 10 compatible Development Boards,&nbsp; so far...
 
 Let’s break down how you can identify a compatible Development Board.&nbsp;
@@ -39,9 +39,15 @@ boards generally do NOT have a &nbsp;*DVP camera interface*.
 This practice of skipping the extra pins at the top and bottom is so wide spread,&nbsp;
 that the majority of ESP32-S3-WROOM-1 development boards today are `40-Pin (20+20)`.
 
-> 1. 44-pin pinout [Espressif ESP32-S3-DevKitC-1 44-pin pinout](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/ESP32-S3-DevKitC-1%2044-pins%20pinout.jpg)<br/>
-> 2. 40-pin pinout [GOOUUU ESP32-S3-CAM 40-pin pinout](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/GOOUUU%20ESP32-S3-CAM%2040-pins%20pinout.png).
+> 1. &nbsp;44-pin (22+22) pinout [Espressif ESP32-S3-DevKitC-1 44-pin pinout](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/ESP32-S3-DevKitC-1%2044-pins%20pinout.jpg)<br/>
+> 2. &nbsp;40-pin (20+20) pinout [GOOUUU ESP32-S3-CAM 40-pin pinout](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/GOOUUU%20ESP32-S3-CAM%2040-pins%20pinout.png).
 <hr>
+
+【1.】 Let’s start with the most widely availiable,&nbsp; and least expensive,&nbsp; of the ESP32-S3-WROOM-1 
+compatible Development Boards.&nbsp; The
+[YD-ESP32-S3 (ESP32-S3-WROOM-1 Dev)](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/5.%20YD-ESP32-S3%20(ESP32-S3%20Dev).jpg).
+
+![YD-ESP32-S3 (ESP32-S3-WROOM-1 Dev)](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/5.%20YD-ESP32-S3%20(ESP32-S3%20Dev).jpg).
 
 
 
