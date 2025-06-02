@@ -108,7 +108,7 @@ close but not quite...<br/>
  &nbsp; &nbsp; &nbsp; your “ESP32-S3-WROOM-1” Development boards.
 </code></pre>
 
-## 40-Pin (20+20) “Yellow” header sockets _(primary)_
+# 40-Pin (20+20) “Yellow” header sockets _(primary)_
 The `40-Pin` (20+20) `“Yellow”` header sockets, are designed for the &nbsp;
 **GOOUUU “ESP32-S3-CAM”** board.&nbsp; A second, third, and fourth compatible
 Dev Boards are the &nbsp;**“ESP32-S3-WROOM”** (CAM),&nbsp; a clone of the
@@ -129,7 +129,7 @@ headers,&nbsp; allowing your `44-pin (22+22)` board to plug into a set of
 `40-Pin (20+20) “Yellow”`header sockets.&nbsp; These development boards do NOT have a
 &nbsp;*DVP camera interface* like our first three boards.
 
-All seven of these **“ESP32-S3-WROOM-1”** Dev boards are pinout&nbsp;
+All eight of these **“ESP32-S3-WROOM-1”** Dev boards are pinout&nbsp;
 ***backward compatible***,&nbsp; -not counting the extra top & bottom
 pins,&nbsp; with the original **Espressif**&nbsp; `44-pin (22+22)`
 ***“ESP-S3-DevKitC-1”***.
@@ -141,14 +141,18 @@ the `40-Pin (20+20) “Yellow”` headers,&nbsp; as this original Dev Board is
 narrower *(by 1 pin spacing)* than the other seven Dev Boards.&nbsp; Otherwise
 it could plug in just like the other `44-pin (22+22)` boards,&nbsp; like the
 inexpensive workhorse **“YD-ESP32-S3”**.
+
+![0. Espressif ESP32-S3-DevKitC-1](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/0.%20Espressif%20ESP32-S3-DevKitC-1.jpg)
 <hr>
 
 ## Identifying **ESP32-S3-DevKitC-1** pin compatible boards
 **NOTE:**&nbsp;
-To identify one of these seven `40-pin (20+20)` **ESP32-S3-DevKitC-1**
-pin compatible boards...&nbsp; Look at the board with the two USB ports facing
-down.&nbsp; The Left-side pins will _end_ with `GPIO13`, `GPIO14`, then `5V0`
-_(and possibly an extra `GND`)_.&nbsp;
+To identify one of these eight `40-pin (20+20)` **-or-** `44-pin (22+22)`
+**ESP32-S3-DevKitC-1** pin compatible boards...&nbsp; Look at the board with
+the two USB ports facing down.&nbsp; The Left-side pins will _end_ with `GPIO13`,
+`GPIO14`, then `5V0` &nbsp;_(and possibly an extra `GND`)_.&nbsp;
+
+![2. ESP32-S3-WROOM CAM](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/2.%20ESP32-S3-WROOM%20(CAM).jpg)
 
 The top Right-side pins will _(possibly start with a `GND` pin)_&nbsp; then
 _begin_ with `TXD`, `RXD`, `GPIO1`, then `GPIO2`.
@@ -157,12 +161,13 @@ The `44-pin (22+22)` boards,&nbsp; like the **“YD-ESP32-S3”** and
 **“ESP32-S3-DevKitC-1”**,&nbsp; have 1 extra pin at the top and bottom of
 each header,&nbsp; --an extra `3V3` pin in the upper-Left,&nbsp; and an
 extra `GND` pin on the other 3 corners.
+
+![6. AI-S3 (YD-ESP32-S3 clone)](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/6.%20AI-S3%20(YD-ESP32-S3%20clone).jpg)
 <hr>
 
-## 42-Pin (21+21) “Black” header sockets
-
+# 42-Pin (21+21) “Black” header sockets
 The `42-Pin (21+21) “Black” header` sockets are for an **ALT version**
-&nbsp;of the **“ESP-S3-DevKitC-1”**.&nbsp; This ALT version has
+&nbsp;of the **“ESP-S3-DevKitC-1”**.&nbsp; This **ALT** version has
 `42-pins (21+21)` instead of the original `44-pins (22+22)`,&nbsp;
 and is 1 pin-space wider,&nbsp; like the Dev boards mentioned above.
 
@@ -174,14 +179,15 @@ similar, but **NOT** the same as the other `40-pin (20+20)` and
 **“YD-ESP32-S3”**,&nbsp; or the original `44-pin (22+22)`
 **“ESP-S3-DevKitC-1”**.
 
-A quick way to identify this Development board,&nbsp; besides the
+![9. ESP32-S3-DevKitC-1-ALT](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/9.%20ESP32-S3-DevKitC-1-ALT.jpg)
+
+A quick way to identify this **ALT** Development board,&nbsp; besides the
 `42-pins (21+21)`,&nbsp; instead of `40-pins (20+20)` or `44-pins (22+22)`,
 &nbsp;is to look at the board with the two USB ports facing down.&nbsp;
 The upper-Right pins will _start_ with _(an extra)_ `GND`,&nbsp; then `GPIO1`,
 `GPIO2`, `TX0`, `RX0`.&nbsp; The lower-Left will _end_ with `GPIO11`,
 `GPIO12`, `3V3`.&nbsp; --AND most importantly,&nbsp; the lower-Right
 pin is `5VIN`.
-
 
 > [!WARNING]
 > I want to pointout this _lower-Right_ `5VIN` pin,&nbsp; specifically,
