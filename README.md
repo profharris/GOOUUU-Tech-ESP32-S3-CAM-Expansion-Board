@@ -1,6 +1,6 @@
 # GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board
 
-***A WORK IN PROGRESS*** &nbsp; &nbsp; Prof. Michael P. Harris &nbsp; &nbsp; *05/28/2025*<br/>
+***A WORK IN PROGRESS*** &nbsp; &nbsp; Prof. Michael P. Harris &nbsp; &nbsp; *06/02/2025*<br/>
 [GitHub Pages](https://pages.github.com/)
 
 ![GOOUUU-Tech ESP32-S3-CAM Expansion Board](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/GOOUUU%20ESP32-S3-CAM%20Expansion%20Board-1.jpg)
@@ -392,11 +392,20 @@ Key Features of the TFT LCD 2.8″ 240×320 Display with Touch Screen:
 + 2.8″ TFT LCD with 240×320 resolution
 + 65K 16-BIT colors using a ILI9341 controller
 + Resistive Touch Screen using an XPT2046 controller
-+ SPI 4-wire ILI9341 LCD interface (`SCK`,    `SDI_MOSI`, `SDO_MIS0`, `CS`)
-+ SPI 4-wire XPT2046 Touch Screen  (`T-CLK`,  `T-DIN`,    `T-DO`,     `T-CS`)
-+ SPI 4-wire SD_Card interface     (`SD_SCK`, `SD_MOSI`,  `SD_MISO`,  `SD_CS`)
++ SPI 4-wire `ILI9341` LCD interface (`SCK`,    `SDI_MOSI`, `SDO_MIS0`, `CS`)
++ SPI 4-wire `XPT2046` Touch Screen  (`T-CLK`,  `T-DIN`,    `T-DO`,     `T-CS`)
++ SPI 4-wire `SD_Card` interface     (`SD_SCK`, `SD_MOSI`,  `SD_MISO`,  `SD_CS`) _(Not Used)_
 + 3.6V to 5.5V module operation
 + 3.3V logic compatible only
+
+**NOTE:**&nbsp; The SPI `SD_Card` interface is _(**Not Used**)_ on this Expansion Board.
+&nbsp;Instead,&nbsp; the 4-pin header the SPI `SD_Card` pins plug into, are wired as an
+`I²C interface` using `SCL` - `GPIO41` and `SDA` - `GPIO42`.&nbsp; This allows the
+use of a standard I²C 128×64 SSD1306 OLED Display.&nbsp; Notice that
+`GPIO41` and `GPIO42` are also used by the _Touch Screen interface_... although if
+you are using an I²C OLED Display,&nbsp; you would not be using the TFT Touch Screen.
+
+[I²C 128×64 SSD1306 OLED Display](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/GOOUUU%20ESP32-S3-CAM%20Expansion%20Board-5.jpg)
 
 Internally,&nbsp; the LCD display logic operates at `3.3V`,&nbsp;
 -so if you use the LCD TFT module with a `5V0` Microcontroller,&nbsp;
@@ -413,7 +422,7 @@ its’ backside.
 
 > **DO NOT CONFUSE:**&nbsp; the ***SPI*** _SD_Card interface_&nbsp; on the
 > LCD TFT module pins&nbsp; _(SD_SCK, SD_MOSI, SD_MISO, SD_CS)_,&nbsp;
-> which we are not using,&nbsp; with the ***SDIO*** _SD_Card interface_&nbsp;
+> _which we are not using_,&nbsp; with the ***SDIO*** _SD_Card interface_&nbsp;
 > to the `TF SD_Card slot` on the backside of the “DVP Camera capable”
 > Dev boards.&nbsp;
 >
