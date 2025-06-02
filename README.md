@@ -405,7 +405,7 @@ use of a standard I²C 128×64 SSD1306 OLED Display.&nbsp; Notice that
 `GPIO41` and `GPIO42` are also used by the _Touch Screen interface_... although if
 you are using an I²C OLED Display,&nbsp; you would not be using the TFT Touch Screen.
 
-[I²C 128×64 SSD1306 OLED Display](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/GOOUUU%20ESP32-S3-CAM%20Expansion%20Board-5.jpg)
+![I²C 128×64 SSD1306 OLED Display](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/GOOUUU%20ESP32-S3-CAM%20Expansion%20Board-5.jpg)
 
 Internally,&nbsp; the LCD display logic operates at `3.3V`,&nbsp;
 -so if you use the LCD TFT module with a `5V0` Microcontroller,&nbsp;
