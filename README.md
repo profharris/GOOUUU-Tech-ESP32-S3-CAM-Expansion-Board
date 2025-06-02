@@ -1,6 +1,6 @@
 # GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board
 
-***A WORK IN PROGRESS*** &nbsp; &nbsp; Prof. Michael P. Harris &nbsp; &nbsp; *06/02/2025*<br/>
+***A WORK IN PROGRESS*** &nbsp; &nbsp; Prof. Michael P. Harris &nbsp; &nbsp; *05/28/2025*<br/>
 [GitHub Pages](https://pages.github.com/)
 
 ![GOOUUU-Tech ESP32-S3-CAM Expansion Board](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/GOOUUU%20ESP32-S3-CAM%20Expansion%20Board-1.jpg)
@@ -46,7 +46,7 @@ ESP32-S3-WROOM-1 “pin-compliant” Development boards:     Pins   CAM SD RGB L
 ```
 > [9. ESP32-S3-DevKitC-1-ALT](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/9.%20ESP32-S3-DevKitC-1-ALT.jpg)
 <br/>
-close but not quite...
+close but not quite...<br/>
 > [10. Lolin-S3 ESP32-S3](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/10.%20Lolin-S3%20ESP32-S3.jpg) 
 <hr>
 
