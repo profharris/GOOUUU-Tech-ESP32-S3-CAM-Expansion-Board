@@ -65,8 +65,9 @@ wider form factor.
 2. The main recognizable difference, making the **YD-ESP32-S3** and its’ clones unique,&nbsp;
 -are the three solder-jumbers on the board.&nbsp; 
 > 1. The first solder-jumber,&nbsp;  “**RGB**”,&nbsp; is just to the right of the large white 
-> RGB LED.&nbsp; It is even labled “**RGB**” on most boards.&nbsp; Note: on one of my 
-> **YD-ESP32-S3** clones,&nbsp; there is a capacitor soldered across this solder-jumber.
+> RGB LED.&nbsp; It is even labled “**RGB**”,&nbsp; and is soldered closed on most boards.&nbsp; 
+> Note: on one of my **YD-ESP32-S3** clones,&nbsp; there is a capacitor soldered across this 
+> solder-jumber.
 >
 > 2. The second solder-jumber,&nbsp; “**IN-OUT**”,&nbsp; is on the far Left side, just
 > below the RGB LED.&nbsp; It is usually labled “**IN OUT**” or “**5VIN OUT**”.
