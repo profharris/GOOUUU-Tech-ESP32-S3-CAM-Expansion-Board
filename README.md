@@ -606,15 +606,15 @@ memory,&nbsp; and thus are NOT available for external use.
 # findSPIpins.ino
 ```C++
 // findSPIpins.ino
-<br/>
+
 // Find the default (Hardware) SPI pins for your board.
 // Make sure you have the right board selected in:&nbsp; `Tools —» Boards`...
-<br/>
+
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);         // Initialize Serial communication
   while(!Serial);               // Wait for the Serial port to open
-  <br/>
+
   Serial.print(" MOSI: ");
   Serial.println(MOSI);
   Serial.print(" MISO: ");
