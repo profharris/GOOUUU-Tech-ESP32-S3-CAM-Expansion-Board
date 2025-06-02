@@ -44,10 +44,42 @@ that the majority of ESP32-S3-WROOM-1 development boards today are `40-Pin (20+2
 <hr>
 
 【1.】 Let’s start with the most widely availiable,&nbsp; and least expensive,&nbsp; of the ESP32-S3-WROOM-1 
-compatible Development Boards.&nbsp; The
+compatible Development Boards.<br/>The
 [YD-ESP32-S3 (ESP32-S3-WROOM-1 Dev)](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/5.%20YD-ESP32-S3%20(ESP32-S3%20Dev).jpg).
 
 ![YD-ESP32-S3 (ESP32-S3-WROOM-1 Dev)](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/5.%20YD-ESP32-S3%20(ESP32-S3%20Dev).jpg).
 
+This is a `44-pin (22+22)` development board,&nbsp; sharing the same pinout as the original&nbsp; 
+[Espressif ESP32-S3-DevKitC-1](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/0.%20Espressif%20ESP32-S3-DevKitC-1.jpg).
+&nbsp; -It is even mis-labled on many sites, selling as an _Espressif ESP32-S3-DevKitC-1_,&nbsp;
+--but there are _two_ big differences. 
 
+1. The [VCC-GND.com](https://vcc-gnd.com/) **YD-ESP32-S3** and its’ clones,&nbsp; are _1 pin-space_
+wider than the original&nbsp; 
+[Espressif ESP32-S3-DevKitC-1](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/0.%20Espressif%20ESP32-S3-DevKitC-1.jpg).
+&nbsp; Regrettably, an orininal _Espressif ESP32-S3-DevKitC-1_,&nbsp; will not plug into the
+`40-Pin (20+20) “Yellow”` header pin sockets because it is _1 pin-space_ too narrow.&nbsp; 
+Being _1 pin-space_ wider is a good thing, as most of the Dev Boards availiable use this
+wider form factor.
 
+2. The main recognizable difference, making the **YD-ESP32-S3** and its’ clones unique,&nbsp;
+-are the three solder-jumbers on the board.&nbsp; 
+> 1. The first solder-jumber,&nbsp;  “**RGB**”,&nbsp; is just to the right of the large white 
+> RGB LED.&nbsp; It is even labled “**RGB**” on most boards.&nbsp; Note: on one of my 
+> **YD-ESP32-S3** clones,&nbsp; there is a capacitor soldered across this solder-jumber.
+>
+> 2. The second solder-jumber,&nbsp; “**IN-OUT**”,&nbsp; is on the far Left side, just
+> below the RGB LED.&nbsp; It is usually labled “**IN OUT**” or “**5VIN OUT**”.
+>
+> 3. The third solder-jumber,&nbsp; “**USB-OTG**”,&nbsp; is on the back of the board.
+
+These solder-jumpers&nbsp; make the [VCC-GND.com](https://vcc-gnd.com/) **YD-ESP32-S3** and its’ 
+clones easily recognizable,&nbsp; even when they are labled as &nbsp;_Espressif ESP32-S3-DevKitC-1_&nbsp;
+or &nbsp;_ESP32-S3-WROOM-1 Dev_,&nbsp; or something else on sales sites. 
+
+Ususlly Only **YD-ESP32-S3**s' from [VCC-GND.com](https://vcc-gnd.com/)&nbsp; will have 
+the **YD-ESP32-S3** markings on the back. Even though these are the least expensive of
+these compatible Dev Boards, I have several, from several different vendors, and
+they have always been of good quality and performed as expected.
+
+【2.】 
