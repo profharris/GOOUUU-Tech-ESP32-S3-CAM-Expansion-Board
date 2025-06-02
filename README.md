@@ -392,9 +392,9 @@ Key Features of the TFT LCD 2.8″ 240×320 Display with Touch Screen:
 + 2.8″ TFT LCD with 240×320 resolution
 + 65K 16-BIT colors using a ILI9341 controller
 + Resistive Touch Screen using an XPT2046 controller
-+ SPI 4-wire ILI9341 LCD interface (SCK,    SDI_MOSI, SDO_MIS0, CS)
-+ SPI 4-wire XPT2046 Touch Screen  (T-CLK,  T-DIN,    T-DO,     T-CS)
-+ SPI 4-wire SD_Card interface     (SD_SCK, SD_MOSI,  SD_MISO,  SD_CS)
++ SPI 4-wire ILI9341 LCD interface (`SCK`,    `SDI_MOSI`, `SDO_MIS0`, `CS`)
++ SPI 4-wire XPT2046 Touch Screen  (`T-CLK`,  `T-DIN`,    `T-DO`,     `T-CS`)
++ SPI 4-wire SD_Card interface     (`SD_SCK`, `SD_MOSI`,  `SD_MISO`,  `SD_CS`)
 + 3.6V to 5.5V module operation
 + 3.3V logic compatible only
 
@@ -414,12 +414,12 @@ its’ backside.
 > **DO NOT CONFUSE:**&nbsp; the ***SPI*** _SD_Card interface_&nbsp; on the
 > LCD TFT module pins&nbsp; _(SD_SCK, SD_MOSI, SD_MISO, SD_CS)_,&nbsp;
 > which we are not using,&nbsp; with the ***SDIO*** _SD_Card interface_&nbsp;
-> to the TF SD_Card slot on the backside of the “DVP Camera capable”
+> to the `TF SD_Card slot` on the backside of the “DVP Camera capable”
 > Dev boards.&nbsp;
 >
 > This _high speed_ advanced &nbsp;***SDIO*** _SD_Card interface_&nbsp;
 > is configured on reserved pins&nbsp; _(GPIO38 &nbsp;**SD_CMD**,&nbsp;
-> GPIO39 &nbsp;**SD_CLK**,&nbsp; and GPIO40 &nbsp;**SD_DATA**)_.
+> `GPIO39` &nbsp;**SD_CLK**,&nbsp; and `GPIO40` &nbsp;**SD_DATA**)_.
 
 ## 2.8″ TFT LCD Display Technical Specifications:
 
