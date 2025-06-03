@@ -563,6 +563,8 @@ following combinations.
 
 ————————————————————————————————————————————————————————————————————
 </code></pre>
+
+![ESP32-S3 DVP Camera Interface (OV2640)](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/GOOUUU%20ESP32-S3-CAM%20Expansion%20Board-4.jpg)
 <hr>
 
 ### SDIO SD_Card interface:&nbsp; _(GPIO38, GPIO39, & GPIO40)_
