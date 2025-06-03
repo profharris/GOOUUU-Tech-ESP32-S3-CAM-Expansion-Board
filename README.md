@@ -1,6 +1,6 @@
 # GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board
 
-***A WORK IN PROGRESS*** &nbsp; &nbsp; Prof. Michael P. Harris &nbsp; &nbsp; *06/02/2025*<br/>
+***A WORK IN PROGRESS*** &nbsp; &nbsp; Prof. Michael P. Harris &nbsp; &nbsp; *06/03/2025*<br/>
 [GitHub Pages](https://pages.github.com/)
 
 ![GOOUUU-Tech ESP32-S3-CAM Expansion Board](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/GOOUUU%20ESP32-S3-CAM%20Expansion%20Board-1.jpg)
@@ -152,7 +152,8 @@ To identify one of these eight `40-pin (20+20)` **-or-** `44-pin (22+22)`
 the two USB ports facing down.&nbsp; The Left-side pins will _end_ with `GPIO13`,
 `GPIO14`, then `5V0` &nbsp;_(and possibly an extra `GND`)_.&nbsp;
 
-![2. ESP32-S3-WROOM CAM](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/2.%20ESP32-S3-WROOM%20(CAM).jpg)
+![2. ESP32-S3-WROOM CAM](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/2.%20ESP32-S3-WROOM%20(CAM).jpg)<br/>
+![3.1 FREENOVE ESP32-S3-WROOM (CAM) Red](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/3.1%20FREENOVE%20ESP32-S3-WROOM%20(CAM).jpg)
 
 The top Right-side pins will _(possibly start with a `GND` pin)_&nbsp; then
 _begin_ with `TXD`, `RXD`, `GPIO1`, then `GPIO2`.
@@ -286,7 +287,7 @@ header sockets.
 GOOUUU Tech ESP32-S3-CAM Expansion Board<br/>
 &nbsp; &nbsp; MISC Pin connections/configurations:
 
-   + VR R3  W505 Pot: `GPIO1`
+   + VR R3 &nbsp;W505 Pot: `GPIO1`
    + U2 DHT11 sensor: `GPIO2`
 
    * Jumper P7: `GPIO1`  (VR Enable)
