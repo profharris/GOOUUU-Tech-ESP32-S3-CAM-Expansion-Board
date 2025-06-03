@@ -286,26 +286,26 @@ header sockets.
 GOOUUU Tech ESP32-S3-CAM Expansion Board<br/>
 &nbsp; &nbsp; MISC Pin connections/configurations:
 
-+ VR R3  W505 Pot: `GPIO1`
-+ U2 DHT11 sensor: `GPIO2`
+   + VR R3  W505 Pot: `GPIO1`
+   + U2 DHT11 sensor: `GPIO2`
 
-+ Jumper P7: `GPIO1`  (VR Enable)
-+ Jumper P8: `GPIO2`  (U2 Enable)
+   * Jumper P7: `GPIO1`  (VR Enable)
+   * Jumper P8: `GPIO2`  (U2 Enable)
 
-+ Header S1: `GPIO38` (3-Wire PWM)
-+ Header S2: `GPIO39` (3-Wire PWM)
-+ Header S3: `GPIO40` (3-Wire PWM)
-+ Header S4: `GPIO37` (3-Wire PWM)
+   - Header S1: `GPIO38` (3-Wire PWM)
+   - Header S2: `GPIO39` (3-Wire PWM)
+   - Header S3: `GPIO40` (3-Wire PWM)
+   - Header S4: `GPIO37` (3-Wire PWM)
 
-+ I²C SCL: `GPIO41` &nbsp; &nbsp; &nbsp;{0.96″ OLED}
-+ I²C SDA: `GPIO42` &nbsp; &nbsp; &nbsp;{  64×128  }
+   + I²C SCL: `GPIO41` &nbsp; &nbsp; &nbsp;{0.96″ OLED}
+   + I²C SDA: `GPIO42` &nbsp; &nbsp; &nbsp;{  64×128  }
 
-+ LED D1: `GPIO48` RGB LED
-+ LED D2: `PWR ON`
-+ LED D3: `GPIO43` TXD LED
+   * LED D1: `GPIO48` RGB LED
+   * LED D2: `PWR ON`
+   * LED D3: `GPIO43` TXD LED
 
-+ ‹RST› Button: `EN/RESET`
-+ ‹KEY› Button: `GPIO0/BOOT`
+   - ‹RST› Button: `EN/RESET`
+   - ‹KEY› Button: `GPIO0/BOOT`
 <hr>
 <br/>
 
