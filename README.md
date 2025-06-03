@@ -582,6 +582,9 @@ This _high speed_ advanced &nbsp;***SDIO*** _SD_Card interface_&nbsp;
 is configured on reserved pins&nbsp; _(GPIO38 &nbsp;**SD_CMD**,&nbsp;
 GPIO39 &nbsp;**SD_CLK**,&nbsp; and GPIO40 &nbsp;**SD_DATA**)_.
 
+![ESP32-S3 SDIO TF SD_Card Interface](https://github.com/profharris/GOOUUU-Tech-ESP32-S3-CAM-Expansion-Board/blob/main/images/1.%20GOOUUU%20ESP32-S3-CAM.jpg)
+
+
 See example usage in `\code`.&nbsp; _...to be continued..._
 <hr>
 
