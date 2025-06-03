@@ -616,8 +616,10 @@ memory,&nbsp; and thus are NOT available for external use.
 ———————————————————————————————————————————————————
 <hr>
 <br/>
-
-# findSPIpins.ino
+# Code Snippets:
+<hr>
+<br/>
+## findSPIpins.ino
 ```C++
 // findSPIpins.ino
 
