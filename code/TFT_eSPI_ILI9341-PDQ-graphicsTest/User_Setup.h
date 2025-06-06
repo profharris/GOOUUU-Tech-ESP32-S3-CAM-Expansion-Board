@@ -18,6 +18,9 @@
 
 #define ILI9341_DRIVER
 
+#define TFT_WIDTH  240              // 240×240 and 240×320
+#define TFT_HEIGHT 320              // 240×320
+
 //#define TFT_INVERSION_OFF
 
 // #################################################################
