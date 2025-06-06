@@ -66,13 +66,19 @@
 // Section 4. Other options
 // #################################################################
 
+// Define the SPI clock frequency, this affects the graphics rendering speed. 
+// Too fast and the TFT driver will not keep up and display corruption appears.
+// With an ILI9341 display 40MHz works OK, 80MHz sometimes fails.
+// With a ST7735 display more than 27MHz may not work (spurious pixels and lines)
+// With an ILI9163 display 27 MHz works OK.
+
 //#define SPI_FREQUENCY        20000000
-#define SPI_FREQUENCY        27000000
-//#define SPI_FREQUENCY        40000000
+//#define SPI_FREQUENCY        27000000
+#define SPI_FREQUENCY        40000000
 
 // Optional reduced SPI frequency for reading TFT
 #define SPI_READ_FREQUENCY   20000000
 
 #define SPI_TOUCH_FREQUENCY  2500000
 
-// #define SUPPORT_TRANSACTIONS
+#define SUPPORT_TRANSACTIONS
