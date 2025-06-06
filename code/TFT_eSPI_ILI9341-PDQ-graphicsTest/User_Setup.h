@@ -11,7 +11,10 @@
 // sketches should run without the need to make any more changes for 
 // a particular hardware setup! Note that some sketches are designed 
 // for a particular TFT pixel Width/Height
-//
+
+// User defined information reported by "Read_User_Setup" test & diagnostics example
+#define USER_SETUP_INFO "User_Setup"
+
 // #################################################################
 // Section 1. Call up the right driver file and any options for it
 // #################################################################
